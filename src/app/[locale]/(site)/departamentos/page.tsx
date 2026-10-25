@@ -46,7 +46,8 @@ export default async function ApartmentsPage() {
             id="hero-apartments"
             alt={t('imageAlt')}
             fill
-            priority
+            fetchPriority="high"
+            loading="eager"
             sizes="100vw"
             className="object-cover object-[center_40%]"
           />

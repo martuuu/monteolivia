@@ -8,4 +8,5 @@ nvm use && npm install && cp .env.example .env.local && npm run dev
 
 - Guía de trabajo: [AGENTS.md](AGENTS.md)
 - Puesta en producción: [.docs/runbook.md](.docs/runbook.md)
-- Documentación: [.docs/](.docs/)
+- Pendientes: [.docs/pending.md](.docs/pending.md) · QA manual: [.docs/QA.md](.docs/QA.md)
+- Analytics: [.docs/analytics.md](.docs/analytics.md) · Convenciones: [.docs/conventions.md](.docs/conventions.md) · Roadmap: [.docs/roadmap.md](.docs/roadmap.md)

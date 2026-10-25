@@ -84,7 +84,7 @@ export function SiteHeader({ locale, labels, phone, phoneHref, address }: Props)
             alt="Monte Olivia Suites"
             width={127}
             height={54}
-            priority
+            loading="eager"
             className="block h-[54px] w-auto"
           />
         </Link>

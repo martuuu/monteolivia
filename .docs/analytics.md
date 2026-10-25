@@ -13,25 +13,25 @@ Medición del sitio con Google Analytics 4 (gtag directo vía `@next/third-parti
 
 ## Catálogo de eventos
 
-| Evento | Parámetros | Cuándo |
-|---|---|---|
-| `section_view` | `section_id` | Primera vez que una sección se ve en la página |
-| `section_time` | `section_id`, `seconds` | Tiempo visible acumulado en la sección (≥1 s) |
-| `whatsapp_click` | `location`, `apartment`, `link_domain` | Cualquier botón/link a WhatsApp |
-| `email_click` | `location` | Links `mailto:` |
-| `airbnb_click` / `instagram_click` / `facebook_click` | `location`, `apartment` | Links a redes |
-| `map_click` | `location` | "Cómo llegar" (Google Maps) |
-| `cta_click` | `cta_id`, `location`, `apartment` | CTAs internos (ver departamentos, ver depto N, reservar, ver tarifas…) |
-| `nav_click` | `target`, `location` | Header, menú mobile, footer, atajos y paginador de departamentos |
-| `menu_open` | — | Abre el menú mobile |
-| `lang_switch` | `from`, `to` | Cambio de idioma |
-| `lightbox_open` | `gallery` (home, apartment_N), `apartment`, `index` | Abre una foto |
-| `lightbox_nav` | `gallery`, `direction`, `index` | Navega en el lightbox |
-| `carousel_interact` | `apartment`, `action` (dot, swipe) | Primera interacción con un carrusel de la home |
-| `booking_submit` | `channel` (whatsapp, email), `source` (home_form, apartment_widget), `apartment`, `guests`, `has_dates`, `nights` | Envía una consulta de reserva |
-| `review_open` / `review_submit` | `status` (sent, mailto_fallback, error), `rating` | Modal "Dejar comentario" |
-| `tours_scroll` | `direction` | Flechas del carrusel de excursiones |
-| `hero_video` | `state` | Solo si se activa el video del hero |
+| Evento                                                | Parámetros                                                                                                        | Cuándo                                                                 |
+| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| `section_view`                                        | `section_id`                                                                                                      | Primera vez que una sección se ve en la página                         |
+| `section_time`                                        | `section_id`, `seconds`                                                                                           | Tiempo visible acumulado en la sección (≥1 s)                          |
+| `whatsapp_click`                                      | `location`, `apartment`, `link_domain`                                                                            | Cualquier botón/link a WhatsApp                                        |
+| `email_click`                                         | `location`                                                                                                        | Links `mailto:`                                                        |
+| `airbnb_click` / `instagram_click` / `facebook_click` | `location`, `apartment`                                                                                           | Links a redes                                                          |
+| `map_click`                                           | `location`                                                                                                        | "Cómo llegar" (Google Maps)                                            |
+| `cta_click`                                           | `cta_id`, `location`, `apartment`                                                                                 | CTAs internos (ver departamentos, ver depto N, reservar, ver tarifas…) |
+| `nav_click`                                           | `target`, `location`                                                                                              | Header, menú mobile, footer, atajos y paginador de departamentos       |
+| `menu_open`                                           | —                                                                                                                 | Abre el menú mobile                                                    |
+| `lang_switch`                                         | `from`, `to`                                                                                                      | Cambio de idioma                                                       |
+| `lightbox_open`                                       | `gallery` (home, apartment_N), `apartment`, `index`                                                               | Abre una foto                                                          |
+| `lightbox_nav`                                        | `gallery`, `direction`, `index`                                                                                   | Navega en el lightbox                                                  |
+| `carousel_interact`                                   | `apartment`, `action` (dot, swipe)                                                                                | Primera interacción con un carrusel de la home                         |
+| `booking_submit`                                      | `channel` (whatsapp, email), `source` (home_form, apartment_widget), `apartment`, `guests`, `has_dates`, `nights` | Envía una consulta de reserva                                          |
+| `review_open` / `review_submit`                       | `status` (sent, mailto_fallback, error), `rating`                                                                 | Modal "Dejar comentario"                                               |
+| `tours_scroll`                                        | `direction`                                                                                                       | Flechas del carrusel de excursiones                                    |
+| `hero_video`                                          | `state`                                                                                                           | Solo si se activa el video del hero                                    |
 
 Valores de `section_id`: `hero`, `datos`, `departamentos`, `tarifas`, `huespedes`, `reserva`, `galeria`, `excursiones`, `ubicacion` (home), `depto_1`…`depto_5`, `cierre`.
 
@@ -51,14 +51,14 @@ Valores de `location`: `hero`, `nav`, `menu`, `fab` (botón flotante), `apartmen
 - GA4 clasifica solo: Google orgánico, directo, referidos, `l.instagram.com` → "Organic Social".
 - El navegador interno de Instagram a veces no envía referrer → aparece como "Direct". Por eso hay **links cortos con UTM**:
 
-| Link | Uso | Llega como |
-|---|---|---|
-| `monteoliviasuites.com.ar/ig` | Bio de Instagram | `instagram / social / bio` |
-| `/ig?c=historia-julio` | Historias, reels, posts | + `utm_content=historia-julio` |
-| `/ig?to=en` | Versión en inglés | idem, aterriza en `/en` |
-| `/fb` | Página de Facebook | `facebook / social / page` |
-| `/airbnb` | Perfil / anuncios de Airbnb | `airbnb / referral / profile` |
-| `/wa` | Estados de WhatsApp | `whatsapp / social / status` |
+| Link                          | Uso                         | Llega como                     |
+| ----------------------------- | --------------------------- | ------------------------------ |
+| `monteoliviasuites.com.ar/ig` | Bio de Instagram            | `instagram / social / bio`     |
+| `/ig?c=historia-julio`        | Historias, reels, posts     | + `utm_content=historia-julio` |
+| `/ig?to=en`                   | Versión en inglés           | idem, aterriza en `/en`        |
+| `/fb`                         | Página de Facebook          | `facebook / social / page`     |
+| `/airbnb`                     | Perfil / anuncios de Airbnb | `airbnb / referral / profile`  |
+| `/wa`                         | Estados de WhatsApp         | `whatsapp / social / status`   |
 
 Definidos en `src/lib/campaign.ts`.
 

@@ -31,7 +31,7 @@ export function FullscreenMessage({
       alt="Monte Olivia Suites"
       width={127}
       height={54}
-      priority
+      loading="eager"
       className="block h-[54px] w-auto rounded-[10px]"
     />
   )
@@ -41,7 +41,8 @@ export function FullscreenMessage({
         <Photo
           id={image}
           fill
-          priority
+          fetchPriority="high"
+          loading="eager"
           sizes="100vw"
           className="object-cover"
           style={{ objectPosition: imagePosition }}

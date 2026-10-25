@@ -72,7 +72,8 @@ export function ApartmentMosaic({
                 alt=""
                 fill
                 sizes={sizes[k]}
-                priority={priority && k === 0}
+                fetchPriority={priority && k === 0 ? 'high' : undefined}
+                loading={priority && k === 0 ? 'eager' : 'lazy'}
                 placeholder="blur"
                 blurDataURL={it.blurDataURL}
                 className="object-cover"

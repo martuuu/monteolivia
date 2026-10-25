@@ -86,7 +86,7 @@ export function ApartmentCarousel({ slides, offset, apartment, dotLabel }: Props
             onClick={() => go(k, 'dot')}
             aria-label={dotLabel.replace('{i}', String(k + 1)).replace('{total}', String(slides.length))}
             aria-current={k === i ? 'true' : undefined}
-            className="flex h-8 cursor-pointer items-center px-[3px]"
+            className="flex h-8 min-w-6 cursor-pointer items-center justify-center"
           >
             <span
               className="mo-dot block h-2 w-2 rounded-full bg-white/60 shadow-[0_0_0_1px_rgba(11,40,54,.25)]"

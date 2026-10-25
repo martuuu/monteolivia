@@ -23,7 +23,7 @@ export async function SiteFooter() {
   ]
   return (
     <footer className="bg-ink text-white">
-      <div className="mx-auto flex max-w-[1180px] flex-wrap items-start justify-between gap-[clamp(24px,4vw,48px)] px-[clamp(18px,5vw,64px)] py-[clamp(40px,7vw,72px)]">
+      <div className="wrap flex flex-wrap items-start justify-between gap-[clamp(24px,4vw,48px)] py-[clamp(40px,7vw,72px)]">
         <div className="flex max-w-[300px] flex-col gap-3.5">
           <Image
             src="/images/brand/logo-tile.png"
@@ -116,7 +116,7 @@ export async function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/12">
-        <div className="mx-auto flex max-w-[1180px] flex-wrap justify-between gap-2.5 px-[clamp(18px,5vw,64px)] py-[18px] text-[14.5px] text-white/60">
+        <div className="wrap flex flex-wrap justify-between gap-2.5 py-[18px] text-[14.5px] text-white/60">
           <span>{t('rights', { year: site.copyrightYear })}</span>
           <span>{t('pricesNote')}</span>
         </div>

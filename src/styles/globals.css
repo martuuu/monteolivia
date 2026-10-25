@@ -324,3 +324,26 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/*
+ * Contenedores del diseño: max-width aplica al CONTENIDO (content-box) y el padding lateral se suma.
+ * wrap = 1180px (estándar), wrap-wide = 1240px (datos rápidos), wrap-narrow = 900px (reserva).
+ */
+@utility wrap {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: clamp(18px, 5vw, 64px);
+  max-width: calc(1180px + 2 * clamp(18px, 5vw, 64px));
+}
+@utility wrap-wide {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: clamp(18px, 5vw, 64px);
+  max-width: calc(1240px + 2 * clamp(18px, 5vw, 64px));
+}
+@utility wrap-narrow {
+  margin-inline: auto;
+  width: 100%;
+  padding-inline: clamp(18px, 5vw, 64px);
+  max-width: calc(900px + 2 * clamp(18px, 5vw, 64px));
+}

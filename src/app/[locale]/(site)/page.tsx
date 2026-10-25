@@ -1,3 +1,44 @@
-export default function Home() {
-  return <h1 className="font-display text-5xl">Monte Olivia Suites</h1>
+import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
+import { locale as rootLocale } from 'next/root-params'
+import type { Locale } from '@/i18n/routing'
+import { buildMetadata } from '@/lib/seo'
+import { Hero } from '@/components/home/Hero'
+import { QuickFacts } from '@/components/home/QuickFacts'
+import { HomeApartments } from '@/components/home/HomeApartments'
+import { Rates } from '@/components/home/Rates'
+import { Guests } from '@/components/home/Guests'
+import { Booking } from '@/components/home/Booking'
+import { Gallery } from '@/components/home/Gallery'
+import { Tours } from '@/components/home/Tours'
+import { Location } from '@/components/home/Location'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const locale = (await rootLocale()) as Locale
+  const t = await getTranslations('Meta')
+  return buildMetadata({
+    locale,
+    href: '/',
+    title: t('homeTitle'),
+    description: t('homeDescription'),
+    ogImage: `/og/home-${locale}.jpg`,
+    ogAlt: t('ogAlt'),
+  })
+}
+
+export default async function Home() {
+  const locale = (await rootLocale()) as Locale
+  return (
+    <>
+      <Hero />
+      <QuickFacts />
+      <HomeApartments locale={locale} />
+      <Rates locale={locale} />
+      <Guests locale={locale} />
+      <Booking />
+      <Gallery locale={locale} />
+      <Tours locale={locale} />
+      <Location />
+    </>
+  )
 }

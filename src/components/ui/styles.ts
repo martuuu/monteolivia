@@ -1,7 +1,7 @@
 /** Clases reutilizables que replican los estilos inline del diseño. */
 export const cx = (...c: (string | false | null | undefined)[]) => c.filter(Boolean).join(' ')
 
-export const container = 'mx-auto w-full max-w-[1180px] px-[clamp(18px,5vw,64px)]'
+export const container = 'wrap'
 export const sectionY = 'py-[clamp(56px,9vw,104px)]'
 
 export const eyebrow = 'm-0 mb-2.5 text-[14px] font-semibold uppercase tracking-[2.5px]'

@@ -30,7 +30,10 @@ for (const folder of folders) {
   }
 }
 const body = entries
-  .map((e) => `  '${e.id}': { src: '${e.src}', width: ${e.width}, height: ${e.height}, blurDataURL: '${e.blurDataURL}' },`)
+  .map(
+    (e) =>
+      `  '${e.id}': { src: '${e.src}', width: ${e.width}, height: ${e.height}, blurDataURL: '${e.blurDataURL}' },`,
+  )
   .join('\n')
 const ts = `// GENERADO por scripts/build-image-manifest.mjs — no editar a mano (npm run images:manifest)
 export type ImageAsset = { src: string; width: number; height: number; blurDataURL: string }

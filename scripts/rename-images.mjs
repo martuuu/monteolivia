@@ -36,6 +36,9 @@ for (const j of jobs) {
   if (apply) fs.renameSync(path.join(j.dir, j.from), path.join(j.dir, j.to))
 }
 if (apply) {
-  fs.writeFileSync(path.join(root, 'rename-map.csv'), rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n') + '\n')
+  fs.writeFileSync(
+    path.join(root, 'rename-map.csv'),
+    rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n') + '\n',
+  )
   console.log(`\n${jobs.length} archivos renombrados. Mapa: images/rename-map.csv`)
 } else console.log(`\n${jobs.length} archivos (dry-run). Usar --apply para renombrar.`)

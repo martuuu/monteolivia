@@ -54,11 +54,19 @@ for (const j of jobs) {
   done++
 }
 if (fs.existsSync(logoLight)) {
-  await sharp(logoLight).resize({ width: 480 }).png({ compressionLevel: 9, palette: true }).toFile(path.join(OUT, 'brand', 'logo.png'))
+  await sharp(logoLight)
+    .resize({ width: 480 })
+    .png({ compressionLevel: 9, palette: true })
+    .toFile(path.join(OUT, 'brand', 'logo.png'))
   // Isotipo (montañas + sol) para favicon / apple-icon
-  await sharp(logoLight).extract({ left: 184, top: 4, width: 398, height: 156 }).toFile(path.join(OUT, 'brand', 'mark.png'))
+  await sharp(logoLight)
+    .extract({ left: 184, top: 4, width: 398, height: 156 })
+    .toFile(path.join(OUT, 'brand', 'mark.png'))
 }
 if (fs.existsSync(logoTile)) {
-  await sharp(logoTile).resize({ width: 480 }).png({ compressionLevel: 9, palette: true }).toFile(path.join(OUT, 'brand', 'logo-tile.png'))
+  await sharp(logoTile)
+    .resize({ width: 480 })
+    .png({ compressionLevel: 9, palette: true })
+    .toFile(path.join(OUT, 'brand', 'logo-tile.png'))
 }
 console.log(`${jobs.length} fotos (${done} procesadas ahora) + logos → public/images`)

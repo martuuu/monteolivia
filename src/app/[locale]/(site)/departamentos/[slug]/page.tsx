@@ -35,7 +35,7 @@ export async function generateMetadata({
   const pax = apt.pax === 2 ? c('exactly', { n: 2 }) : c('upTo', { n: apt.pax })
   return buildMetadata({
     locale,
-    href: { pathname: '/departamentos/[slug]', params: { slug: apartmentSlug(apt.n, locale) } },
+    href: (l) => ({ pathname: '/departamentos/[slug]', params: { slug: apartmentSlug(apt.n, l) } }),
     title: t('apartmentTitle', { n: apt.n, pax: pax.toLowerCase() }),
     description: t('apartmentDescription', { summary: apt.summary[locale], price: minPrice(apt) }),
     ogImage: `/og/apartment-${apt.n}-${locale}.jpg`,

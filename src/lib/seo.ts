@@ -4,6 +4,9 @@ import { routing, type Locale } from '@/i18n/routing'
 import { site } from '@/data/site'
 
 type Href = Parameters<typeof getPathname>[0]['href']
+/** Href fijo o por idioma (las fichas tienen slug distinto en ES y EN). */
+export type LocalizedHref = Href | ((locale: Locale) => Href)
+const resolve = (h: LocalizedHref, l: Locale) => (typeof h === 'function' ? h(l) : h)
 
 export const absoluteUrl = (path: string) => `${site.url}${path === '/' ? '' : path}` || site.url
 
@@ -13,22 +16,22 @@ export function localizedUrl(href: Href, locale: Locale) {
 }
 
 /** canonical + hreflang (es, en, x-default → es) para una ruta. */
-export function alternates(href: Href, locale: Locale): Metadata['alternates'] {
+export function alternates(href: LocalizedHref, locale: Locale): Metadata['alternates'] {
   const languages: Record<string, string> = {}
-  for (const l of routing.locales) languages[l] = localizedUrl(href, l)
-  languages['x-default'] = localizedUrl(href, routing.defaultLocale)
-  return { canonical: localizedUrl(href, locale), languages }
+  for (const l of routing.locales) languages[l] = localizedUrl(resolve(href, l), l)
+  languages['x-default'] = localizedUrl(resolve(href, routing.defaultLocale), routing.defaultLocale)
+  return { canonical: localizedUrl(resolve(href, locale), locale), languages }
 }
 
 export function buildMetadata(opts: {
   locale: Locale
-  href: Href
+  href: LocalizedHref
   title: string
   description: string
   ogImage: string
   ogAlt: string
 }): Metadata {
-  const url = localizedUrl(opts.href, opts.locale)
+  const url = localizedUrl(resolve(opts.href, opts.locale), opts.locale)
   return {
     title: { absolute: opts.title },
     description: opts.description,

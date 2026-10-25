@@ -37,3 +37,11 @@ Para trabajar con Martín al cerrar la iteración 1. Cada ítem dice qué hace f
 | Títulos SEO                                | 65–78 caracteres (Google corta ~60 en mobile). Se priorizó incluir marca + keyword                     | Acortar si Search Console muestra baja CTR                                                  |
 | Mosaico de departamentos en mobile         | Se respetó el diseño + botón "Ver las N fotos"                                                         | Alternativa: foto principal + tira deslizable                                               |
 | Marquee de reseñas                         | 7 s por reseña, texto recortado a 7 líneas                                                             | Ajustar velocidad o largo con el cliente                                                    |
+
+## Hallazgos menores de la revisión de código (25/10/2026)
+
+| Tema                                                                                                                            | Impacto                                               | Opción                                                       |
+| ------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------ |
+| El header `x-mo-internal: 1` saltea el modo mantenimiento (lo usa el proxy para pedir la página de mantenimiento)               | Bajo: solo permite ver el sitio durante mantenimiento | Firmar el header con un secreto de env                       |
+| El HTML del 404 dentro de un idioma llega como shell y el contenido/título aparecen con JS (status 404 y noindex son correctos) | Bajo: no se indexa                                    | Revisar en una versión futura de Next/next-intl              |
+| No hay `error.tsx` con el diseño del sitio (errores inesperados muestran la pantalla genérica de Next)                          | Bajo                                                  | Agregar `src/app/[locale]/error.tsx` con la plantilla de 404 |

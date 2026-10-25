@@ -17,6 +17,8 @@ const legacy: { source: string; destination: string }[] = [
   { source: '/es/excursiones', destination: '/#excursiones' },
   { source: '/es/:path*', destination: '/' },
   // Inglés: /en/apartments y /en/apartments/apartment-N ya son las URLs nuevas
+  { source: '/en/departamentos', destination: '/en/apartments' },
+  { source: '/en/departamentos/departamento-:n(\\d)', destination: '/en/apartments/apartment-:n' },
   { source: '/en/rates', destination: '/en#tarifas' },
   { source: '/en/reservation', destination: '/en#reserva' },
   { source: '/en/contact', destination: '/en#reserva' },

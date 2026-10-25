@@ -32,6 +32,11 @@ for (const p of pages) {
     await expect(page.locator('link[rel="alternate"][hreflang="es"]')).toHaveCount(1)
     await expect(page.locator('link[rel="alternate"][hreflang="en"]')).toHaveCount(1)
     await expect(page.locator('link[rel="alternate"][hreflang="x-default"]')).toHaveCount(1)
+    for (const href of await page
+      .locator('link[rel="alternate"][hreflang]')
+      .evaluateAll((ls) => ls.map((l) => new URL((l as HTMLLinkElement).href).pathname))) {
+      expect((await request.get(href)).status(), `hreflang ${href}`).toBe(200)
+    }
     await expect(page.locator('meta[property="og:image"]')).toHaveCount(1)
     // selector de idioma apunta a la página equivalente
     await expect(page.locator(`a[hreflang="${p.lang === 'es' ? 'en' : 'es'}"]`).first()).toHaveAttribute(
@@ -68,6 +73,7 @@ const redirects: [string, string][] = [
   ['/en/testimonials', '/en#huespedes'],
   ['/en/tours', '/en#excursiones'],
   ['/index.php', '/'],
+  ['/en/departamentos/departamento-2', '/en/apartments/apartment-2'],
 ]
 for (const [from, to] of redirects) {
   test(`301 ${from} → ${to}`, async ({ request }) => {

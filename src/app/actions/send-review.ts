@@ -28,7 +28,8 @@ export async function sendReview(formData: FormData): Promise<ReviewResult> {
     return { status: 'invalid' }
   }
   const r = parsed.data
-  if (Date.now() - r.startedAt < 3000) return { status: 'sent' } // bot: se descarta en silencio
+  // bot: formulario enviado en <3 s o sin timestamp válido → se descarta en silencio
+  if (r.startedAt <= 0 || Date.now() - r.startedAt < 3000) return { status: 'sent' }
 
   const key = process.env.RESEND_API_KEY
   if (!key) return { status: 'fallback' }

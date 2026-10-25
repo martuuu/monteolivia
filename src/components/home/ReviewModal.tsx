@@ -48,7 +48,13 @@ export function ReviewModal({ labels: l, locale, email }: Props) {
     const form = e.currentTarget
     const data = new FormData(form)
     start(async () => {
-      const res = await sendReview(data)
+      // Error de red o deploy nuevo (acción inexistente): cae al fallback mailto sin romper la página
+      let res: Awaited<ReturnType<typeof sendReview>>
+      try {
+        res = await sendReview(data)
+      } catch {
+        res = { status: 'error' }
+      }
       if (res.status === 'sent') {
         setState('sent')
         track('review_submit', { status: 'sent', rating: Number(data.get('rating')) })

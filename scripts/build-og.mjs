@@ -26,14 +26,14 @@ const pages = [
   },
   {
     file: 'apartments-es',
-    img: 'hero/hero-apartments',
+    img: 'apartments/apartment-24',
     eyebrow: 'MONTE OLIVIA SUITES',
     title: '5 departamentos en Ushuaia',
     sub: 'De 2 a 6 huéspedes · cocina completa · Wi-Fi',
   },
   {
     file: 'apartments-en',
-    img: 'hero/hero-apartments',
+    img: 'apartments/apartment-24',
     eyebrow: 'MONTE OLIVIA SUITES',
     title: '5 apartments in Ushuaia',
     sub: '2 to 6 guests · full kitchen · Wi-Fi',

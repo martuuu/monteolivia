@@ -2,6 +2,8 @@ import type { Locale } from '@/i18n/routing'
 
 export type Review = {
   n: number
+  /** Estrellas (1–5). Las reseñas del sitio anterior no tenían puntaje: se asignó 5 por su contenido (validar con el cliente). */
+  rating: number
   name: string
   city?: string
   date: string
@@ -16,6 +18,7 @@ export type Review = {
 export const reviews: Review[] = [
   {
     n: 58,
+    rating: 5,
     name: 'Herminia',
     city: 'Buenos Aires',
     date: '2023-09-17',
@@ -24,6 +27,7 @@ export const reviews: Review[] = [
   },
   {
     n: 57,
+    rating: 5,
     name: 'Carolina',
     city: 'Buenos Aires',
     date: '2023-07-30',
@@ -32,6 +36,7 @@ export const reviews: Review[] = [
   },
   {
     n: 54,
+    rating: 5,
     name: 'Marisol',
     date: '2023-03-11',
     lang: 'es',
@@ -39,6 +44,7 @@ export const reviews: Review[] = [
   },
   {
     n: 52,
+    rating: 5,
     name: 'Patricia',
     date: '2023-02-14',
     lang: 'es',
@@ -46,6 +52,7 @@ export const reviews: Review[] = [
   },
   {
     n: 50,
+    rating: 5,
     name: 'Florencia',
     date: '2023-01-25',
     lang: 'es',
@@ -53,6 +60,7 @@ export const reviews: Review[] = [
   },
   {
     n: 43,
+    rating: 5,
     name: 'Andrea',
     date: '2022-10-06',
     lang: 'es',
@@ -60,6 +68,7 @@ export const reviews: Review[] = [
   },
   {
     n: 38,
+    rating: 5,
     name: 'Verónica',
     date: '2022-09-05',
     lang: 'es',
@@ -67,6 +76,7 @@ export const reviews: Review[] = [
   },
   {
     n: 36,
+    rating: 5,
     name: 'María Inés',
     date: '2022-08-27',
     lang: 'es',
@@ -74,6 +84,7 @@ export const reviews: Review[] = [
   },
   {
     n: 34,
+    rating: 5,
     name: 'Romina',
     date: '2022-08-22',
     lang: 'es',
@@ -81,6 +92,7 @@ export const reviews: Review[] = [
   },
   {
     n: 27,
+    rating: 5,
     name: 'Florencia',
     date: '2021-09-02',
     lang: 'es',
@@ -88,6 +100,7 @@ export const reviews: Review[] = [
   },
   {
     n: 26,
+    rating: 5,
     name: 'Mariana',
     city: 'Argentina',
     date: '2021-08-25',
@@ -96,6 +109,7 @@ export const reviews: Review[] = [
   },
   {
     n: 25,
+    rating: 5,
     name: 'Gabriel',
     date: '2021-08-05',
     lang: 'es',
@@ -103,6 +117,7 @@ export const reviews: Review[] = [
   },
   {
     n: 13,
+    rating: 5,
     name: 'Lucre',
     city: 'Buenos Aires',
     date: '2020-02-04',
@@ -111,6 +126,7 @@ export const reviews: Review[] = [
   },
   {
     n: 20,
+    rating: 5,
     name: 'Jochen',
     city: 'Amberes, Bélgica',
     date: '2020-02-28',
@@ -119,6 +135,7 @@ export const reviews: Review[] = [
   },
   {
     n: 9,
+    rating: 5,
     name: 'Hannah',
     city: 'Portland, EE.UU.',
     date: '2020-01-26',
@@ -127,6 +144,7 @@ export const reviews: Review[] = [
   },
   {
     n: 6,
+    rating: 5,
     name: 'Peggy',
     city: 'Arizona, EE.UU.',
     date: '2020-01-09',
@@ -135,6 +153,7 @@ export const reviews: Review[] = [
   },
   {
     n: 2,
+    rating: 5,
     name: 'Teresa',
     city: 'Zúrich, Suiza',
     date: '2019-12-20',
@@ -143,6 +162,7 @@ export const reviews: Review[] = [
   },
   {
     n: 22,
+    rating: 5,
     name: 'Eduarda',
     city: 'Río de Janeiro, Brasil',
     date: '2020-09-09',
@@ -151,6 +171,7 @@ export const reviews: Review[] = [
   },
   {
     n: 19,
+    rating: 5,
     name: 'Sandra',
     city: 'Brasilia, Brasil',
     date: '2020-02-25',
@@ -159,6 +180,7 @@ export const reviews: Review[] = [
   },
   {
     n: 14,
+    rating: 5,
     name: 'Amarildo',
     city: 'Brasilia, Brasil',
     date: '2020-02-07',
@@ -167,6 +189,7 @@ export const reviews: Review[] = [
   },
   {
     n: 21,
+    rating: 5,
     name: 'Amanda',
     city: 'Coronel Vivida, Brasil',
     date: '2020-03-04',

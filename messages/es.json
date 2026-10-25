@@ -46,8 +46,11 @@
   "Hero": {
     "eyebrow": "Ushuaia · Tierra del Fuego",
     "title": "Tu lugar en el fin del mundo",
+    "titleLead": "Tu lugar en",
+    "titleTyped": "el fin del mundo",
     "lead": "Departamentos boutique, amplios y cálidos, en una zona tranquila de Ushuaia — con las montañas siempre a la vista.",
-    "imageAlt": "El Monte Olivia nevado sobre la ciudad de Ushuaia y el Canal Beagle"
+    "imageAlt": "El Monte Olivia nevado sobre la ciudad de Ushuaia y el Canal Beagle",
+    "scrollCue": "Ver más"
   },
   "Facts": {
     "heading": "Lo esencial de Monte Olivia Suites",
@@ -169,7 +172,7 @@
     "eyebrow": "Monte Olivia Suites · Ushuaia",
     "title": "Departamentos",
     "lead": "Cinco departamentos modernos y muy espaciosos en una zona residencial, comercial y a la vez muy tranquila de Ushuaia. Cada detalle está pensado para que te sientas como en casa: decoración cálida y con estilo, cocina completa y Wi-Fi libre. Estacionamiento sin cargo, a pedido al reservar.",
-    "imageAlt": "La ciudad de Ushuaia frente a la bahía, con los Andes fueguinos nevados",
+    "imageAlt": "Living-comedor con balcón y vista a la ciudad en uno de los departamentos de Monte Olivia Suites",
     "jumpTo": "Ir a un departamento",
     "closingTitle": "¿No sabés cuál elegir?",
     "closingText": "Contanos cuántos viajan y en qué fechas, y te recomendamos el departamento ideal.",

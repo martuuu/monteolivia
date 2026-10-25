@@ -83,17 +83,21 @@ export function CarIcon() {
   )
 }
 
+/** Locker con un par de esquís apoyados (se balancean) y un copo de nieve que titila. */
 export function LockerIcon() {
   return (
     <svg {...common}>
-      <rect x="13" y="4" width="22" height="40" rx="2.5" />
-      <path d="M17.5 9h13M17.5 12.5h13" opacity=".5" />
-      <path d="M31 26v4" strokeWidth="2.6" />
-      <path d="M4 44h40" opacity=".35" />
-      <g stroke="#F0973B" strokeWidth="2" className="animate-mo-bob">
-        <path d="M20.5 40V18.5c0-1.6 .9-2.8 2-2.8" />
-        <path d="M26 40V20.5c0-1.6-.9-2.8-2-2.8" />
-        <path d="M19 30h3M24.5 32h3" strokeWidth="2.4" />
+      <rect x="5" y="7" width="19" height="35" rx="2.5" />
+      <path d="M9 12h11M9 15.5h11" opacity=".5" />
+      <path d="M20 23.5v5" strokeWidth="2.4" />
+      <path d="M3 44h42" opacity=".35" />
+      <g className="animate-mo-sway" style={{ transformBox: 'view-box', transformOrigin: '43px 43px' }}>
+        <path d="M40.5 43 29.6 10.2c-.6-1.8.3-3.5 2.1-3.4" stroke="#F0973B" strokeWidth="2.4" />
+        <path d="M45 42 34.1 9.2c-.6-1.8.3-3.5 2.1-3.4" stroke="#F0973B" strokeWidth="2.4" />
+        <path d="M33.4 26.6l7.3-2.5" strokeWidth="2.2" />
+      </g>
+      <g stroke="#F0973B" strokeWidth="1.4" className="animate-mo-blink" style={{ animationDelay: '.6s' }}>
+        <path d="M43 9v6M40 12h6M40.9 9.9l4.2 4.2M45.1 9.9l-4.2 4.2" />
       </g>
     </svg>
   )

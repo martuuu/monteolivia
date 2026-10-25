@@ -15,7 +15,10 @@ function ReviewCard({ r, locale }: { r: Review; locale: Locale }) {
     timeZone: 'UTC',
   })
   return (
-    <figure className="m-0 mr-4 flex w-[min(380px,80vw)] flex-none flex-col gap-3.5 rounded-[18px] border border-white/12 bg-white/5 p-[26px]">
+    <figure className="m-0 mr-4 flex w-[min(380px,80vw)] flex-none flex-col gap-3.5 rounded-[18px] border border-white/12 bg-white/5 p-[26px] transition-colors duration-300 hover:border-white/30 hover:bg-white/9">
+      <span className="text-orange text-[15px] tracking-[3px]" role="img" aria-label={`${r.rating}/5`}>
+        {'★'.repeat(r.rating) + '☆'.repeat(5 - r.rating)}
+      </span>
       <blockquote
         lang={r.lang}
         className="font-display m-0 line-clamp-7 text-[21px] leading-[1.5] text-white"
@@ -49,6 +52,7 @@ export async function Guests({ locale }: { locale: Locale }) {
         </h2>
       </div>
       <Marquee
+        label={t('eyebrow')}
         seconds={list.length * 7}
         duplicate={cards}
         className="mt-[clamp(28px,4vw,44px)] items-stretch"

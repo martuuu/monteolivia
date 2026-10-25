@@ -111,6 +111,8 @@ test('modal de reseña: validación y envío (fallback mailto sin Resend)', asyn
 
 for (const path of ['/', '/departamentos', '/departamentos/departamento-1', '/en', '/no-existe']) {
   test(`accesibilidad (axe) ${path}`, async ({ page }) => {
+    // sin animaciones de entrada: axe mide contraste con la opacidad final
+    await page.emulateMedia({ reducedMotion: 'reduce' })
     await page.goto(path)
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa'])
@@ -128,3 +130,54 @@ for (const path of ['/', '/departamentos', '/departamentos/departamento-1', '/en
     ).toEqual([])
   })
 }
+
+test('marquee de reseñas se pausa con hover y sigue al salir', async ({ page }) => {
+  await page.goto('/#huespedes')
+  const track = page.locator('#huespedes .mo-marquee-track')
+  const state = () => track.evaluate((el) => getComputedStyle(el).animationPlayState)
+  await page.locator('#huespedes .mo-marquee').scrollIntoViewIfNeeded()
+  await page.mouse.move(5, 5)
+  await expect.poll(state, { timeout: 10_000 }).toBe('running')
+  const box = (await page.locator('#huespedes .mo-marquee').boundingBox())!
+  await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2)
+  await expect.poll(state, { timeout: 10_000 }).toBe('paused')
+  await page.mouse.move(5, 5)
+  await expect.poll(state, { timeout: 10_000 }).toBe('running')
+  await expect(page.locator('#huespedes figure').first()).toContainText('★★★★★')
+})
+
+test('galería de la home: solo paisajes', async ({ page }) => {
+  await page.goto('/#galeria')
+  const srcs = await page
+    .locator('#galeria img')
+    .evaluateAll((imgs) => imgs.map((i) => (i as HTMLImageElement).currentSrc || (i as HTMLImageElement).src))
+  expect(srcs.length).toBeGreaterThan(0)
+  expect(srcs.some((s) => decodeURIComponent(s).includes('/images/apartments/'))).toBeFalsy()
+})
+
+test('h1 animado conserva el texto completo y nombre accesible', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByRole('heading', { level: 1, name: 'Tu lugar en el fin del mundo' })).toBeVisible()
+  await page.goto('/en')
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'Your place at the end of the world' }),
+  ).toBeVisible()
+})
+
+test('selector de departamentos: activo según scroll', async ({ page }) => {
+  await page.goto('/departamentos')
+  const picker = page.getByRole('navigation', { name: 'Ir a un departamento' })
+  await expect(picker.getByRole('link')).toHaveCount(5)
+  await picker.getByRole('link', { name: /Departamento 3/ }).click()
+  await expect(page).toHaveURL(/#depto-3$/)
+  await expect(picker.getByRole('link', { name: /Departamento 3/ })).toHaveAttribute('aria-current', 'true')
+})
+
+test('ficha: galería propia (no el mosaico) y columna de reserva', async ({ page }) => {
+  await page.goto('/departamentos/departamento-2')
+  await expect(page.locator('.aspect-\\[6\\/5\\]')).toHaveCount(0)
+  await page.getByRole('button', { name: /Ampliar foto: Vista general/ }).click()
+  await expect(page.locator('dialog[open]')).toContainText('Departamento 2')
+  await page.keyboard.press('Escape')
+  await expect(page.getByText('Consultar disponibilidad')).toBeVisible()
+})

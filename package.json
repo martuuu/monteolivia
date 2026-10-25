@@ -14,7 +14,8 @@
     "images:prepare": "node scripts/prepare-images.mjs",
     "images:manifest": "node scripts/build-image-manifest.mjs",
     "og:build": "node scripts/build-og.mjs",
-    "qa:shots": "node scripts/qa/screenshot.mjs http://localhost:3000 qa-shots / /departamentos /departamentos/departamento-1 /en"
+    "qa:shots": "node scripts/qa/screenshot.mjs http://localhost:3000 qa-shots / /departamentos /departamentos/departamento-1 /en",
+    "brand:logo": "node scripts/build-logo-white.mjs && node scripts/build-icons.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.3",

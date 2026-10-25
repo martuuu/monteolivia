@@ -30,3 +30,20 @@ test('inputs ≥16px (iOS no hace zoom)', async ({ page }) => {
     )
   expect(Math.min(...sizes)).toBeGreaterThanOrEqual(16)
 })
+
+test('selector de departamentos: los 5 visibles sin scroll', async ({ page }) => {
+  await page.goto('/departamentos')
+  const links = page.getByRole('navigation', { name: 'Ir a un departamento' }).getByRole('link')
+  await expect(links).toHaveCount(5)
+  const vw = page.viewportSize()!.width
+  for (const box of await links.evaluateAll((ls) => ls.map((l) => l.getBoundingClientRect().toJSON()))) {
+    expect(box.left).toBeGreaterThanOrEqual(0)
+    expect(box.right).toBeLessThanOrEqual(vw)
+    expect(box.height).toBeGreaterThanOrEqual(44)
+  }
+})
+
+test('ficha mobile: carrusel con contador', async ({ page }) => {
+  await page.goto('/departamentos/departamento-1')
+  await expect(page.getByText('1 / 8')).toBeVisible()
+})

@@ -11,13 +11,15 @@ type Props = {
   /** Duración del loop en segundos (diseño: reseñas 80s, galería 75s / 85s) */
   seconds: number
   className?: string
+  /** Si la fila no tiene elementos con foco (reseñas), se vuelve una región enfocable para poder desplazarla con teclado */
+  label?: string
 }
 
 /**
  * Marquee del diseño (moMarqL / moMarqR). Un solo layer animado con transform.
  * Se pausa con hover, foco, toque y cuando sale de pantalla. Con reduced-motion queda como fila scrolleable (globals.css).
  */
-export function Marquee({ children, duplicate, direction = 'left', seconds, className }: Props) {
+export function Marquee({ children, duplicate, direction = 'left', seconds, className, label }: Props) {
   const ref = useRef<HTMLDivElement>(null)
   const [visible, setVisible] = useState(false)
   const [userPaused, setUserPaused] = useState(false)
@@ -35,6 +37,9 @@ export function Marquee({ children, duplicate, direction = 'left', seconds, clas
       ref={ref}
       className={cx('mo-marquee w-full overflow-hidden', className)}
       data-paused={!visible || userPaused ? 'true' : 'false'}
+      role={label ? 'region' : undefined}
+      aria-label={label}
+      tabIndex={label ? 0 : undefined}
       onPointerUp={(e) => {
         if (e.pointerType === 'touch' && !(e.target as HTMLElement).closest('button,a'))
           setUserPaused((p) => !p)
@@ -42,8 +47,12 @@ export function Marquee({ children, duplicate, direction = 'left', seconds, clas
     >
       <div
         className="mo-marquee-track"
+        // Propiedades sueltas (no el shorthand `animation`, que fija play-state inline): así el CSS puede pausar
         style={{
-          animation: `${direction === 'left' ? 'mo-marq-l' : 'mo-marq-r'} ${seconds}s linear infinite`,
+          animationName: direction === 'left' ? 'mo-marq-l' : 'mo-marq-r',
+          animationDuration: `${seconds}s`,
+          animationTimingFunction: 'linear',
+          animationIterationCount: 'infinite',
         }}
       >
         <div className="flex">{children}</div>

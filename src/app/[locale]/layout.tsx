@@ -7,6 +7,7 @@ import type { Metadata, Viewport } from 'next'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import { site } from '@/data/site'
 import { Analytics } from '@/components/analytics/Analytics'
+import { RevealObserver } from '@/components/ui/RevealObserver'
 import '@/styles/globals.css'
 
 const marcellus = Marcellus({
@@ -51,6 +52,7 @@ export default async function RootLayout({ children }: LayoutProps<'/[locale]'>)
           {children}
         </NextIntlClientProvider>
         <Analytics />
+        <RevealObserver />
         {GA_ID && <GoogleAnalytics gaId={GA_ID} debugMode={process.env.NEXT_PUBLIC_GA_DEBUG === '1'} />}
       </body>
     </html>

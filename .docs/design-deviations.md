@@ -35,3 +35,21 @@ Todo lo demás replica el diseño: tokens, tipografías, tamaños, espaciados, r
 | Facebook en footer                                  | "f" con link vacío                      | ícono con link real                                                                                     |
 | Hero                                                | 100vh                                   | 100svh (evita saltos con la barra del navegador mobile)                                                 |
 | Logo                                                | PNG del diseño                          | mismo PNG optimizado (no hay SVG)                                                                       |
+
+## Iteración 1.1 (pedidos de Martín, 25/10/2026)
+
+| Elemento                                 | Antes (diseño)                    | Ahora                                                                                                                                |
+| ---------------------------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Eyebrow del hero (home y /departamentos) | texto naranja 15 px sobre la foto | píldora con fondo navy translúcido, ícono de ubicación, 14–17 px                                                                     |
+| Título del hero                          | aparece todo junto                | "Tu lugar en" se pinta de entrada y se desliza; "el fin del mundo" se tipea letra por letra con cursor naranja (CSS puro)            |
+| Indicador de scroll                      | línea vertical                    | botón circular con flecha que flota y un anillo que pulsa; lleva a "Datos rápidos"                                                   |
+| Datos rápidos                            | 4 + 1 en dos filas                | desktop (≥1024): los 5 en una fila con ícono arriba y separadores; mobile igual que el diseño                                        |
+| Ícono "Lockers de ski"                   | locker con esquís dentro          | locker + par de esquís naranjas apoyados que se balancean + copo de nieve                                                            |
+| Sección Departamentos (home)             | sin animación                     | título/bajada suben al entrar; foto y texto de cada departamento entran desde su lado                                                |
+| Reseñas                                  | sin estrellas (iteración 1)       | ★★★★★ en cada reseña (puntaje asignado, ver pendientes) y pausa real con hover                                                       |
+| Galería                                  | paisajes + interiores             | solo paisajes                                                                                                                        |
+| Botón de WhatsApp                        | 20 px del borde                   | 24 px (mobile 20 px)                                                                                                                 |
+| Logo del footer                          | logo sobre recuadro blanco        | logo blanco con sol y "SUITES" en naranja (`npm run brand:logo`)                                                                     |
+| Hero de /departamentos                   | bahía de Ushuaia                  | foto `apartment-24` (living con balcón)                                                                                              |
+| Atajos a departamentos                   | chips con scroll horizontal       | selector de 5 columnas siempre visible, fijo bajo el header, marca el departamento en pantalla                                       |
+| Ficha individual                         | mismo mosaico que /departamentos  | galería propia: desktop 1 grande + 4 (66 % del alto), mobile carrusel a ancho completo y alto; precios y consulta fijos a la derecha |

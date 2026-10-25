@@ -8,7 +8,7 @@ Lo automatizado ya pasa (`npm run test:e2e`: 43 tests de rutas, 301, 404, SEO, G
 
 Abrir `design/Monte Olivia - Sitio v2.dc.html` y `Departamentos.dc.html` en el navegador al lado del sitio (`npm run dev`).
 
-- [ ] Hero: zoom lento de la foto, línea de scroll animada, botones.
+- [ ] Hero: zoom lento de la foto, botón de scroll animado, botones.
 - [ ] Datos rápidos: los 5 íconos animados (ventanas que titilan, wifi, auto, ski, tercer huésped que aparece).
 - [ ] Departamentos (home): carrusel cambia cada ~4 s, alternado izquierda/derecha, íconos de personas en ola.
 - [ ] Huéspedes y galería: marquees continuos, se frenan con el mouse.
@@ -16,12 +16,23 @@ Abrir `design/Monte Olivia - Sitio v2.dc.html` y `Departamentos.dc.html` en el n
 - [ ] 404 y mantenimiento (`/mantenimiento`): humo animado en la casita.
 - [ ] Header se esconde al bajar y aparece al subir.
 
+## 1.1 Cambios de la iteración 1.1
+
+- [ ] Hero: "el fin del mundo" se tipea con cursor naranja; el resto entra suave. El botón redondo de abajo baja a "Datos rápidos".
+- [ ] Datos rápidos en una sola fila en notebook; ícono de lockers nuevo (esquís que se balancean).
+- [ ] Departamentos (home): foto y texto entran cada uno desde su lado al hacer scroll.
+- [ ] Reseñas: estrellas visibles; el carrusel se frena con el mouse encima y sigue al salir.
+- [ ] Galería: solo paisajes.
+- [ ] Footer: logo blanco con sol y "SUITES" naranjas.
+- [ ] /departamentos: selector de 1 a 5 siempre visible, se queda fijo al bajar y marca el departamento que estás mirando.
+- [ ] Ficha: galería grande (desktop) / carrusel alto (mobile); en desktop la columna de precios y consulta acompaña el scroll.
+
 ## 2. Mobile (lo más importante para el cliente)
 
 - [ ] Menú hamburguesa: abre, links grandes, cierra con ✕ y al tocar un link.
 - [ ] Carrusel: se puede deslizar con el dedo y tocar los puntitos.
 - [ ] Lightbox: swipe izquierda/derecha, flechas abajo, cerrar.
-- [ ] Atajos "Departamento N" debajo del hero de `/departamentos`.
+- [ ] Selector de departamentos (1 a 5) debajo del hero de `/departamentos`: entra completo y queda fijo al bajar.
 - [ ] Selector de fechas nativo en el widget de cada departamento (iPhone y Android). La salida no deja elegir un día anterior a la llegada.
 - [ ] Botón "WhatsApp" del widget abre WhatsApp con el mensaje armado (depto, fechas, noches, huéspedes).
 - [ ] Botón flotante de WhatsApp no tapa nada importante.

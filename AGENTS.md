@@ -15,7 +15,7 @@ npm run test:e2e         # build con GA de prueba + Playwright (rutas, 301, 404,
 npm run images:prepare   # images/{apartments,landscapes} + heroes del diseño → public/images (≤2048px, sin EXIF)
 npm run images:manifest  # public/images → src/data/image-manifest.ts (ancho/alto/blur). No editar a mano
 npm run og:build         # public/og/*.jpg (1200×630) por página e idioma
-node scripts/build-icons.mjs              # favicon, icon.png, apple-icon.png
+npm run brand:logo                        # logo blanco del footer + favicon/icon/apple-icon
 python3 -I scripts/extract-design.py      # design/*.dc.html → design/extracted/<pagina>/template.html
 scripts/encode-hero-video.sh clip.mov     # video del hero (requiere ffmpeg)
 node scripts/qa/screenshot.mjs <url> <dir> / /departamentos   # capturas 390/1440 (--design = capturas del diseño)

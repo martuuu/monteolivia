@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { getTranslations } from 'next-intl/server'
 import { Link } from '@/i18n/navigation'
 import type { Locale } from '@/i18n/routing'
@@ -26,14 +27,23 @@ export async function HomeApartments({ locale }: { locale: Locale }) {
       id="departamentos"
       data-section="departamentos"
       aria-labelledby="home-apts-title"
-      className="bg-cream scroll-mt-[84px]"
+      className="bg-cream scroll-mt-[84px] overflow-x-clip"
     >
       <div className={`${container} ${sectionY}`}>
-        <p className={eyebrowLight}>{t('eyebrow')}</p>
-        <h2 id="home-apts-title" className={`${h2} max-w-[20ch]`}>
+        <p className={eyebrowLight} data-reveal="up">
+          {t('eyebrow')}
+        </p>
+        <h2
+          id="home-apts-title"
+          className={`${h2} max-w-[20ch]`}
+          data-reveal="up"
+          style={{ '--reveal-delay': '.08s' } as CSSProperties}
+        >
           {t('title')}
         </h2>
-        <p className={lead}>{t('lead')}</p>
+        <p className={lead} data-reveal="up" style={{ '--reveal-delay': '.16s' } as CSSProperties}>
+          {t('lead')}
+        </p>
 
         <div className="border-ink/12 mt-[clamp(28px,4vw,44px)] border-t">
           {apartments.map((a, idx) => {
@@ -48,10 +58,23 @@ export async function HomeApartments({ locale }: { locale: Locale }) {
                 aria-labelledby={`home-apt-${a.n}`}
                 className="border-ink/12 grid grid-cols-[repeat(auto-fit,minmax(min(100%,320px),1fr))] items-center gap-[clamp(20px,3.5vw,44px)] border-b py-[clamp(28px,4vw,40px)]"
               >
-                <div className={idx % 2 === 1 ? 'min-[761px]:order-2' : undefined}>
-                  <ApartmentCarousel slides={slides} offset={idx} apartment={a.n} dotLabel={t('photoOf')} />
+                {/* La foto entra desde su lado y el texto desde el opuesto */}
+                <div
+                  className={idx % 2 === 1 ? 'min-[761px]:order-2' : undefined}
+                  data-reveal={idx % 2 === 1 ? 'right' : 'left'}
+                >
+                  <ApartmentCarousel
+                    slides={slides}
+                    offset={idx}
+                    apartment={a.n}
+                    dotLabel={t.raw('photoOf')}
+                  />
                 </div>
-                <div className="flex flex-col gap-3">
+                <div
+                  className="flex flex-col gap-3"
+                  data-reveal={idx % 2 === 1 ? 'left' : 'right'}
+                  style={{ '--reveal-delay': '.12s' } as CSSProperties}
+                >
                   <h3
                     id={`home-apt-${a.n}`}
                     className="text-orange-text m-0 text-[13.5px] font-semibold tracking-[2px] uppercase"
@@ -125,7 +148,7 @@ export async function HomeApartments({ locale }: { locale: Locale }) {
           })}
         </div>
 
-        <div className="mt-[clamp(30px,4vw,44px)] flex justify-center">
+        <div className="mt-[clamp(30px,4vw,44px)] flex justify-center" data-reveal="up">
           <Link
             href="/departamentos"
             className={`${btnOrange} px-8 shadow-[0_6px_18px_rgba(240,151,59,.3)]`}

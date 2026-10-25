@@ -26,11 +26,11 @@ export async function SiteFooter() {
       <div className="wrap flex flex-wrap items-start justify-between gap-[clamp(24px,4vw,48px)] py-[clamp(40px,7vw,72px)]">
         <div className="flex max-w-[300px] flex-col gap-3.5">
           <Image
-            src="/images/brand/logo-tile.png"
+            src="/images/brand/logo-white.png"
             alt="Monte Olivia Suites"
-            width={150}
+            width={155}
             height={64}
-            className="h-16 w-auto self-start rounded-xl"
+            className="h-16 w-auto self-start"
           />
           <p className="font-display m-0 text-[19px] text-white/85">{t('tagline')}</p>
         </div>

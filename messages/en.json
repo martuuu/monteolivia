@@ -46,8 +46,11 @@
   "Hero": {
     "eyebrow": "Ushuaia · Tierra del Fuego",
     "title": "Your place at the end of the world",
+    "titleLead": "Your place at",
+    "titleTyped": "the end of the world",
     "lead": "Boutique apartments — spacious, warm and quiet — in a calm corner of Ushuaia, with the mountains always in sight.",
-    "imageAlt": "Snow-capped Mount Olivia above the city of Ushuaia and the Beagle Channel"
+    "imageAlt": "Snow-capped Mount Olivia above the city of Ushuaia and the Beagle Channel",
+    "scrollCue": "Ver más"
   },
   "Facts": {
     "heading": "Monte Olivia Suites at a glance",
@@ -169,7 +172,7 @@
     "eyebrow": "Monte Olivia Suites · Ushuaia",
     "title": "Apartments",
     "lead": "Five modern, very spacious apartments in a residential and commercial — yet very quiet — area of Ushuaia. Every detail is designed to make you feel at home: warm, stylish interiors, full kitchens and free Wi-Fi. Free parking on request when booking.",
-    "imageAlt": "The city of Ushuaia on the bay, with the snow-capped Fuegian Andes",
+    "imageAlt": "Living-dining room with a balcony and city views in one of the Monte Olivia Suites apartments",
     "jumpTo": "Go to an apartment",
     "closingTitle": "Not sure which one to choose?",
     "closingText": "Tell us how many are travelling and when, and we'll recommend the ideal apartment.",

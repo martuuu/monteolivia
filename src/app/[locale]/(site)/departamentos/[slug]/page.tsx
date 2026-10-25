@@ -8,7 +8,15 @@ import { apartmentFromSlug, apartments, apartmentSlug, minPrice } from '@/data/a
 import { buildMetadata, localizedUrl } from '@/lib/seo'
 import { apartmentJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
 import { JsonLd } from '@/components/seo/JsonLd'
-import { ApartmentBlock } from '@/components/apartments/ApartmentBlock'
+import { ApartmentGallery } from '@/components/apartments/ApartmentGallery'
+import {
+  ApartmentBookingBox,
+  ApartmentDetails,
+  ApartmentHeading,
+  ApartmentPrices,
+  apartmentPhotos,
+  lightboxLabels,
+} from '@/components/apartments/ApartmentParts'
 import { ClosingCta } from '@/components/apartments/ClosingCta'
 import { ChevronIcon } from '@/components/icons'
 
@@ -55,6 +63,7 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
     pathname: '/departamentos/[slug]' as const,
     params: { slug: apartmentSlug(num, locale) },
   })
+  const photos = await apartmentPhotos(apt, locale)
   const label = `${c('apartment')} ${apt.n}`
   const pager =
     'inline-flex min-h-12 items-center gap-2 rounded-full border border-ink/16 bg-white px-5 py-2.5 text-base font-semibold text-teal hover:border-teal'
@@ -92,7 +101,24 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
               </li>
             </ol>
           </nav>
-          <ApartmentBlock apt={apt} locale={locale} as="h1" priority />
+          <ApartmentGallery
+            apartment={apt.n}
+            title={label}
+            items={photos}
+            labels={await lightboxLabels()}
+            openLabel={t.raw('openPhoto')}
+            seeAllLabel={t('seePhotos', { n: photos.length })}
+          />
+          <div className="mt-[clamp(24px,4vw,44px)] grid items-start gap-[clamp(28px,4vw,56px)] lg:grid-cols-[minmax(0,1fr)_minmax(340px,400px)]">
+            <article aria-labelledby={`depto-${apt.n}-title`} className="flex flex-col gap-[18px]">
+              <ApartmentHeading apt={apt} locale={locale} as="h1" />
+              <ApartmentDetails apt={apt} locale={locale} />
+            </article>
+            <aside className="flex flex-col gap-4 transition-[top] duration-[380ms] lg:sticky lg:top-[calc(var(--hdr)+24px)]">
+              <ApartmentPrices apt={apt} locale={locale} />
+              <ApartmentBookingBox apt={apt} />
+            </aside>
+          </div>
           <nav
             aria-label={t('allApartments')}
             className="border-ink/10 mt-[clamp(32px,5vw,56px)] flex flex-wrap items-center justify-between gap-3 border-t pt-6"

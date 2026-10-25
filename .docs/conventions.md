@@ -45,6 +45,9 @@ tests/unit · tests/e2e
 - Medidas del diseño con valores arbitrarios (`text-[17.5px]`, `px-[30px]`) cuando no coinciden con la escala de Tailwind. Es intencional: pixel-perfect.
 - Breakpoints del diseño: `min-[761px]` (alternado de columnas), `min-[1081px]` (nav desktop / burger).
 - Animaciones decorativas con `animate-mo-*` → se apagan solas con `prefers-reduced-motion`.
+- Aparición al hacer scroll: atributo `data-reveal="up|left|right"` (+ `style={{ '--reveal-delay': '.1s' }}`) en cualquier elemento de servidor; lo activa `RevealObserver` (layout). Solo oculta con JS y movimiento permitido. La sección debe tener `overflow-x-clip` si usa left/right.
+- Nunca animar desde `opacity: 0` el elemento LCP (h1 del hero): usar solo movimiento (`mo-slide-in`).
+- `--hdr`: alto del header fijo (79 px, 0 cuando se oculta). Usar en elementos `sticky` (`top-[var(--hdr)]`).
 
 ## Contenido
 

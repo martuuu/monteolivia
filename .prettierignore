@@ -1,0 +1,6 @@
+design/
+images/
+assets-src/
+public/
+.next/
+src/data/image-manifest.ts

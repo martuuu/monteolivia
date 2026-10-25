@@ -3,6 +3,8 @@ import { getTranslations } from 'next-intl/server'
 import { locale as rootLocale } from 'next/root-params'
 import type { Locale } from '@/i18n/routing'
 import { buildMetadata } from '@/lib/seo'
+import { businessJsonLd, websiteJsonLd } from '@/lib/jsonld'
+import { JsonLd } from '@/components/seo/JsonLd'
 import { Hero } from '@/components/home/Hero'
 import { QuickFacts } from '@/components/home/QuickFacts'
 import { HomeApartments } from '@/components/home/HomeApartments'
@@ -30,6 +32,7 @@ export default async function Home() {
   const locale = (await rootLocale()) as Locale
   return (
     <>
+      <JsonLd data={[businessJsonLd(locale), websiteJsonLd(locale)]} />
       <Hero />
       <QuickFacts />
       <HomeApartments locale={locale} />

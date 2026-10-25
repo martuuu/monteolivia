@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { locale as rootLocale } from 'next/root-params'
-import type { Locale } from '@/i18n/routing'
+import { pageLocale } from '@/i18n/locale'
 import { buildMetadata } from '@/lib/seo'
 import { businessJsonLd, websiteJsonLd } from '@/lib/jsonld'
 import { JsonLd } from '@/components/seo/JsonLd'
@@ -16,7 +15,7 @@ import { Tours } from '@/components/home/Tours'
 import { Location } from '@/components/home/Location'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const t = await getTranslations('Meta')
   return buildMetadata({
     locale,
@@ -29,7 +28,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Home() {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   return (
     <>
       <JsonLd data={[businessJsonLd(locale), websiteJsonLd(locale)]} />

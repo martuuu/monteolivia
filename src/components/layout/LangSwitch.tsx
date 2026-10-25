@@ -30,7 +30,6 @@ export function LangSwitch({ locale, label, switchTo, variant = 'light' }: Props
             hrefLang={l}
             lang={l}
             aria-current={active ? 'true' : undefined}
-            aria-label={active ? undefined : switchTo}
             onClick={(e) => {
               if (active) return e.preventDefault()
               if (window.location.hash) {
@@ -53,6 +52,7 @@ export function LangSwitch({ locale, label, switchTo, variant = 'light' }: Props
             data-track-to={l}
           >
             {l.toUpperCase()}
+            {!active && <span className="sr-only"> · {switchTo}</span>}
           </a>
         )
       })}

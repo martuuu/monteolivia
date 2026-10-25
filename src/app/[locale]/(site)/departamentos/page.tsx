@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { locale as rootLocale } from 'next/root-params'
+import { pageLocale } from '@/i18n/locale'
 import { Link } from '@/i18n/navigation'
-import type { Locale } from '@/i18n/routing'
 import { apartments, apartmentSlug } from '@/data/apartments'
 import { buildMetadata, localizedUrl } from '@/lib/seo'
 import { breadcrumbJsonLd } from '@/lib/jsonld'
@@ -12,7 +11,7 @@ import { ApartmentBlock } from '@/components/apartments/ApartmentBlock'
 import { ClosingCta } from '@/components/apartments/ClosingCta'
 
 export async function generateMetadata(): Promise<Metadata> {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const t = await getTranslations('Meta')
   return buildMetadata({
     locale,
@@ -25,7 +24,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ApartmentsPage() {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const t = await getTranslations('ApartmentsPage')
   const c = await getTranslations('Common')
   const a = await getTranslations('Apartment')

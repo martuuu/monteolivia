@@ -1,13 +1,12 @@
 import { getTranslations } from 'next-intl/server'
-import { locale as rootLocale } from 'next/root-params'
+import { pageLocale } from '@/i18n/locale'
 import { SiteHeader } from '@/components/layout/SiteHeader'
 import { SiteFooter } from '@/components/layout/SiteFooter'
 import { WhatsAppFab } from '@/components/layout/WhatsAppFab'
 import { site, waUrl } from '@/data/site'
-import type { Locale } from '@/i18n/routing'
 
 export default async function SiteLayout({ children }: LayoutProps<'/[locale]'>) {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const n = await getTranslations('Nav')
   const c = await getTranslations('Common')
   return (

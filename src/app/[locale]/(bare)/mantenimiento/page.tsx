@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
-import { locale as rootLocale } from 'next/root-params'
-import type { Locale } from '@/i18n/routing'
+import { pageLocale } from '@/i18n/locale'
 import { mailtoUrl, site, waUrl } from '@/data/site'
 import { HouseSmokeIcon } from '@/components/icons/animated'
 import { WhatsAppIcon } from '@/components/icons'
@@ -15,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 /** Página de mantenimiento (design/extracted/mantenimiento). El proxy la sirve con 503 cuando MAINTENANCE_MODE=1. */
 export default async function Maintenance() {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const t = await getTranslations('Maintenance')
   const n = await getTranslations('Nav')
   const c = await getTranslations('Common')

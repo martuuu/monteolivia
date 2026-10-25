@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
-import { locale as rootLocale } from 'next/root-params'
+import { pageLocale } from '@/i18n/locale'
 import { Link } from '@/i18n/navigation'
-import { routing, type Locale } from '@/i18n/routing'
+import { routing } from '@/i18n/routing'
 import { apartmentFromSlug, apartments, apartmentSlug, minPrice } from '@/data/apartments'
 import { buildMetadata, localizedUrl } from '@/lib/seo'
 import { apartmentJsonLd, breadcrumbJsonLd } from '@/lib/jsonld'
@@ -19,7 +19,7 @@ export function generateStaticParams() {
 }
 
 async function resolve(params: PageProps<'/[locale]/departamentos/[slug]'>['params']) {
-  const locale = (await rootLocale()) as Locale
+  const locale = await pageLocale()
   const { slug } = await params
   const apt = apartmentFromSlug(slug, locale)
   if (!apt) notFound()

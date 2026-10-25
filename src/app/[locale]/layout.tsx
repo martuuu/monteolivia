@@ -4,7 +4,9 @@ import { hasLocale, NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 import { routing } from '@/i18n/routing'
 import type { Metadata, Viewport } from 'next'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { site } from '@/data/site'
+import { Analytics } from '@/components/analytics/Analytics'
 import '@/styles/globals.css'
 
 const marcellus = Marcellus({
@@ -19,6 +21,8 @@ const archivo = Archivo({
   variable: '--font-archivo',
   display: 'swap',
 })
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -46,6 +50,8 @@ export default async function RootLayout({ children }: LayoutProps<'/[locale]'>)
         <NextIntlClientProvider locale={locale} messages={null} timeZone="America/Argentina/Ushuaia">
           {children}
         </NextIntlClientProvider>
+        <Analytics />
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} debugMode={process.env.NEXT_PUBLIC_GA_DEBUG === '1'} />}
       </body>
     </html>
   )

@@ -1,33 +1,45 @@
 import type { Locale } from '@/i18n/routing'
 
 /**
- * Traduce una URL pública al otro idioma (para el selector ES/EN del header).
+ * Traduce una URL al otro idioma (selector ES/EN). Acepta la URL pública (/en/apartments/apartment-2)
+ * y también la ruta interna que puede devolver usePathname tras el rewrite de next-intl
+ * (/es/departamentos/departamento-2, /en/departamentos/apartment-2).
  * Espejo de `pathnames` en src/i18n/routing.ts — mantener sincronizado.
  */
-const pairs: [es: RegExp, en: string, en2es: RegExp, es: string][] = [
-  [
-    /^\/departamentos\/departamento-(\d)$/,
-    '/apartments/apartment-$1',
-    /^\/apartments\/apartment-(\d)$/,
-    '/departamentos/departamento-$1',
-  ],
-  [/^\/departamentos$/, '/apartments', /^\/apartments$/, '/departamentos'],
-  [/^\/mantenimiento$/, '/maintenance', /^\/maintenance$/, '/mantenimiento'],
-]
+type Parsed =
+  | { kind: 'home' }
+  | { kind: 'list' }
+  | { kind: 'detail'; n: string }
+  | { kind: 'maintenance' }
+  | { kind: 'other'; rest: string }
 
 export function localeOfPath(pathname: string): Locale {
-  return pathname === '/en' || pathname.startsWith('/en/') ? 'en' : 'es'
+  return /^\/en(\/|$)/.test(pathname) ? 'en' : 'es'
+}
+
+function parse(pathname: string): Parsed {
+  const rest = (pathname.replace(/\/+$/, '') || '/').replace(/^\/(es|en)(?=\/|$)/, '') || '/'
+  if (rest === '/') return { kind: 'home' }
+  if (/^\/(departamentos|apartments)$/.test(rest)) return { kind: 'list' }
+  const d = rest.match(/^\/(?:departamentos|apartments)\/(?:departamento|apartment)-(\d+)$/)
+  if (d) return { kind: 'detail', n: d[1] }
+  if (/^\/(mantenimiento|maintenance)$/.test(rest)) return { kind: 'maintenance' }
+  return { kind: 'other', rest }
 }
 
 export function switchLocalePath(pathname: string, to: Locale): string {
-  const clean = pathname.replace(/\/+$/, '') || '/'
-  const from = localeOfPath(clean)
-  if (from === to) return clean
-  if (to === 'en') {
-    for (const [re, en] of pairs) if (re.test(clean)) return '/en' + clean.replace(re, en)
-    return clean === '/' ? '/en' : '/en' + clean
+  const p = parse(pathname)
+  const en = to === 'en'
+  switch (p.kind) {
+    case 'home':
+      return en ? '/en' : '/'
+    case 'list':
+      return en ? '/en/apartments' : '/departamentos'
+    case 'detail':
+      return en ? `/en/apartments/apartment-${p.n}` : `/departamentos/departamento-${p.n}`
+    case 'maintenance':
+      return en ? '/en/maintenance' : '/mantenimiento'
+    default:
+      return en ? `/en${p.rest}` : p.rest
   }
-  const rest = clean.replace(/^\/en/, '') || '/'
-  for (const [, , re, es] of pairs) if (re.test(rest)) return rest.replace(re, es)
-  return rest
 }

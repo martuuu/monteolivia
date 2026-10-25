@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="1804a809-af6f-4f16-a9d5-c7171344c7df"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b10f5acf-7ecc-41e1-9566-b95268e0a6cc") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("309550af-d209-4de1-ae28-a394b590038f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("c2a93b22-d008-4856-bfe0-927d446ad235") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b10f5acf-7ecc-41e1-9566-b95268e0a6cc") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("309550af-d209-4de1-ae28-a394b590038f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("c2a93b22-d008-4856-bfe0-927d446ad235") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b10f5acf-7ecc-41e1-9566-b95268e0a6cc") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("309550af-d209-4de1-ae28-a394b590038f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("c2a93b22-d008-4856-bfe0-927d446ad235") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("b10f5acf-7ecc-41e1-9566-b95268e0a6cc") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("309550af-d209-4de1-ae28-a394b590038f") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("c2a93b22-d008-4856-bfe0-927d446ad235") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("60f8cf2c-3abd-4172-85a9-7b89be9c908a") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("8e367a61-137b-495c-a490-4747f8086381") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="3cd66cb7-645f-425e-a8fb-e8b52a9a32d3"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Archivo',system-ui,sans-serif;color:#0B2836;background:#F6F4EF;-webkit-font-smoothing:antialiased;font-size:18px}
+input,select,textarea,button{font-family:inherit}
+a{color:#164E63;text-decoration:none}
+a:hover{color:#D97F1E}
+.en{display:none !important}
+body[data-lang="en"] .en{display:revert !important}
+body[data-lang="en"] .es{display:none !important}
+#lb-es,#lb-en{border:0;cursor:pointer;background:transparent;color:#4E6672;font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;letter-spacing:.6px}
+#lb-es{background:#164E63;color:#FFFFFF}
+body[data-lang="en"] #lb-es{background:transparent;color:#4E6672}
+body[data-lang="en"] #lb-en{background:#164E63;color:#FFFFFF}
+#mo-nav{transition:transform .38s cubic-bezier(.4,0,.2,1)}
+#mo-nav[data-hidden="true"]{transform:translateY(-110%)}
+#mo-links{display:flex}
+#mo-burger{display:none}
+@media (max-width:1080px){#mo-links{display:none}#mo-burger{display:flex}}
+@keyframes moZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes moPaxWave{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-3px);opacity:1}}
+@keyframes moLbFade{from{opacity:0}to{opacity:1}}
+@keyframes moLbIn{from{opacity:0;transform:scale(.55)}to{opacity:1;transform:scale(1)}}
+</style>
+</helmet>
+
+<header id="mo-nav" data-hidden="{{ navHidden }}" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,40px);background:rgba(246,244,239,.9);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(11,40,54,.08)">
+  <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html" style="display:flex;align-items:center;flex:none"><img src="d40f36f2-b9be-472f-92d3-61d29e72dd92.png" alt="Monte Olivia Suites" style="height:54px;width:auto;display:block"></a>
+  <nav id="mo-links" style="align-items:center;gap:clamp(14px,2.2vw,30px);font-size:16.5px;font-weight:500">
+    <a href="#inicio" style="color:#164E63;font-weight:600;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:100% 2px"><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#tarifas" style="color:#0B2836;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:0% 2px;transition:background-size .45s cubic-bezier(.4,0,.2,1),color .2s" style-hover="color:#164E63;background-size:100% 2px"><span class="es">Tarifas</span><span class="en">Rates</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#huespedes" style="color:#0B2836;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:0% 2px;transition:background-size .45s cubic-bezier(.4,0,.2,1),color .2s" style-hover="color:#164E63;background-size:100% 2px"><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#reserva" style="display:inline-flex;align-items:center;background:#164E63;color:#FFFFFF;font-weight:600;padding:11px 20px;border-radius:999px;margin-left:4px" style-hover="background:#0F3B4C;color:#FFFFFF"><span class="es">Reservar</span><span class="en">Book</span></a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="display:flex;align-items:center;gap:2px;border:1px solid rgba(11,40,54,.14);border-radius:999px;padding:2px">
+      <button id="lb-es" sc-camel-on-click="{{ setEs }}">ES</button>
+      <button id="lb-en" sc-camel-on-click="{{ setEn }}">EN</button>
+    </div>
+    <button id="mo-burger" sc-camel-on-click="{{ openMenu }}" aria-label="Menú" style="flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;border-radius:999px;border:1px solid rgba(11,40,54,.14);background:#FFFFFF;cursor:pointer;align-items:center" style-hover="border-color:#164E63">
+      <span style="display:block;width:18px;height:2px;background:#164E63;border-radius:2px"></span>
+      <span style="display:block;width:18px;height:2px;background:#164E63;border-radius:2px"></span>
+    </button>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:90;background:rgba(9,31,42,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;padding:clamp(20px,5vw,56px);overflow:auto">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <img src="895481ab-645f-494f-b207-fa213cc9378e.png" alt="Monte Olivia Suites" style="height:52px;width:auto;border-radius:10px">
+    <button sc-camel-on-click="{{ closeMenu }}" aria-label="Cerrar" style="width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#FFFFFF;font-size:20px;cursor:pointer" style-hover="background:rgba(255,255,255,.12)">✕</button>
+  </div>
+  <nav style="display:flex;flex-direction:column;gap:clamp(10px,2vh,16px);margin:auto 0;max-width:560px;padding:24px 0">
+    <a href="#inicio" sc-camel-on-click="{{ closeMenu }}" style="color:#F0973B;font-family:'Marcellus',serif;font-size:clamp(1.9rem,5.5vw,2.9rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#FFFFFF"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">01</span><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#tarifas" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(1.9rem,5.5vw,2.9rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">02</span><span class="es">Tarifas</span><span class="en">Rates</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#huespedes" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(1.9rem,5.5vw,2.9rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">03</span><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+    <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#reserva" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(1.9rem,5.5vw,2.9rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">04</span><span class="es">Reservar</span><span class="en">Book now</span></a>
+  </nav>
+  <div style="display:flex;flex-wrap:wrap;gap:18px;color:rgba(255,255,255,.65);font-size:15px">
+    <a href="{{ heroWa }}" target="_blank" style="color:rgba(255,255,255,.85)">+54 9 291 642 1561</a>
+    <span>Primer Argentino 108 · Ushuaia</span>
+  </div>
+</div>
+</sc-if>
+
+<section id="inicio" data-screen-label="Departamentos — Portada" style="position:relative;min-height:72vh;display:flex;align-items:flex-end;overflow:hidden;background:#0B2836">
+  <img src="19b1ef40-9409-4be9-93ed-fca5997ae642.avif" alt="Ushuaia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;animation:moZoom 16s ease-out forwards">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,40,54,.4) 0%,rgba(11,40,54,.1) 35%,rgba(7,27,38,.8) 75%,rgba(7,27,38,.96) 100%)"></div>
+  <div style="position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:140px clamp(18px,5vw,64px) clamp(44px,6vh,72px);display:flex;flex-direction:column;gap:22px">
+    <div style="max-width:820px">
+      <p style="margin:0 0 14px;color:#F0973B;font-size:15px;font-weight:600;letter-spacing:3px;text-transform:uppercase">Monte Olivia Suites · Ushuaia</p>
+      <h1 style="margin:0;font-family:'Marcellus',serif;font-weight:400;color:#FFFFFF;font-size:clamp(2.8rem,7vw,5rem);line-height:1.05;text-shadow:0 2px 24px rgba(7,27,38,.6)"><span class="es">Departamentos</span><span class="en">Apartments</span></h1>
+      <p style="margin:18px 0 0;color:rgba(255,255,255,.92);font-size:clamp(18px,2.2vw,20px);line-height:1.65;max-width:62ch;text-shadow:0 1px 14px rgba(7,27,38,.7)"><span class="es">Cinco departamentos modernos y muy espaciosos en una zona residencial, comercial y a la vez muy tranquila de Ushuaia. Cada detalle está pensado para que te sientas como en casa: decoración cálida y con estilo, cocina completa y Wi-Fi libre. Estacionamiento sin cargo, a pedido al reservar.</span><span class="en">Five modern, very spacious apartments in a residential and commercial — yet very quiet — area of Ushuaia. Every detail is designed to make you feel at home: warm, stylish interiors, full kitchens and free Wi-Fi. Free parking on request when booking.</span></p>
+    </div>
+  </div>
+</section>
+
+<sc-for list="{{ apts }}" as="a" hint-placeholder-count="5">
+<section id="{{ a.id }}" data-screen-label="{{ a.numLbl }}" style="scroll-margin-top:90px;background:#FFFFFF;border-top:1px solid rgba(11,40,54,.08)">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(18px,5vw,64px)">
+    <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:clamp(24px,4vw,56px);align-items:start">
+      <div style="position:sticky;top:96px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-template-rows:repeat(5,minmax(0,1fr));gap:10px;aspect-ratio:6/5">
+        <div sc-camel-on-click="{{ a.open1 }}" style="grid-column:1/5;grid-row:1/4;position:relative;border-radius:16px;overflow:hidden;background:#E7E3DA;cursor:zoom-in">
+          <div style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.05)"><image-slot id="{{ a.slotMain }}" shape="rect" placeholder="{{ a.phMain }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+        <div sc-camel-on-click="{{ a.open2 }}" style="grid-column:5/7;grid-row:1/3;position:relative;border-radius:12px;overflow:hidden;background:#E7E3DA;cursor:zoom-in">
+          <div style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.07)"><image-slot id="{{ a.slot2 }}" shape="rect" placeholder="{{ a.ph2 }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+        <div sc-camel-on-click="{{ a.open3 }}" style="grid-column:5/7;grid-row:3/4;position:relative;border-radius:12px;overflow:hidden;background:#E7E3DA;cursor:zoom-in">
+          <div style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.07)"><image-slot id="{{ a.slot3 }}" shape="rect" placeholder="{{ a.ph3 }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+        <div sc-camel-on-click="{{ a.open4 }}" style="grid-column:1/3;grid-row:4/6;position:relative;border-radius:12px;overflow:hidden;background:#E7E3DA;cursor:zoom-in">
+          <div style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.07)"><image-slot id="{{ a.slot4 }}" shape="rect" placeholder="{{ a.ph4 }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+        <div sc-camel-on-click="{{ a.open5 }}" style="grid-column:3/7;grid-row:4/6;position:relative;border-radius:12px;overflow:hidden;background:#E7E3DA;cursor:zoom-in">
+          <div style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.2,.7,.2,1)" style-hover="transform:scale(1.07)"><image-slot id="{{ a.slot5 }}" shape="rect" placeholder="{{ a.ph5 }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div>
+          <p style="margin:0 0 8px;color:#D97F1E;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase">{{ a.numLbl }}</p>
+          <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.1;color:#0B2836">{{ a.paxTitle }}</h2>
+          <div style="display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap">
+            <span style="display:inline-flex;gap:3px;color:#164E63"><sc-for list="{{ a.paxIcons }}" as="i" hint-placeholder-count="4"><svg width="18" height="18" sc-camel-view-box="0 0 14 14" fill="currentColor" aria-hidden="true" style="animation-name:moPaxWave;animation-duration:2.8s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-delay:{{ i.d }}"><circle cx="7" cy="3.6" r="3"></circle><path d="M.8 14c0-3.6 2.6-5.8 6.2-5.8s6.2 2.2 6.2 5.8z"></path></svg></sc-for></span>
+            <span style="font-size:16px;color:#4E6672;font-weight:500">{{ a.sizeLine }}</span>
+          </div>
+        </div>
+        <p style="margin:0;font-size:18px;color:#0B2836;line-height:1.65">{{ a.p1 }}</p>
+        <p style="margin:0;font-size:17px;color:#4E6672;line-height:1.65">{{ a.p2 }}</p>
+        <div>
+          <p style="margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8FA3AC">{{ roomsLbl }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <sc-for list="{{ a.rooms }}" as="r" hint-placeholder-count="4"><span style="display:inline-flex;align-items:center;background:#F6F4EF;border:1px solid rgba(11,40,54,.1);color:#0B2836;font-size:15.5px;font-weight:500;padding:8px 14px;border-radius:999px">{{ r }}</span></sc-for>
+          </div>
+        </div>
+        <div>
+          <p style="margin:0 0 10px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8FA3AC">{{ amenLbl }}</p>
+          <ul style="margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;font-size:16.5px;color:#0B2836;line-height:1.4">
+            <sc-for list="{{ a.amenities }}" as="am" hint-placeholder-count="6"><li style="display:flex;gap:9px;align-items:flex-start"><svg width="18" height="18" sc-camel-view-box="0 0 20 20" fill="none" stroke="#F0973B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M4 10.5l4 4 8-9"></path></svg><span>{{ am }}</span></li></sc-for>
+          </ul>
+        </div>
+        <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+          <div style="background:#F6F4EF;border:1px solid rgba(11,40,54,.1);border-radius:14px;padding:16px 18px">
+            <p style="margin:0;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#8FA3AC">{{ lowLbl }}</p>
+            <p style="margin:2px 0 10px;font-size:14px;color:#4E6672">{{ lowMonths }}</p>
+            <sc-for list="{{ a.baja }}" as="r" hint-placeholder-count="2"><div style="display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-top:1px solid rgba(11,40,54,.08);font-size:16.5px"><span style="color:#4E6672">{{ r.k }}</span><span style="font-weight:600;color:#164E63">{{ r.v }}</span></div></sc-for>
+          </div>
+          <div style="background:#0F3B4C;border-radius:14px;padding:16px 18px;color:#FFFFFF">
+            <p style="margin:0;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6)">{{ highLbl }}</p>
+            <p style="margin:2px 0 10px;font-size:14px;color:rgba(255,255,255,.7)">{{ highMonths }}</p>
+            <sc-for list="{{ a.alta }}" as="r" hint-placeholder-count="2"><div style="display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-top:1px solid rgba(255,255,255,.14);font-size:16.5px"><span style="color:rgba(255,255,255,.7)">{{ r.k }}</span><span style="font-weight:600;color:#F0973B">{{ r.v }}</span></div></sc-for>
+          </div>
+        </div>
+        </sc-if>
+        <div style="background:#0B2836;border-radius:16px;padding:18px 20px;color:#FFFFFF;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0;color:#F0973B;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase">{{ bookEyebrow }}</p>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px">
+            <label style="display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:rgba(255,255,255,.75)"><span>{{ inLbl }}</span><input id="{{ a.inId }}" type="date" style="border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:9px 12px;font-size:15px;color:#0B2836;background:#FFFFFF;outline:none;min-width:0" style-focus="border-color:#F0973B;box-shadow:0 0 0 3px rgba(240,151,59,.3)"></label>
+            <label style="display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:rgba(255,255,255,.75)"><span>{{ outLbl }}</span><input id="{{ a.outId }}" type="date" style="border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:9px 12px;font-size:15px;color:#0B2836;background:#FFFFFF;outline:none;min-width:0" style-focus="border-color:#F0973B;box-shadow:0 0 0 3px rgba(240,151,59,.3)"></label>
+            <label style="display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:rgba(255,255,255,.75)"><span>{{ paxLbl }}</span><sc-raw-select id="{{ a.paxId }}" style="border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:9px 12px;font-size:15px;color:#0B2836;background:#FFFFFF;outline:none;min-width:0"><sc-for list="{{ a.paxOptions }}" as="o" hint-placeholder-count="2"><option value="{{ o.v }}" selected="{{ o.sel }}">{{ o.v }}</option></sc-for></sc-raw-select></label>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+            <span style="font-size:14px;color:rgba(255,255,255,.65);margin-right:4px">{{ channelLbl }}</span>
+            <button sc-camel-on-click="{{ a.sendWa }}" style="display:inline-flex;align-items:center;gap:8px;background:#F0973B;border:0;color:#082330;font-weight:600;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer" style-hover="background:#E08420">
+              <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+              WhatsApp
+            </button>
+            <button sc-camel-on-click="{{ a.sendMail }}" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.4);color:#FFFFFF;font-weight:600;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer" style-hover="background:rgba(255,255,255,.12)">
+              <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7l8.5 6.5L20.5 7"></path></svg>
+              Email
+            </button>
+            <button sc-camel-on-click="{{ a.goAirbnb }}" style="display:inline-flex;align-items:center;gap:8px;background:transparent;border:1px solid rgba(255,255,255,.4);color:#FFFFFF;font-weight:600;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer" style-hover="background:rgba(255,255,255,.12)">
+              <svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6c-2.2 0-3.4 3-5.3 7.3C5.3 13 3.4 16.8 3.4 18.4c0 1.9 1.5 3.3 3.3 3.3 1.9 0 3.7-1.4 5.3-3.2 1.6 1.8 3.4 3.2 5.3 3.2 1.8 0 3.3-1.4 3.3-3.3 0-1.6-1.9-5.4-3.3-8.5C15.4 5.6 14.2 2.6 12 2.6z"></path><path d="M12 18.5c-1.3-1.6-2.4-3.4-2.4-4.8a2.4 2.4 0 0 1 4.8 0c0 1.4-1.1 3.2-2.4 4.8z"></path></svg>
+              Airbnb
+            </button>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+</sc-for>
+
+<section data-screen-label="Cierre" style="background:#F6F4EF;border-top:1px solid rgba(11,40,54,.08)">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between">
+    <div style="max-width:620px">
+      <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2rem,4vw,2.8rem);line-height:1.15"><span class="es">¿No sabés cuál elegir?</span><span class="en">Not sure which one to choose?</span></h2>
+      <p style="margin:12px 0 0;color:#4E6672;font-size:18px;line-height:1.6"><span class="es">Contanos cuántos viajan y en qué fechas, y te recomendamos el departamento ideal.</span><span class="en">Tell us how many are travelling and when, and we'll recommend the ideal apartment.</span></p>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <a href="{{ heroWa }}" target="_blank" style="display:inline-flex;align-items:center;gap:9px;background:#F0973B;color:#082330;font-weight:600;font-size:17px;padding:16px 28px;border-radius:999px" style-hover="background:#E08420;color:#082330"><span class="es">Consultar por WhatsApp</span><span class="en">Ask via WhatsApp</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#tarifas" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(11,40,54,.22);color:#164E63;font-weight:600;font-size:17px;padding:16px 26px;border-radius:999px" style-hover="border-color:#164E63;background:#F6F4EF"><span class="es">Ver tarifas</span><span class="en">See rates</span></a>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="background:#0B2836;color:#FFFFFF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,7vw,72px) clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,48px);align-items:flex-start;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:300px">
+      <img src="895481ab-645f-494f-b207-fa213cc9378e.png" alt="Monte Olivia Suites" style="height:64px;width:auto;border-radius:12px;align-self:flex-start">
+      <p style="margin:0;font-family:'Marcellus',serif;font-size:19px;color:rgba(255,255,255,.85)"><span class="es">Tu lugar en el fin del mundo.</span><span class="en">Your place at the end of the world.</span></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:16.5px">
+      <p style="margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F0973B"><span class="es">Secciones</span><span class="en">Sections</span></p>
+      <a href="#inicio" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#tarifas" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Tarifas</span><span class="en">Rates</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#huespedes" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#reserva" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Reservar</span><span class="en">Book</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#galeria" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Galería</span><span class="en">Gallery</span></a>
+      <a href="Monte%20Olivia%20-%20Sitio%20v2.dc.html#ubicacion" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Ubicación</span><span class="en">Location</span></a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:16.5px;max-width:280px">
+      <p style="margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F0973B"><span class="es">Contacto</span><span class="en">Contact</span></p>
+      <p style="margin:0;color:rgba(255,255,255,.8);line-height:1.55">Primer Argentino 108<br>(9410) Ushuaia, Tierra del Fuego</p>
+      <a href="{{ heroWa }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>+54 9 291 642 1561</a>
+      <a href="{{ mailHref }}" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B">{{ email }}</a>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <a href="{{ igUrl }}" target="_blank" title="Instagram" style="width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="border-color:#F0973B;color:#F0973B"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="{{ abUrl }}" target="_blank" title="Airbnb" style="width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="border-color:#F0973B;color:#F0973B"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6c-2.2 0-3.4 3-5.3 7.3C5.3 13 3.4 16.8 3.4 18.4c0 1.9 1.5 3.3 3.3 3.3 1.9 0 3.7-1.4 5.3-3.2 1.6 1.8 3.4 3.2 5.3 3.2 1.8 0 3.3-1.4 3.3-3.3 0-1.6-1.9-5.4-3.3-8.5C15.4 5.6 14.2 2.6 12 2.6z"></path><path d="M12 18.5c-1.3-1.6-2.4-3.4-2.4-4.8a2.4 2.4 0 0 1 4.8 0c0 1.4-1.1 3.2-2.4 4.8z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.12)">
+    <div style="max-width:1180px;margin:0 auto;padding:18px clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:14.5px;color:rgba(255,255,255,.5)">
+      <span>© 2026 Monte Olivia Suites — Ushuaia, Argentina</span>
+      <span><span class="es">Precios en U$S, por noche</span><span class="en">Rates in U$S, per night</span></span>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+<div sc-camel-on-click="{{ lbClose }}" role="dialog" aria-modal="true" style="position:fixed;inset:0;z-index:100;background:rgba(7,27,38,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:moLbFade .3s ease-out">
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,56px) clamp(64px,8vw,110px);animation:moLbIn .5s cubic-bezier(.2,.7,.2,1);transform-origin:{{ lbOrigin }}">
+    <figure sc-camel-on-click="{{ lbStop }}" style="margin:0;max-width:1240px;max-height:100%;display:flex;flex-direction:column;align-items:center;gap:16px;cursor:default">
+      <div role="img" aria-label="{{ lbCap }}" style="{{ lbImgStyle }}"></div>
+      <figcaption style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:6px 14px;color:rgba(255,255,255,.8);font-size:15.5px;text-align:center">
+        <span style="font-family:'Marcellus',serif;font-size:20px;color:#FFFFFF">{{ lbTitle }}</span>
+        <span>{{ lbCap }}</span>
+        <span style="color:#F0973B;font-weight:600;letter-spacing:1.5px;font-size:14px">{{ lbCount }}</span>
+      </figcaption>
+    </figure>
+  </div>
+  <button sc-camel-on-click="{{ lbClose }}" aria-label="Cerrar" style="position:absolute;top:18px;right:18px;width:50px;height:50px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(11,40,54,.5);color:#FFFFFF;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#F0973B;color:#082330;border-color:#F0973B">
+    <svg width="20" height="20" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+  </button>
+  <sc-if value="{{ lbMulti }}" hint-placeholder-val="{{ false }}">
+    <button sc-camel-on-click="{{ lbPrev }}" aria-label="Anterior" style="position:absolute;left:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(11,40,54,.5);color:#FFFFFF;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#F0973B;color:#082330;border-color:#F0973B">
+      <svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>
+    </button>
+    <button sc-camel-on-click="{{ lbNext }}" aria-label="Siguiente" style="position:absolute;right:clamp(10px,2vw,28px);top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(11,40,54,.5);color:#FFFFFF;cursor:pointer;display:flex;align-items:center;justify-content:center" style-hover="background:#F0973B;color:#082330;border-color:#F0973B">
+      <svg width="22" height="22" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"></path></svg>
+    </button>
+  </sc-if>
+</div>
+</sc-if>
+
+<a href="{{ heroWa }}" target="_blank" aria-label="WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:70;width:70px;height:70px;border-radius:999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(11,40,54,.32);transition:transform .2s ease" style-hover="transform:scale(1.07)">
+  <svg width="36" height="36" sc-camel-view-box="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+</a>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;whatsapp&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;5492916421561&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;email&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;info@monteoliviasuites.com.ar&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;instagramUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.instagram.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;airbnbUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.airbnb.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;idiomaInicial&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;es&quot;, &quot;en&quot;], &quot;default&quot;: &quot;es&quot;, &quot;tsType&quot;: &quot;'es' | 'en'&quot;, &quot;section&quot;: &quot;Contenido&quot;}, &quot;mostrarPrecios&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contenido&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'es', menuOpen: false, navHidden: false, lb: null };
+  // Lightbox: collect filled slots of one apartment (image bytes live in each slot's shadow <img>).
+  openLb(n, ids, k, e) {
+    const path = e && e.nativeEvent && e.nativeEvent.composedPath ? e.nativeEvent.composedPath() : [];
+    if (path.some(x => x && x.getAttribute && (x.hasAttribute('data-act') || (x.classList && (x.classList.contains('ctl') || x.classList.contains('credit')))))) return;
+    const clicked = document.getElementById(ids[k]);
+    if (!clicked || !clicked.hasAttribute('data-filled') || clicked.hasAttribute('data-reframe')) return;
+    const imgs = [];
+    ids.forEach((id, i) => {
+      const s = document.getElementById(id);
+      const im = s && s.hasAttribute('data-filled') && s.shadowRoot && s.shadowRoot.querySelector('.frame img');
+      if (im && im.getAttribute('src')) imgs.push({ src: im.getAttribute('src'), k: i });
+    });
+    if (!imgs.length) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    const origin = Math.round(r.left + r.width / 2) + 'px ' + Math.round(r.top + r.height / 2) + 'px';
+    const idx = Math.max(0, imgs.findIndex(x => x.k === k));
+    document.body.style.overflow = 'hidden';
+    this.setState({ lb: { n, imgs, idx, origin } });
+  }
+  closeLb() { document.body.style.overflow = ''; this.setState({ lb: null }); }
+  stepLb(d) { this.setState(s => s.lb ? { lb: Object.assign({}, s.lb, { idx: (s.lb.idx + d + s.lb.imgs.length) % s.lb.imgs.length }) } : null); }
+  componentDidMount() {
+    let l = null;
+    try { l = localStorage.getItem('mo-lang'); } catch (e) {}
+    this.applyLang(l || this.props.idiomaInicial || 'es');
+    this._lastY = window.scrollY;
+    this._onScroll = () => {
+      const y = window.scrollY;
+      const hidden = y > this._lastY + 4 && y > 140;
+      const shown = y < this._lastY - 4 || y <= 140;
+      if (hidden && !this.state.navHidden) this.setState({ navHidden: true });
+      else if (shown && this.state.navHidden) this.setState({ navHidden: false });
+      this._lastY = y;
+    };
+    this._onKey = (e) => {
+      if (e.key === 'Escape') { if (this.state.lb) this.closeLb(); else this.setState({ menuOpen: false }); }
+      if (this.state.lb && e.key === 'ArrowRight') this.stepLb(1);
+      if (this.state.lb && e.key === 'ArrowLeft') this.stepLb(-1);
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('keydown', this._onKey); }
+  applyLang(l) {
+    document.body.dataset.lang = l;
+    try { localStorage.setItem('mo-lang', l); } catch (e) {}
+    this.setState({ lang: l });
+  }
+  waNum() { return String(this.props.whatsapp ?? '5492916421561').replace(/[^0-9]/g, ''); }
+  wa(msg) { return 'https://wa.me/' + this.waNum() + '?text=' + encodeURIComponent(msg); }
+  val(id) { const e = document.getElementById(id); return e && e.value ? e.value : ''; }
+  renderVals() {
+    const es = this.state.lang !== 'en';
+    const showPrices = this.props.mostrarPrecios ?? true;
+    const email = this.props.email ?? 'info@monteoliviasuites.com.ar';
+    const abUrl = this.props.airbnbUrl ?? 'https://www.airbnb.com/';
+    const DATA = [
+      { n: 1, pax: 6,
+        baja: [['4 pax', 'U$S 140'], ['5/6 pax', 'U$S 170']], alta: [['4 pax', 'U$S 150'], ['5/6 pax', 'U$S 185']],
+        sizeEs: 'Living-comedor · 2 dormitorios · Cocina completa', sizeEn: 'Living-dining · 2 bedrooms · Full kitchen',
+        p1Es: 'Amplio, moderno y con mucho estilo. Excelentes terminaciones y detalles de decoración que lo hacen muy cálido y confortable. Cuenta con un living-comedor espacioso y una cocina grande, completamente equipada.',
+        p1En: 'Spacious, modern and stylish. Excellent finishes and decorative details make it very warm and comfortable. It has a large living-dining room and a big, fully equipped kitchen.',
+        p2Es: 'Dos dormitorios — uno con cama matrimonial y otro con dos camas individuales — más un sofá cama en el living para el quinto y sexto huésped. Baño completo. Pensado para familias o grupos que quieren espacio de sobra.',
+        p2En: 'Two bedrooms — one with a double bed and one with two single beds — plus a sofa bed in the living room for the fifth and sixth guest. Full bathroom. Designed for families or groups who want plenty of room.',
+        roomsEs: ['Living-comedor', 'Cocina completa', '2 dormitorios', 'Sofá cama', 'Baño completo'], roomsEn: ['Living-dining room', 'Full kitchen', '2 bedrooms', 'Sofa bed', 'Full bathroom'] },
+      { n: 2, pax: 6,
+        baja: [['4 pax', 'U$S 140'], ['5/6 pax', 'U$S 170']], alta: [['4 pax', 'U$S 150'], ['5/6 pax', 'U$S 185']],
+        sizeEs: 'Living-comedor · 2 dormitorios · Cocina completa', sizeEn: 'Living-dining · 2 bedrooms · Full kitchen',
+        p1Es: 'Espacioso, luminoso y muy confortable. El living-comedor se integra con la cocina completa y una gran mesa familiar, ideal para compartir después de un día de excursiones.',
+        p1En: 'Spacious, bright and very comfortable. The living-dining room opens onto the full kitchen and a large family table — ideal for gathering after a day of tours.',
+        p2Es: 'Dos dormitorios y sofá cama en el living, con capacidad para hasta seis huéspedes. Decoración cálida, calefacción en todos los ambientes y vista a las montañas desde el living.',
+        p2En: 'Two bedrooms and a sofa bed in the living room, sleeping up to six guests. Warm décor, heating in every room and mountain views from the living room.',
+        roomsEs: ['Living-comedor', 'Cocina completa', '2 dormitorios', 'Sofá cama', 'Baño completo'], roomsEn: ['Living-dining room', 'Full kitchen', '2 bedrooms', 'Sofa bed', 'Full bathroom'] },
+      { n: 3, pax: 4,
+        baja: [['2 pax', 'U$S 100'], ['3/4 pax', 'U$S 125']], alta: [['2 pax', 'U$S 110'], ['3/4 pax', 'U$S 135']],
+        sizeEs: 'Living · 1 dormitorio · Cocina completa', sizeEn: 'Living room · 1 bedroom · Full kitchen',
+        p1Es: 'Cálido y funcional, pensado para parejas que buscan comodidad, con lugar para uno o dos huéspedes más. Luminoso y silencioso, con decoración cuidada en cada detalle.',
+        p1En: 'Warm and functional, designed for couples seeking comfort — with room for one or two more guests. Bright and quiet, with carefully chosen décor in every detail.',
+        p2Es: 'Dormitorio con cama matrimonial, living con sofá cama, cocina completa y baño completo. Una base cómoda para recorrer Ushuaia y volver a descansar.',
+        p2En: 'Bedroom with a double bed, living room with a sofa bed, full kitchen and full bathroom. A comfortable base to explore Ushuaia and come back to rest.',
+        roomsEs: ['Living', 'Cocina completa', '1 dormitorio', 'Sofá cama', 'Baño completo'], roomsEn: ['Living room', 'Full kitchen', '1 bedroom', 'Sofa bed', 'Full bathroom'] },
+      { n: 4, pax: 4,
+        baja: [['Hasta 4 pax', 'U$S 135']], alta: [['Hasta 4 pax', 'U$S 145']],
+        sizeEs: 'Living-comedor · 2 dormitorios · Cocina completa', sizeEn: 'Living-dining · 2 bedrooms · Full kitchen',
+        p1Es: 'Cómodo y completo para cuatro huéspedes. Living-comedor con cocina equipada y dos dormitorios independientes, para que cada uno tenga su espacio.',
+        p1En: 'Comfortable and complete for four guests. Living-dining room with an equipped kitchen and two separate bedrooms, so everyone has their own space.',
+        p2Es: 'Dormitorio principal con cama matrimonial y segundo dormitorio con dos camas individuales. Baño completo, calefacción y todos los servicios incluidos.',
+        p2En: 'Main bedroom with a double bed and a second bedroom with two single beds. Full bathroom, heating and all services included.',
+        roomsEs: ['Living-comedor', 'Cocina completa', '2 dormitorios', 'Baño completo'], roomsEn: ['Living-dining room', 'Full kitchen', '2 bedrooms', 'Full bathroom'] },
+      { n: 5, pax: 2,
+        baja: [['2 pax', 'U$S 69']], alta: [['2 pax', 'U$S 79']],
+        sizeEs: 'Ambiente integrado · Cocina completa', sizeEn: 'Open-plan · Full kitchen',
+        p1Es: 'Compacto y acogedor, ideal para dos. Un ambiente integrado con cama matrimonial, cocina completa y baño privado, con la misma calidez y terminaciones que el resto del edificio.',
+        p1En: 'Compact and cosy, ideal for two. An open-plan space with a double bed, full kitchen and private bathroom, with the same warmth and finishes as the rest of the building.',
+        p2Es: 'La opción más accesible para una escapada a Ushuaia: todo lo necesario para descansar bien y salir a recorrer el fin del mundo.',
+        p2En: 'The most affordable option for an Ushuaia getaway: everything you need to rest well and head out to explore the end of the world.',
+        roomsEs: ['Ambiente integrado', 'Cocina completa', 'Cama matrimonial', 'Baño privado'], roomsEn: ['Open-plan space', 'Full kitchen', 'Double bed', 'Private bathroom'] }
+    ];
+    const amenities = es
+      ? ['Wi-Fi libre', 'TV', 'Calefacción', 'Vajilla y utensilios completos', 'Ropa blanca y toallas', 'Estacionamiento a pedido, sin cargo']
+      : ['Free Wi-Fi', 'TV', 'Heating', 'Full tableware and utensils', 'Linens and towels', 'Free parking on request'];
+    const paxTitle = p => p === 2 ? (es ? '2 huéspedes' : '2 guests') : (es ? 'Hasta ' + p + ' huéspedes' : 'Up to ' + p + ' guests');
+    const CAPS = es ? ['Vista general', 'Living', 'Detalle', 'Dormitorio', 'Cocina'] : ['Overview', 'Living room', 'Detail', 'Bedroom', 'Kitchen'];
+    const slotIds = n => ['slot-apt-' + n, 'slot-apt-' + n + '-2', 'slot-apt-' + n + '-3', 'slot-apt-' + n + '-4', 'slot-apt-' + n + '-5'];
+    const apts = DATA.map(a => {
+      const inId = 'dp-' + a.n + '-in', outId = 'dp-' + a.n + '-out', paxId = 'dp-' + a.n + '-pax';
+      const ids = slotIds(a.n);
+      const open = k => e => this.openLb(a.n, ids, k, e);
+      const msg = () => {
+        const L = [];
+        L.push(es ? 'Hola Monte Olivia Suites! Quiero consultar disponibilidad del Departamento ' + a.n + ' (' + paxTitle(a.pax).toLowerCase() + ').' : "Hi Monte Olivia Suites! I'd like to check availability for Apartment " + a.n + ' (' + paxTitle(a.pax).toLowerCase() + ').');
+        const i = this.val(inId), o = this.val(outId);
+        if (i || o) L.push((es ? 'Fechas: ' : 'Dates: ') + (i || '¿?') + ' → ' + (o || '¿?'));
+        L.push((es ? 'Huéspedes: ' : 'Guests: ') + (this.val(paxId) || '2'));
+        return L.join('\n');
+      };
+      return {
+        n: a.n, pax: a.pax, id: 'depto-' + a.n, anchor: '#depto-' + a.n,
+        numLbl: (es ? 'Departamento ' : 'Apartment ') + a.n,
+        paxTitle: paxTitle(a.pax),
+        paxShort: a.pax === 2 ? (es ? '2 huéspedes' : '2 guests') : (es ? 'hasta ' + a.pax : 'up to ' + a.pax),
+        paxIcons: Array.from({ length: a.pax }, (_, i) => ({ d: (i * 0.22).toFixed(2) + 's' })),
+        paxOptions: Array.from({ length: a.pax }, (_, i) => ({ v: String(i + 1), sel: i + 1 === 2 })),
+        sizeLine: es ? a.sizeEs : a.sizeEn,
+        p1: es ? a.p1Es : a.p1En, p2: es ? a.p2Es : a.p2En,
+        rooms: es ? a.roomsEs : a.roomsEn,
+        amenities,
+        baja: a.baja.map(r => ({ k: es ? r[0] : r[0].replace('Hasta', 'Up to'), v: r[1] })),
+        alta: a.alta.map(r => ({ k: es ? r[0] : r[0].replace('Hasta', 'Up to'), v: r[1] })),
+        slotMain: ids[0], phMain: (es ? 'Foto principal · Departamento ' : 'Main photo · Apartment ') + a.n,
+        slot2: ids[1], ph2: CAPS[1], slot3: ids[2], ph3: CAPS[2], slot4: ids[3], ph4: CAPS[3], slot5: ids[4], ph5: CAPS[4],
+        open1: open(0), open2: open(1), open3: open(2), open4: open(3), open5: open(4),
+        bookTitle: (es ? 'Departamento ' : 'Apartment ') + a.n + ' · ' + paxTitle(a.pax).toLowerCase(),
+        inId, outId, paxId,
+        sendWa: () => window.open(this.wa(msg()), '_blank'),
+        sendMail: () => { window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent((es ? 'Consulta Departamento ' : 'Enquiry Apartment ') + a.n + ' — Monte Olivia Suites') + '&body=' + encodeURIComponent(msg()); },
+        goAirbnb: () => window.open(abUrl, '_blank')
+      };
+    });
+    const lb = this.state.lb;
+    const cur = lb ? lb.imgs[lb.idx] : null;
+    return {
+      apts, showPrices,
+      lbOpen: !!lb,
+      lbImgStyle: { width: 'min(1240px,calc(100vw - clamp(128px,16vw,220px)))', height: '76vh', backgroundImage: cur ? 'url("' + cur.src + '")' : 'none', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', filter: 'drop-shadow(0 30px 60px rgba(0,0,0,.55))' },
+      lbCap: cur ? CAPS[cur.k] : '',
+      lbTitle: lb ? (es ? 'Departamento ' : 'Apartment ') + lb.n : '',
+      lbCount: lb ? (lb.idx + 1) + ' / ' + lb.imgs.length : '',
+      lbMulti: !!lb && lb.imgs.length > 1,
+      lbOrigin: lb ? lb.origin : '50% 50%',
+      lbClose: () => this.closeLb(),
+      lbStop: e => e.stopPropagation(),
+      lbPrev: e => { e.stopPropagation(); this.stepLb(-1); },
+      lbNext: e => { e.stopPropagation(); this.stepLb(1); },
+      roomsLbl: es ? 'Ambientes' : 'Rooms', amenLbl: es ? 'Comodidades' : 'Amenities',
+      lowLbl: es ? 'Temporada baja' : 'Low season', highLbl: es ? 'Temporada alta' : 'High season',
+      lowMonths: es ? 'Abril a junio · Octubre y noviembre' : 'April–June · October & November',
+      highMonths: es ? 'Julio a septiembre · Diciembre a marzo' : 'July–September · December–March',
+      bookEyebrow: es ? 'Consultar disponibilidad' : 'Check availability',
+      inLbl: es ? 'Llegada' : 'Check-in', outLbl: es ? 'Salida' : 'Check-out', paxLbl: es ? 'Huéspedes' : 'Guests',
+      channelLbl: es ? 'Enviar por' : 'Send via',
+      navHidden: this.state.navHidden ? 'true' : 'false',
+      menuOpen: this.state.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      setEs: () => this.applyLang('es'),
+      setEn: () => this.applyLang('en'),
+      email, mailHref: 'mailto:' + email,
+      igUrl: this.props.instagramUrl ?? 'https://www.instagram.com/',
+      abUrl,
+      heroWa: this.wa(es ? 'Hola! Quiero que me recomienden un departamento en Monte Olivia Suites.' : "Hi! I'd like a recommendation for an apartment at Monte Olivia Suites.")
+    };
+  }
+}
+</script>
+
+
+</body></html>

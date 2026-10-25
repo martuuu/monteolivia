@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="e44481dc-0875-46e4-abbf-67a56f770e79"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<style>/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("682ddaa0-7f3d-4eff-a970-fd705aee6b16") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4e9d6d41-b4f4-483c-a3f5-5cef734f744e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("97be550d-5b34-4184-9318-051a6a23c9ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("682ddaa0-7f3d-4eff-a970-fd705aee6b16") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4e9d6d41-b4f4-483c-a3f5-5cef734f744e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("97be550d-5b34-4184-9318-051a6a23c9ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("682ddaa0-7f3d-4eff-a970-fd705aee6b16") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4e9d6d41-b4f4-483c-a3f5-5cef734f744e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("97be550d-5b34-4184-9318-051a6a23c9ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("682ddaa0-7f3d-4eff-a970-fd705aee6b16") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("4e9d6d41-b4f4-483c-a3f5-5cef734f744e") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Archivo';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url("97be550d-5b34-4184-9318-051a6a23c9ff") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c005c3e3-6f26-4db2-8b53-18f0ec2a62f4") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Marcellus';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3b3f4f51-e816-4e66-8a8b-9480bda94151") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="1942db74-dbcc-4ea5-abf6-4702d9d4fc2c"></script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'Archivo',system-ui,sans-serif;color:#0B2836;background:#F6F4EF;-webkit-font-smoothing:antialiased;font-size:18px}
+input,select,textarea,button{font-family:inherit}
+a{color:#164E63;text-decoration:none}
+a:hover{color:#D97F1E}
+.en{display:none !important}
+body[data-lang="en"] .en{display:revert !important}
+body[data-lang="en"] .es{display:none !important}
+#lb-es,#lb-en{border:0;cursor:pointer;background:transparent;color:#4E6672;font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;letter-spacing:.6px}
+#lb-es{background:#164E63;color:#FFFFFF}
+body[data-lang="en"] #lb-es{background:transparent;color:#4E6672}
+body[data-lang="en"] #lb-en{background:#164E63;color:#FFFFFF}
+#mo-nav{transition:transform .38s cubic-bezier(.4,0,.2,1)}
+#mo-nav[data-hidden="true"]{transform:translateY(-110%)}
+#mo-links{display:flex}
+#mo-burger{display:none}
+@media (max-width:1080px){#mo-links{display:none}#mo-burger{display:flex}}
+[data-alt="true"] > div:first-child{order:2}
+@media (max-width:760px){[data-alt="true"] > div:first-child{order:0}}
+[data-on]{transition:opacity .9s ease}
+[data-on="false"]{opacity:0;pointer-events:none}
+[data-dot]{transition:width .4s ease,background .4s ease}
+[data-dot="true"]{background:#F0973B !important;width:22px !important}
+@keyframes moMarqL{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes moMarqR{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@keyframes moZoom{from{transform:scale(1.07)}to{transform:scale(1)}}
+@keyframes moCue{0%,100%{transform:translateY(0);opacity:.85}50%{transform:translateY(7px);opacity:.35}}
+@keyframes moBlink{0%,100%{opacity:.18}50%{opacity:1}}
+@keyframes moWave{0%,100%{opacity:.18}40%{opacity:1}}
+@keyframes moDrive{0%,100%{transform:translateX(-3px)}50%{transform:translateX(3px)}}
+@keyframes moPop{0%,20%{opacity:0;transform:translateY(3px)}45%,80%{opacity:1;transform:translateY(0)}100%{opacity:0;transform:translateY(3px)}}
+@keyframes moBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes moPaxWave{0%,100%{transform:translateY(0);opacity:.45}50%{transform:translateY(-3px);opacity:1}}
+@keyframes moFade{from{opacity:0}to{opacity:1}}
+</style>
+</helmet>
+
+<header id="mo-nav" data-hidden="{{ navHidden }}" style="position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px clamp(16px,4vw,40px);background:rgba(246,244,239,.9);backdrop-filter:blur(14px) saturate(1.3);-webkit-backdrop-filter:blur(14px) saturate(1.3);border-bottom:1px solid rgba(11,40,54,.08)">
+  <a href="#inicio" style="display:flex;align-items:center;flex:none"><img src="498fb63e-cd4a-403f-94e1-c610ff7ee27b.png" alt="Monte Olivia Suites" style="height:54px;width:auto;display:block"></a>
+  <nav id="mo-links" style="align-items:center;gap:clamp(14px,2.2vw,30px);font-size:16.5px;font-weight:500">
+    <a href="Monte%20Olivia%20-%20Departamentos.dc.html" style="color:#0B2836;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:0% 2px;transition:background-size .45s cubic-bezier(.4,0,.2,1),color .2s" style-hover="color:#164E63;background-size:100% 2px"><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+    <a href="#tarifas" style="color:#0B2836;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:0% 2px;transition:background-size .45s cubic-bezier(.4,0,.2,1),color .2s" style-hover="color:#164E63;background-size:100% 2px"><span class="es">Tarifas</span><span class="en">Rates</span></a>
+    <a href="#huespedes" style="color:#0B2836;padding:6px 2px 8px;background-image:linear-gradient(#F0973B,#F0973B);background-repeat:no-repeat;background-position:left bottom;background-size:0% 2px;transition:background-size .45s cubic-bezier(.4,0,.2,1),color .2s" style-hover="color:#164E63;background-size:100% 2px"><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+    <a href="#reserva" style="display:inline-flex;align-items:center;background:#164E63;color:#FFFFFF;font-weight:600;padding:11px 20px;border-radius:999px;margin-left:4px" style-hover="background:#0F3B4C;color:#FFFFFF"><span class="es">Reservar</span><span class="en">Book</span></a>
+  </nav>
+  <div style="display:flex;align-items:center;gap:10px">
+    <div style="display:flex;align-items:center;gap:2px;border:1px solid rgba(11,40,54,.14);border-radius:999px;padding:2px">
+      <button id="lb-es" sc-camel-on-click="{{ setEs }}">ES</button>
+      <button id="lb-en" sc-camel-on-click="{{ setEn }}">EN</button>
+    </div>
+    <button id="mo-burger" sc-camel-on-click="{{ openMenu }}" aria-label="Menú" style="flex-direction:column;justify-content:center;gap:5px;width:48px;height:48px;border-radius:999px;border:1px solid rgba(11,40,54,.14);background:#FFFFFF;cursor:pointer;align-items:center" style-hover="border-color:#164E63">
+      <span style="display:block;width:18px;height:2px;background:#164E63;border-radius:2px"></span>
+      <span style="display:block;width:18px;height:2px;background:#164E63;border-radius:2px"></span>
+    </button>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:90;background:rgba(9,31,42,.97);backdrop-filter:blur(10px);display:flex;flex-direction:column;padding:clamp(20px,5vw,56px);overflow:auto">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <img src="785d5c2f-f410-4ced-9a75-b094594b2f29.png" alt="Monte Olivia Suites" style="height:52px;width:auto;border-radius:10px">
+    <button sc-camel-on-click="{{ closeMenu }}" aria-label="Cerrar" style="width:48px;height:48px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:transparent;color:#FFFFFF;font-size:20px;cursor:pointer" style-hover="background:rgba(255,255,255,.12)">✕</button>
+  </div>
+  <nav style="display:flex;flex-direction:column;gap:clamp(12px,2.4vh,20px);margin:auto 0;max-width:560px;padding:24px 0">
+    <a href="Monte%20Olivia%20-%20Departamentos.dc.html" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(2rem,6vw,3.2rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">01</span><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+    <a href="#tarifas" sc-camel-on-click="{{ closeMenu }}" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(2rem,6vw,3.2rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">02</span><span class="es">Tarifas</span><span class="en">Rates</span></a>
+    <a href="#huespedes" sc-camel-on-click="{{ closeMenu }}" style="color:#FFFFFF;font-family:'Marcellus',serif;font-size:clamp(2rem,6vw,3.2rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#F0973B"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">03</span><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+    <a href="#reserva" sc-camel-on-click="{{ closeMenu }}" style="color:#F0973B;font-family:'Marcellus',serif;font-size:clamp(2rem,6vw,3.2rem);display:flex;align-items:baseline;gap:14px" style-hover="color:#FFFFFF"><span style="font-family:'Archivo',sans-serif;font-size:13px;color:#F0973B;letter-spacing:2px">04</span><span class="es">Reservar</span><span class="en">Book now</span></a>
+  </nav>
+  <div style="display:flex;flex-wrap:wrap;gap:18px;color:rgba(255,255,255,.65);font-size:15px">
+    <a href="{{ heroWa }}" target="_blank" style="color:rgba(255,255,255,.85)">+54 9 291 642 1561</a>
+    <span>Primer Argentino 108 · Ushuaia</span>
+  </div>
+</div>
+</sc-if>
+
+<section id="inicio" data-screen-label="Hero" style="position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:#0B2836">
+  <img src="a002c350-36db-48c9-bffb-f6ea3fbcb12a.avif" alt="Monte Olivia, Ushuaia" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;animation:moZoom 16s ease-out forwards">
+  <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,40,54,.32) 0%,rgba(11,40,54,.04) 38%,rgba(7,27,38,.72) 78%,rgba(7,27,38,.94) 100%)"></div>
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 70% 75% at 18% 88%,rgba(7,27,38,.78) 0%,rgba(7,27,38,.45) 45%,rgba(7,27,38,0) 100%)"></div>
+  <div style="position:relative;z-index:2;padding:0 clamp(18px,5vw,64px) clamp(60px,9vh,100px);max-width:880px">
+    <p style="margin:0 0 16px;color:#F0973B;font-size:15px;font-weight:600;letter-spacing:3px;text-transform:uppercase">Ushuaia · Tierra del Fuego</p>
+    <h1 style="margin:0;font-family:'Marcellus',serif;font-weight:400;color:#FFFFFF;font-size:clamp(3rem,8vw,5.8rem);line-height:1.04;text-wrap:balance;text-shadow:0 2px 24px rgba(7,27,38,.6),0 1px 2px rgba(7,27,38,.5)"><span class="es">Tu lugar en el fin del mundo</span><span class="en">Your place at the end of the world</span></h1>
+    <p style="margin:20px 0 0;color:rgba(255,255,255,.92);font-size:clamp(18px,2.4vw,21px);line-height:1.6;max-width:54ch;text-shadow:0 1px 14px rgba(7,27,38,.7),0 1px 2px rgba(7,27,38,.5)"><span class="es">Departamentos boutique, amplios y cálidos, en una zona tranquila de Ushuaia — con las montañas siempre a la vista.</span><span class="en">Boutique apartments — spacious, warm and quiet — in a calm corner of Ushuaia, with the mountains always in sight.</span></p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:30px">
+      <a href="{{ heroWa }}" target="_blank" style="display:inline-flex;align-items:center;gap:10px;background:#F0973B;color:#082330;font-weight:600;font-size:17.5px;padding:17px 30px;border-radius:999px" style-hover="background:#E08420;color:#082330">
+        <svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+        <span class="es">Reservar por WhatsApp</span><span class="en">Book via WhatsApp</span>
+      </a>
+      <a href="Monte%20Olivia%20-%20Departamentos.dc.html" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.45);background:rgba(7,27,38,.7);color:#FFFFFF;font-weight:500;font-size:17.5px;padding:17px 30px;border-radius:999px" style-hover="background:rgba(7,27,38,.9);border-color:rgba(255,255,255,.7);color:#FFFFFF"><span class="es">Ver departamentos</span><span class="en">See the apartments</span> →</a>
+    </div>
+  </div>
+  <div style="position:absolute;left:50%;bottom:16px;transform:translateX(-50%);z-index:2;width:2px;height:34px;background:linear-gradient(180deg,rgba(255,255,255,0),#FFFFFF);border-radius:2px;animation:moCue 2.2s ease-in-out infinite"></div>
+</section>
+
+<section data-screen-label="Datos rápidos" style="background:#FFFFFF;border-bottom:1px solid rgba(11,40,54,.07)">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(26px,4vw,40px) clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(22px,3vw,36px) clamp(18px,2.5vw,28px)">
+    <div style="flex:0 1 230px;min-width:0;display:flex;align-items:center;gap:14px">
+      <svg width="52" height="52" sc-camel-view-box="0 0 48 48" fill="none" stroke="#164E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+        <path d="M9 42V13l15-6 15 6v29"></path><path d="M4 42h40"></path><path d="M20 42v-9h8v9"></path>
+        <rect x="14" y="17" width="5" height="5" rx="1" fill="#F0973B" stroke="none" style="animation:moBlink 3.6s ease-in-out infinite"></rect>
+        <rect x="21.5" y="17" width="5" height="5" rx="1" fill="#F0973B" stroke="none" style="animation:moBlink 3.6s ease-in-out .7s infinite"></rect>
+        <rect x="29" y="17" width="5" height="5" rx="1" fill="#F0973B" stroke="none" style="animation:moBlink 3.6s ease-in-out 1.4s infinite"></rect>
+        <rect x="14" y="25.5" width="5" height="5" rx="1" fill="#F0973B" stroke="none" style="animation:moBlink 3.6s ease-in-out 2.1s infinite"></rect>
+        <rect x="29" y="25.5" width="5" height="5" rx="1" fill="#F0973B" stroke="none" style="animation:moBlink 3.6s ease-in-out 2.8s infinite"></rect>
+      </svg>
+      <div><p style="margin:0;font-family:'Marcellus',serif;font-size:21px;color:#0B2836;line-height:1.2"><span class="es">5 departamentos</span><span class="en">5 apartments</span></p><p style="margin:4px 0 0;font-size:15.5px;color:#4E6672;line-height:1.45"><span class="es">Amplios, modernos y luminosos</span><span class="en">Spacious, modern and bright</span></p></div>
+    </div>
+    <div style="flex:0 1 230px;min-width:0;display:flex;align-items:center;gap:14px">
+      <svg width="52" height="52" sc-camel-view-box="0 0 48 48" fill="none" stroke="#164E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+        <circle cx="24" cy="37" r="2.6" fill="#164E63" stroke="none"></circle>
+        <path d="M17 30a10 10 0 0 1 14 0" stroke="#F0973B" style="animation:moWave 2.6s ease-in-out infinite"></path>
+        <path d="M11 24a18.5 18.5 0 0 1 26 0" stroke="#F0973B" style="animation:moWave 2.6s ease-in-out .45s infinite"></path>
+        <path d="M5 18a27 27 0 0 1 38 0" stroke="#F0973B" style="animation:moWave 2.6s ease-in-out .9s infinite"></path>
+      </svg>
+      <div><p style="margin:0;font-family:'Marcellus',serif;font-size:21px;color:#0B2836;line-height:1.2">Wi-Fi</p><p style="margin:4px 0 0;font-size:15.5px;color:#4E6672;line-height:1.45"><span class="es">Gratis en todas las unidades</span><span class="en">Free in every apartment</span></p></div>
+    </div>
+    <div style="flex:0 1 230px;min-width:0;display:flex;align-items:center;gap:14px">
+      <svg width="52" height="52" sc-camel-view-box="0 0 48 48" fill="none" stroke="#164E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+        <g style="animation:moDrive 3.2s ease-in-out infinite">
+          <path d="M9 29l3-8.5A3 3 0 0 1 14.8 18.5h18.4a3 3 0 0 1 2.8 2L39 29"></path>
+          <rect x="6" y="29" width="36" height="9" rx="2.5"></rect>
+          <circle cx="14" cy="38.5" r="3.5" fill="#FFFFFF"></circle><circle cx="34" cy="38.5" r="3.5" fill="#FFFFFF"></circle>
+          <path d="M10.5 33.5h4M33.5 33.5h4" stroke="#F0973B" stroke-width="2.6"></path>
+        </g>
+        <path d="M4 44h40" opacity=".35"></path>
+      </svg>
+      <div><p style="margin:0;font-family:'Marcellus',serif;font-size:21px;color:#0B2836;line-height:1.2"><span class="es">Estacionamiento</span><span class="en">Parking</span></p><p style="margin:4px 0 0;font-size:15.5px;color:#4E6672;line-height:1.45"><span class="es">A pedido, sin cargo</span><span class="en">On request, free of charge</span></p></div>
+    </div>
+    <div style="flex:0 1 230px;min-width:0;display:flex;align-items:center;gap:14px">
+      <svg width="52" height="52" sc-camel-view-box="0 0 48 48" fill="none" stroke="#164E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+        <rect x="13" y="4" width="22" height="40" rx="2.5"></rect>
+        <path d="M17.5 9h13M17.5 12.5h13" opacity=".5"></path>
+        <path d="M31 26v4" stroke-width="2.6"></path>
+        <path d="M4 44h40" opacity=".35"></path>
+        <g stroke="#F0973B" stroke-width="2" style="animation:moBob 2.8s ease-in-out infinite">
+          <path d="M20.5 40V18.5c0-1.6 .9-2.8 2-2.8"></path>
+          <path d="M26 40V20.5c0-1.6-.9-2.8-2-2.8"></path>
+          <path d="M19 30h3M24.5 32h3" stroke-width="2.4"></path>
+        </g>
+      </svg>
+      <div><p style="margin:0;font-family:'Marcellus',serif;font-size:21px;color:#0B2836;line-height:1.2"><span class="es">Lockers de ski</span><span class="en">Ski lockers</span></p><p style="margin:4px 0 0;font-size:15.5px;color:#4E6672;line-height:1.45"><span class="es">Y lavasecarropas para tu equipo</span><span class="en">Plus a washer-dryer for your gear</span></p></div>
+    </div>
+    <div style="flex:0 1 230px;min-width:0;display:flex;align-items:center;gap:14px">
+      <svg width="52" height="52" sc-camel-view-box="0 0 48 48" fill="none" stroke="#164E63" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none">
+        <circle cx="13" cy="18" r="4.5"></circle><path d="M4.5 38c0-6 3.8-10 8.5-10s8.5 4 8.5 10"></path>
+        <circle cx="25" cy="18" r="4.5"></circle><path d="M16.5 38c0-6 3.8-10 8.5-10s8.5 4 8.5 10"></path>
+        <g stroke="#F0973B" style="animation:moPop 3.4s ease-in-out infinite"><circle cx="37" cy="18" r="4.5"></circle><path d="M28.5 38c0-6 3.8-10 8.5-10s8.5 4 8.5 10"></path></g>
+      </svg>
+      <div><p style="margin:0;font-family:'Marcellus',serif;font-size:21px;color:#0B2836;line-height:1.2"><span class="es">De 2 a 6 huéspedes</span><span class="en">2 to 6 guests</span></p><p style="margin:4px 0 0;font-size:15.5px;color:#4E6672;line-height:1.45"><span class="es">Según el departamento</span><span class="en">Depending on the apartment</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="departamentos" data-screen-label="Departamentos" style="scroll-margin-top:84px;background:#F6F4EF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px)">
+    <p style="margin:0 0 10px;color:#D97F1E;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Departamentos</span><span class="en">Apartments</span></p>
+    <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.4rem);line-height:1.12;max-width:20ch;text-wrap:balance"><span class="es">Cada detalle pensado para sentirte en casa</span><span class="en">Every detail designed to feel like home</span></h2>
+    <p style="margin:16px 0 0;color:#4E6672;font-size:19px;line-height:1.65;max-width:62ch"><span class="es">Cinco departamentos modernos y espaciosos en una zona residencial, comercial y muy tranquila de Ushuaia. Decoración cálida, cocina completa y Wi-Fi libre en todas las unidades.</span><span class="en">Five modern, spacious apartments in a quiet residential and commercial area of Ushuaia. Warm interiors, full kitchens and free Wi-Fi in every unit.</span></p>
+
+    <div style="margin-top:clamp(28px,4vw,44px);border-top:1px solid rgba(11,40,54,.12)">
+      <sc-for list="{{ apartments }}" as="apt" hint-placeholder-count="5">
+        <article data-alt="{{ apt.alt }}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(20px,3.5vw,44px);padding:clamp(28px,4vw,40px) 0;border-bottom:1px solid rgba(11,40,54,.12);align-items:center">
+          <div sc-camel-on-mouse-enter="{{ pauseCar }}" sc-camel-on-mouse-leave="{{ resumeCar }}" style="position:relative;aspect-ratio:4/3;border-radius:16px;overflow:hidden;background:#E7E3DA">
+            <sc-for list="{{ apt.slides }}" as="s" hint-placeholder-count="3">
+              <image-slot id="{{ s.id }}" shape="rect" placeholder="{{ s.ph }}" data-on="{{ s.on }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot>
+            </sc-for>
+            <div style="position:absolute;left:0;right:0;bottom:12px;z-index:3;display:flex;justify-content:center;gap:6px;pointer-events:none">
+              <sc-for list="{{ apt.slides }}" as="s" hint-placeholder-count="3"><span data-dot="{{ s.on }}" style="display:block;width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.6);box-shadow:0 0 0 1px rgba(11,40,54,.25)"></span></sc-for>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <p style="margin:0;color:#D97F1E;font-size:13.5px;font-weight:600;letter-spacing:2px;text-transform:uppercase">{{ apt.numLbl }}</p>
+            <div style="display:flex;align-items:center;gap:16px">
+              <span style="font-family:'Marcellus',serif;font-size:clamp(56px,7vw,76px);line-height:.9;color:#164E63">{{ apt.pax }}</span>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <span style="font-family:'Marcellus',serif;font-size:26px;line-height:1.1;color:#0B2836">{{ apt.paxWord }}</span>
+                <span style="display:inline-flex;gap:4px;color:#164E63"><sc-for list="{{ apt.paxIcons }}" as="i" hint-placeholder-count="4"><svg width="18" height="18" sc-camel-view-box="0 0 14 14" fill="currentColor" aria-hidden="true" style="animation-name:moPaxWave;animation-duration:2.8s;animation-timing-function:ease-in-out;animation-iteration-count:infinite;animation-delay:{{ i.d }}"><circle cx="7" cy="3.6" r="3"></circle><path d="M.8 14c0-3.6 2.6-5.8 6.2-5.8s6.2 2.2 6.2 5.8z"></path></svg></sc-for></span>
+              </div>
+            </div>
+            <p style="margin:0;font-size:18px;color:#4E6672;line-height:1.6">{{ apt.desc }}</p>
+            <p style="margin:0;font-size:16px;color:#4E6672;line-height:1.6">{{ apt.amenityLine }}</p>
+            <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:4px">
+              <div style="background:#FFFFFF;border:1px solid rgba(11,40,54,.1);border-radius:12px;padding:12px 14px"><p style="margin:0;font-size:12.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#8FA3AC">{{ apt.lowLbl }}</p><p style="margin:4px 0 0;font-size:16.5px;font-weight:600;color:#164E63">{{ apt.baja }}</p></div>
+              <div style="background:#0F3B4C;border-radius:12px;padding:12px 14px"><p style="margin:0;font-size:12.5px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.6)">{{ apt.highLbl }}</p><p style="margin:4px 0 0;font-size:16.5px;font-weight:600;color:#F0973B">{{ apt.alta }}</p></div>
+            </div>
+            </sc-if>
+            <div style="display:flex;flex-wrap:wrap;gap:10px;padding-top:6px">
+              <a href="{{ apt.pageHref }}" style="display:inline-flex;align-items:center;gap:7px;background:#164E63;color:#FFFFFF;font-weight:600;font-size:16px;padding:13px 24px;border-radius:999px" style-hover="background:#0F3B4C;color:#FFFFFF">{{ apt.viewLbl }} →</a>
+              <a href="{{ apt.waHref }}" target="_blank" style="display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(11,40,54,.22);color:#164E63;font-weight:600;font-size:16px;padding:13px 22px;border-radius:999px" style-hover="border-color:#164E63;background:#FFFFFF">{{ apt.ctaWaLbl }}</a>
+            </div>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+
+    <div style="display:flex;justify-content:center;margin-top:clamp(30px,4vw,44px)">
+      <a href="Monte%20Olivia%20-%20Departamentos.dc.html" style="display:inline-flex;align-items:center;gap:10px;background:#F0973B;color:#082330;font-weight:600;font-size:17.5px;padding:17px 32px;border-radius:999px;box-shadow:0 6px 18px rgba(240,151,59,.3)" style-hover="background:#E08420;color:#082330"><span class="es">Ver todos los departamentos</span><span class="en">See all apartments</span> →</a>
+    </div>
+  </div>
+</section>
+
+<section id="tarifas" data-screen-label="Tarifas" style="scroll-margin-top:84px;background:#FFFFFF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px)">
+    <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.4rem);line-height:1.12"><span class="es">Tarifas</span><span class="en">Rates</span></h2>
+    <p style="margin:16px 0 0;color:#4E6672;font-size:19px;line-height:1.65;max-width:62ch"><span class="es">Precios por departamento y por noche, en dólares estadounidenses (U$S). Consultá disponibilidad por WhatsApp — respondemos en el día.</span><span class="en">Rates per apartment, per night, in US dollars (U$S). Check availability via WhatsApp — we reply within the day.</span></p>
+    <sc-if value="{{ showPrices }}" hint-placeholder-val="{{ true }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,2.5vw,26px);margin-top:clamp(28px,4vw,44px)">
+      <div style="border:1px solid rgba(11,40,54,.1);border-radius:18px;padding:clamp(20px,3vw,30px);background:#F6F4EF">
+        <h3 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:26px;color:#164E63"><span class="es">Temporada baja</span><span class="en">Low season</span></h3>
+        <p style="margin:6px 0 14px;font-size:15.5px;color:#4E6672"><span class="es">Abril a junio · Octubre y noviembre</span><span class="en">April–June · October &amp; November</span></p>
+        <sc-for list="{{ apartments }}" as="apt" hint-placeholder-count="5">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-top:1px solid rgba(11,40,54,.1)">
+            <span style="font-size:17px;font-weight:500;color:#0B2836;white-space:nowrap">{{ apt.numLbl }}</span>
+            <span style="font-size:16.5px;color:#164E63;font-weight:600;text-align:right">{{ apt.baja }}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div style="border:1px solid rgba(11,40,54,.1);border-radius:18px;padding:clamp(20px,3vw,30px);background:#0F3B4C">
+        <h3 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:26px;color:#FFFFFF"><span class="es">Temporada alta</span><span class="en">High season</span></h3>
+        <p style="margin:6px 0 14px;font-size:15.5px;color:rgba(255,255,255,.7)"><span class="es">Julio a septiembre · Diciembre a marzo</span><span class="en">July–September · December–March</span></p>
+        <sc-for list="{{ apartments }}" as="apt" hint-placeholder-count="5">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:12px 0;border-top:1px solid rgba(255,255,255,.14)">
+            <span style="font-size:17px;font-weight:500;color:#FFFFFF;white-space:nowrap">{{ apt.numLbl }}</span>
+            <span style="font-size:16.5px;color:#F0973B;font-weight:600;text-align:right">{{ apt.alta }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="huespedes" data-screen-label="Huéspedes" style="scroll-margin-top:84px;background:#0B2836;overflow:hidden">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px) 0">
+    <p style="margin:0 0 10px;color:#F0973B;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Huéspedes</span><span class="en">Guests</span></p>
+    <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.4rem);line-height:1.15;color:#FFFFFF;max-width:22ch;text-wrap:balance"><span class="es">Sentirse en casa, incluso en el fin del mundo</span><span class="en">Feeling at home — even at the end of the world</span></h2>
+  </div>
+  <div style="overflow:hidden;width:100%;margin-top:clamp(28px,4vw,44px)">
+    <div style="display:flex;width:max-content;animation:moMarqL 80s linear infinite" style-hover="animation-play-state:paused">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="12">
+        <figure style="margin:0 16px 0 0;width:min(380px,80vw);flex:none;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:14px">
+          <span style="color:#F0973B;letter-spacing:3px;font-size:15px">{{ r.stars }}</span>
+          <blockquote style="margin:0;font-family:'Marcellus',serif;font-size:21px;line-height:1.5;color:#FFFFFF">“{{ r.text }}”</blockquote>
+          <figcaption style="font-size:15.5px;color:rgba(255,255,255,.65);margin-top:auto">{{ r.who }}</figcaption>
+        </figure>
+      </sc-for>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:24px clamp(18px,5vw,64px) clamp(56px,9vw,104px);display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <p style="margin:0;font-size:13px;color:rgba(255,255,255,.35)"><span class="es">Reseñas de muestra — integrar reseñas reales de Booking y Airbnb.</span><span class="en">Sample reviews — replace with real Booking &amp; Airbnb reviews.</span></p>
+    <button sc-camel-on-click="{{ openReview }}" style="display:inline-flex;align-items:center;gap:8px;background:#F0973B;border:0;color:#082330;font-weight:600;font-size:16.5px;padding:14px 24px;border-radius:999px;cursor:pointer;margin-left:auto" style-hover="background:#E08420">✎ <span class="es">Dejar comentario</span><span class="en">Leave a review</span></button>
+  </div>
+</section>
+
+<sc-if value="{{ revOpen }}" hint-placeholder-val="{{ false }}">
+<div sc-camel-on-click="{{ closeReview }}" style="position:fixed;inset:0;z-index:95;background:rgba(7,27,38,.72);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:20px;animation:moFade .25s ease">
+  <div sc-camel-on-click="{{ stop }}" style="background:#FFFFFF;border-radius:22px;padding:clamp(24px,4vw,40px);max-width:560px;width:100%;max-height:92vh;overflow:auto;box-shadow:0 24px 70px rgba(0,0,0,.4);display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
+      <div><p style="margin:0 0 6px;color:#D97F1E;font-size:13.5px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Huéspedes</span><span class="en">Guests</span></p><h3 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:30px;line-height:1.1"><span class="es">Dejá tu comentario</span><span class="en">Leave your review</span></h3></div>
+      <button sc-camel-on-click="{{ closeReview }}" aria-label="Cerrar" style="width:44px;height:44px;border-radius:999px;border:1px solid rgba(11,40,54,.16);background:transparent;color:#164E63;font-size:18px;cursor:pointer;flex:none" style-hover="background:#F6F4EF">✕</button>
+    </div>
+    <sc-if value="{{ revNotSent }}" hint-placeholder-val="{{ true }}">
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Nombre y ciudad</span><span class="en">Name and city</span></span><input id="mo-rev-who" type="text" placeholder="{{ ph.revWho }}" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Puntaje</span><span class="en">Rating</span></span><sc-raw-select id="mo-rev-stars" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none"><option value="5">★★★★★</option><option value="4">★★★★☆</option><option value="3">★★★☆☆</option><option value="2">★★☆☆☆</option><option value="1">★☆☆☆☆</option></sc-raw-select></label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Comentario</span><span class="en">Review</span></span><textarea id="mo-rev-text" rows="4" placeholder="{{ ph.revText }}" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none;resize:vertical" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></textarea></label>
+      <button sc-camel-on-click="{{ submitReview }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:8px;background:#164E63;border:0;color:#FFFFFF;font-weight:600;font-size:17px;padding:15px 28px;border-radius:999px;cursor:pointer" style-hover="background:#0F3B4C"><span class="es">Enviar comentario</span><span class="en">Send review</span></button>
+    </sc-if>
+    <sc-if value="{{ revSent }}" hint-placeholder-val="{{ false }}">
+      <div style="background:#F6F4EF;border-radius:16px;padding:24px;display:flex;flex-direction:column;gap:10px">
+        <p style="margin:0;font-family:'Marcellus',serif;font-size:24px;color:#164E63"><span class="es">¡Gracias por tu comentario!</span><span class="en">Thank you for your review!</span></p>
+        <p style="margin:0;font-size:17px;color:#4E6672;line-height:1.55"><span class="es">Lo recibimos correctamente y pronto aparecerá junto a los demás huéspedes.</span><span class="en">We received it and it will soon appear alongside the other guests' reviews.</span></p>
+        <button sc-camel-on-click="{{ closeReview }}" style="align-self:flex-start;margin-top:6px;background:transparent;border:1px solid rgba(11,40,54,.22);color:#164E63;font-weight:600;font-size:16px;padding:12px 22px;border-radius:999px;cursor:pointer" style-hover="border-color:#164E63"><span class="es">Cerrar</span><span class="en">Close</span></button>
+      </div>
+    </sc-if>
+  </div>
+</div>
+</sc-if>
+
+<section id="reserva" data-screen-label="Reserva" style="scroll-margin-top:84px;background:#F6F4EF">
+  <div style="max-width:900px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px)">
+    <div style="background:#FFFFFF;border:1px solid rgba(11,40,54,.08);border-radius:22px;padding:clamp(24px,5vw,48px);box-shadow:0 2px 10px rgba(11,40,54,.05)">
+      <p style="margin:0 0 10px;color:#D97F1E;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Reservas</span><span class="en">Booking</span></p>
+      <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.1rem);line-height:1.12"><span class="es">Reservá tu estadía</span><span class="en">Book your stay</span></h2>
+      <p style="margin:14px 0 28px;color:#4E6672;font-size:18px;line-height:1.6"><span class="es">Completá tus datos y enviá la solicitud por WhatsApp o por email — el mensaje se arma solo. Te respondemos en el día.</span><span class="en">Fill in your details and send the request via WhatsApp or email — the message is pre-filled. We reply within the day.</span></p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px">
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Nombre</span><span class="en">Name</span></span><input id="mo-nombre" type="text" placeholder="{{ ph.nombre }}" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Llegada</span><span class="en">Check-in</span></span><input id="mo-llegada" type="date" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Salida</span><span class="en">Check-out</span></span><input id="mo-salida" type="date" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Huéspedes</span><span class="en">Guests</span></span><sc-raw-select id="mo-pax" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none"><option value="1">1</option><option value="2" selected="">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option></sc-raw-select></label>
+        <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836"><span><span class="es">Departamento</span><span class="en">Apartment</span></span><sc-raw-select id="mo-depto" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none"><option value="">{{ ph.any }}</option><option value="1">N° 1</option><option value="2">N° 2</option><option value="3">N° 3</option><option value="4">N° 4</option><option value="5">N° 5</option></sc-raw-select></label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:600;color:#0B2836;margin-top:14px"><span><span class="es">Mensaje</span><span class="en">Message</span></span><textarea id="mo-msg" rows="3" placeholder="{{ ph.msg }}" style="border:1px solid rgba(11,40,54,.16);border-radius:12px;padding:14px 16px;font-size:17px;color:#0B2836;background:#FFFFFF;outline:none;resize:vertical" style-focus="border-color:#164E63;box-shadow:0 0 0 3px rgba(47,168,220,.18)"></textarea></label>
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+        <button sc-camel-on-click="{{ sendWhatsApp }}" style="display:inline-flex;align-items:center;gap:10px;background:#F0973B;border:0;color:#082330;font-weight:600;font-size:17.5px;padding:16px 30px;border-radius:999px;cursor:pointer" style-hover="background:#E08420">
+          <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+          <span class="es">Enviar por WhatsApp</span><span class="en">Send via WhatsApp</span>
+        </button>
+        <button sc-camel-on-click="{{ sendEmail }}" style="display:inline-flex;align-items:center;gap:9px;background:transparent;border:1px solid rgba(11,40,54,.22);color:#164E63;font-weight:600;font-size:17.5px;padding:16px 30px;border-radius:999px;cursor:pointer" style-hover="border-color:#164E63;background:#F6F4EF">
+          <svg width="18" height="18" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><path d="M3.5 7l8.5 6.5L20.5 7"></path></svg>
+          <span class="es">Enviar por email</span><span class="en">Send by email</span>
+        </button>
+      </div>
+      <div style="margin-top:30px;padding-top:24px;border-top:1px solid rgba(11,40,54,.1);display:flex;align-items:center;gap:18px;flex-wrap:wrap">
+        <p style="margin:0;font-size:14px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#8FA3AC"><span class="es">También estamos en</span><span class="en">Also find us on</span></p>
+        <div style="display:flex;gap:10px">
+          <a href="{{ igUrl }}" target="_blank" title="Instagram" aria-label="Instagram" style="width:52px;height:52px;border-radius:999px;border:1px solid rgba(11,40,54,.16);display:flex;align-items:center;justify-content:center;color:#164E63;transition:all .2s ease" style-hover="background:#164E63;color:#FFFFFF;border-color:#164E63"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="{{ abUrl }}" target="_blank" title="Airbnb" aria-label="Airbnb" style="width:52px;height:52px;border-radius:999px;border:1px solid rgba(11,40,54,.16);display:flex;align-items:center;justify-content:center;color:#164E63;transition:all .2s ease" style-hover="background:#164E63;color:#FFFFFF;border-color:#164E63"><svg width="24" height="24" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6c-2.2 0-3.4 3-5.3 7.3C5.3 13 3.4 16.8 3.4 18.4c0 1.9 1.5 3.3 3.3 3.3 1.9 0 3.7-1.4 5.3-3.2 1.6 1.8 3.4 3.2 5.3 3.2 1.8 0 3.3-1.4 3.3-3.3 0-1.6-1.9-5.4-3.3-8.5C15.4 5.6 14.2 2.6 12 2.6z"></path><path d="M12 18.5c-1.3-1.6-2.4-3.4-2.4-4.8a2.4 2.4 0 0 1 4.8 0c0 1.4-1.1 3.2-2.4 4.8z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="galeria" data-screen-label="Galería" style="scroll-margin-top:84px;background:#FFFFFF;overflow:hidden">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px) 0">
+    <p style="margin:0 0 10px;color:#D97F1E;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Galería</span><span class="en">Gallery</span></p>
+    <h2 style="margin:0 0 clamp(24px,4vw,40px);font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.4rem);line-height:1.12"><span class="es">Ushuaia desde acá</span><span class="en">Ushuaia from here</span></h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:14px">
+    <div style="overflow:hidden;width:100%">
+      <div style="display:flex;width:max-content;animation:moMarqL 75s linear infinite" style-hover="animation-play-state:paused">
+        <sc-for list="{{ galTop }}" as="g" hint-placeholder-count="16">
+          <div sc-camel-on-click="{{ g.open }}" style="position:relative;width:clamp(240px,26vw,340px);aspect-ratio:4/3;border-radius:14px;overflow:hidden;margin-right:14px;flex:none;background:#E7E3DA;cursor:zoom-in">
+            <sc-if value="{{ g.isImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ g.alt }}" style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ g.bg }};transition:transform .5s ease" style-hover="transform:scale(1.04)"></div></sc-if>
+            <sc-if value="{{ g.isSlot }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ g.id }}" shape="rect" placeholder="{{ g.ph }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="overflow:hidden;width:100%">
+      <div style="display:flex;width:max-content;animation:moMarqR 85s linear infinite" style-hover="animation-play-state:paused">
+        <sc-for list="{{ galBot }}" as="g" hint-placeholder-count="16">
+          <div sc-camel-on-click="{{ g.open }}" style="position:relative;width:clamp(240px,26vw,340px);aspect-ratio:4/3;border-radius:14px;overflow:hidden;margin-right:14px;flex:none;background:#E7E3DA;cursor:zoom-in">
+            <sc-if value="{{ g.isImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ g.alt }}" style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ g.bg }};transition:transform .5s ease" style-hover="transform:scale(1.04)"></div></sc-if>
+            <sc-if value="{{ g.isSlot }}" hint-placeholder-val="{{ false }}"><image-slot id="{{ g.id }}" shape="rect" placeholder="{{ g.ph }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:16px clamp(18px,5vw,64px) clamp(56px,9vw,104px)">
+    <p style="margin:0;font-size:15px;color:#8FA3AC"><span class="es">Tocá una foto para verla en grande. Los recuadros punteados esperan fotos reales de los departamentos — arrastralas ahí.</span><span class="en">Tap a photo to view it full size. Dotted tiles await real photos of the apartments — drag them in.</span></p>
+  </div>
+</section>
+
+<sc-if value="{{ lbOpen }}" hint-placeholder-val="{{ false }}">
+<div sc-camel-on-click="{{ lbClose }}" style="position:fixed;inset:0;z-index:100;background:rgba(7,27,38,.94);display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,48px);animation:moFade .25s ease">
+  <button sc-camel-on-click="{{ lbClose }}" aria-label="Cerrar" style="position:absolute;top:18px;right:18px;width:54px;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#FFFFFF;font-size:22px;cursor:pointer;z-index:2" style-hover="background:rgba(255,255,255,.18)">✕</button>
+  <button sc-camel-on-click="{{ lbPrev }}" aria-label="Anterior" style="position:absolute;left:14px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#FFFFFF;font-size:22px;cursor:pointer;z-index:2" style-hover="background:rgba(255,255,255,.18)">←</button>
+  <button sc-camel-on-click="{{ lbNext }}" aria-label="Siguiente" style="position:absolute;right:14px;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:999px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.08);color:#FFFFFF;font-size:22px;cursor:pointer;z-index:2" style-hover="background:rgba(255,255,255,.18)">→</button>
+  <figure sc-camel-on-click="{{ stop }}" style="margin:0;max-width:min(1200px,90vw);display:flex;flex-direction:column;gap:14px;align-items:center">
+    <div role="img" aria-label="{{ lbAlt }}" style="width:min(1200px,90vw);height:76vh;border-radius:14px;background-size:contain;background-position:center;background-repeat:no-repeat;background-image:{{ lbBg }}"></div>
+    <figcaption style="color:rgba(255,255,255,.85);font-size:17px;text-align:center">{{ lbAlt }} <span style="color:rgba(255,255,255,.45)">· {{ lbCounter }}</span></figcaption>
+  </figure>
+</div>
+</sc-if>
+
+<section id="excursiones" data-screen-label="Excursiones" style="scroll-margin-top:84px;background:#F6F4EF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px) clamp(40px,6vw,72px)">
+    <p style="margin:0 0 10px;color:#D97F1E;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Excursiones</span><span class="en">Tours</span></p>
+    <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2.3rem,4.8vw,3.4rem);line-height:1.12"><span class="es">El fin del mundo, cerca</span><span class="en">The end of the world, up close</span></h2>
+    <p style="margin:16px 0 0;color:#4E6672;font-size:19px;line-height:1.65;max-width:62ch"><span class="es">Coordinamos excursiones y traslados con operadores locales de confianza. Contanos qué querés conocer y armamos tu itinerario.</span><span class="en">We arrange tours and transfers with trusted local operators. Tell us what you want to see and we'll plan your itinerary.</span></p>
+  </div>
+  <div style="max-width:1180px;margin:0 auto;padding:0 clamp(18px,5vw,64px) clamp(56px,9vw,104px)">
+    <div style="display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px">
+      <sc-for list="{{ tours }}" as="t" hint-placeholder-count="4">
+        <article style="flex:none;width:min(340px,86vw);scroll-snap-align:start;background:#FFFFFF;border:1px solid rgba(11,40,54,.08);border-radius:18px;overflow:hidden;display:flex;flex-direction:column">
+          <div style="position:relative;height:180px;flex:none">
+            <sc-if value="{{ t.hasImg }}" hint-placeholder-val="{{ false }}"><div role="img" aria-label="{{ t.name }}" style="position:absolute;inset:0;background-size:cover;background-position:center;background-image:{{ t.bg }}"></div></sc-if>
+            <sc-if value="{{ t.noImg }}" hint-placeholder-val="{{ true }}"><image-slot id="{{ t.slotId }}" shape="rect" placeholder="{{ t.ph }}" style="position:absolute;inset:0;width:100%;height:100%"></image-slot></sc-if>
+          </div>
+          <div style="padding:20px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1">
+            <h3 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:22px">{{ t.name }}</h3>
+            <p style="margin:0;font-size:16px;color:#4E6672;line-height:1.55">{{ t.desc }}</p>
+            <dl style="margin:auto 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;font-size:15px;border-top:1px solid rgba(11,40,54,.08);padding-top:12px">
+              <div><dt style="margin:0;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#8FA3AC">{{ distLbl }}</dt><dd style="margin:3px 0 0;color:#0B2836;font-weight:500;line-height:1.4">{{ t.dist }}</dd></div>
+              <div><dt style="margin:0;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:#8FA3AC">{{ contactLbl }}</dt><dd style="margin:3px 0 0;color:#0B2836;font-weight:500;line-height:1.4">{{ t.contact }}</dd></div>
+            </dl>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="ubicacion" data-screen-label="Ubicación" style="scroll-margin-top:84px;background:#FFFFFF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vw,104px) clamp(18px,5vw,64px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(16px,3vw,28px);align-items:stretch">
+    <div style="background:#0F3B4C;border-radius:18px;padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:18px">
+      <p style="margin:0;color:#F0973B;font-size:14px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase"><span class="es">Ubicación</span><span class="en">Location</span></p>
+      <h2 style="margin:0;font-family:'Marcellus',serif;font-weight:400;font-size:clamp(2rem,3.6vw,2.8rem);line-height:1.15;color:#FFFFFF">Primer Argentino 108</h2>
+      <p style="margin:0;color:rgba(255,255,255,.78);font-size:17.5px;line-height:1.6">(9410) Ushuaia, Tierra del Fuego, Argentina</p>
+      <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px;color:rgba(255,255,255,.85);font-size:17px;line-height:1.5">
+        <li style="display:flex;gap:10px"><span style="color:#F0973B">—</span><span><span class="es">Zona residencial y comercial, muy tranquila</span><span class="en">Quiet residential and commercial area</span></span></li>
+        <li style="display:flex;gap:10px"><span style="color:#F0973B">—</span><span><span class="es">A minutos del centro y del puerto</span><span class="en">Minutes from downtown and the port</span></span></li>
+        <li style="display:flex;gap:10px"><span style="color:#F0973B">—</span><span><span class="es">Estacionamiento sin cargo, a pedido</span><span class="en">Free parking, on request</span></span></li>
+      </ul>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:auto;padding-top:8px">
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Primer+Argentino+108+Ushuaia" target="_blank" style="display:inline-flex;align-items:center;gap:8px;background:#F0973B;color:#082330;font-weight:600;font-size:16px;padding:13px 24px;border-radius:999px" style-hover="background:#E08420;color:#082330"><span class="es">Cómo llegar</span><span class="en">Get directions</span></a>
+        <a href="{{ heroWa }}" target="_blank" style="display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.4);color:#FFFFFF;font-weight:500;font-size:16px;padding:13px 22px;border-radius:999px" style-hover="background:rgba(255,255,255,.12);color:#FFFFFF">
+          <svg width="17" height="17" sc-camel-view-box="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+          +54 9 291 642 1561
+        </a>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;min-height:340px">
+      <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-68.3200%2C-54.8130%2C-68.2820%2C-54.7980&amp;layer=mapnik&amp;marker=-54.8055%2C-68.3010" style="flex:1;width:100%;border:1px solid rgba(11,40,54,.1);border-radius:18px;min-height:320px" title="Mapa Ushuaia" loading="lazy"></iframe>
+      <p style="margin:0;font-size:13.5px;color:#8FA3AC"><span class="es">Mapa referencial — ajustar el pin con las coordenadas exactas.</span><span class="en">Reference map — adjust the pin to the exact coordinates.</span></p>
+    </div>
+  </div>
+</section>
+
+<footer data-screen-label="Footer" style="background:#0B2836;color:#FFFFFF">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(40px,7vw,72px) clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,48px);align-items:flex-start;justify-content:space-between">
+    <div style="display:flex;flex-direction:column;gap:14px;max-width:300px">
+      <img src="785d5c2f-f410-4ced-9a75-b094594b2f29.png" alt="Monte Olivia Suites" style="height:64px;width:auto;border-radius:12px;align-self:flex-start">
+      <p style="margin:0;font-family:'Marcellus',serif;font-size:19px;color:rgba(255,255,255,.85)"><span class="es">Tu lugar en el fin del mundo.</span><span class="en">Your place at the end of the world.</span></p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:16.5px">
+      <p style="margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F0973B"><span class="es">Secciones</span><span class="en">Sections</span></p>
+      <a href="Monte%20Olivia%20-%20Departamentos.dc.html" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Departamentos</span><span class="en">Apartments</span></a>
+      <a href="#tarifas" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Tarifas</span><span class="en">Rates</span></a>
+      <a href="#huespedes" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Huéspedes</span><span class="en">Guests</span></a>
+      <a href="#reserva" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Reservar</span><span class="en">Book</span></a>
+      <a href="#galeria" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Galería</span><span class="en">Gallery</span></a>
+      <a href="#excursiones" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Excursiones</span><span class="en">Tours</span></a>
+      <a href="#ubicacion" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><span class="es">Ubicación</span><span class="en">Location</span></a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px;font-size:16.5px;max-width:280px">
+      <p style="margin:0 0 4px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#F0973B"><span class="es">Contacto</span><span class="en">Contact</span></p>
+      <p style="margin:0;color:rgba(255,255,255,.8);line-height:1.55">Primer Argentino 108<br>(9410) Ushuaia, Tierra del Fuego</p>
+      <a href="{{ heroWa }}" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,.8)" style-hover="color:#F0973B"><svg width="16" height="16" sc-camel-view-box="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>+54 9 291 642 1561</a>
+      <a href="{{ mailHref }}" style="color:rgba(255,255,255,.8)" style-hover="color:#F0973B">{{ email }}</a>
+      <div style="display:flex;gap:10px;margin-top:4px">
+        <a href="{{ igUrl }}" target="_blank" title="Instagram" style="width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="border-color:#F0973B;color:#F0973B"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+        <a href="{{ abUrl }}" target="_blank" title="Airbnb" style="width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#FFFFFF" style-hover="border-color:#F0973B;color:#F0973B"><svg width="19" height="19" sc-camel-view-box="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.6c-2.2 0-3.4 3-5.3 7.3C5.3 13 3.4 16.8 3.4 18.4c0 1.9 1.5 3.3 3.3 3.3 1.9 0 3.7-1.4 5.3-3.2 1.6 1.8 3.4 3.2 5.3 3.2 1.8 0 3.3-1.4 3.3-3.3 0-1.6-1.9-5.4-3.3-8.5C15.4 5.6 14.2 2.6 12 2.6z"></path><path d="M12 18.5c-1.3-1.6-2.4-3.4-2.4-4.8a2.4 2.4 0 0 1 4.8 0c0 1.4-1.1 3.2-2.4 4.8z"></path></svg></a>
+        <a href="#" title="Facebook (agregar URL)" style="width:42px;height:42px;border-radius:999px;border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;color:#FFFFFF;font-size:16px;font-weight:600" style-hover="border-color:#F0973B;color:#F0973B">f</a>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid rgba(255,255,255,.12)">
+    <div style="max-width:1180px;margin:0 auto;padding:18px clamp(18px,5vw,64px);display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:14.5px;color:rgba(255,255,255,.5)">
+      <span>© 2026 Monte Olivia Suites — Ushuaia, Argentina</span>
+      <span><span class="es">Precios en U$S, por noche</span><span class="en">Rates in U$S, per night</span></span>
+    </div>
+  </div>
+</footer>
+
+<a href="{{ heroWa }}" target="_blank" aria-label="WhatsApp" style="position:fixed;right:20px;bottom:20px;z-index:70;width:70px;height:70px;border-radius:999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(11,40,54,.32);transition:transform .2s ease" style-hover="transform:scale(1.07)">
+  <svg width="36" height="36" sc-camel-view-box="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.9c0 2.1.55 4.14 1.6 5.95L0 24l6.3-1.65a11.86 11.86 0 0 0 5.74 1.47h.01c6.55 0 11.89-5.34 11.89-11.9 0-3.18-1.24-6.16-3.42-8.34zM12.05 21.8h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.64-.24-.37a9.86 9.86 0 0 1-1.51-5.28c0-5.45 4.43-9.88 9.9-9.88a9.83 9.83 0 0 1 6.99 2.9 9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.89-9.89 9.89zm5.42-7.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.07-.12-.27-.2-.57-.35z"></path></svg>
+</a>
+</x-dc>
+
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;whatsapp&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;5492916421561&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;email&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;info@monteoliviasuites.com.ar&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;instagramUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.instagram.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;airbnbUrl&quot;: {&quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;https://www.airbnb.com/&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Contacto&quot;}, &quot;idiomaInicial&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;es&quot;, &quot;en&quot;], &quot;default&quot;: &quot;es&quot;, &quot;tsType&quot;: &quot;'es' | 'en'&quot;, &quot;section&quot;: &quot;Contenido&quot;}, &quot;mostrarPrecios&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Contenido&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'es', menuOpen: false, navHidden: false, lb: null, revOpen: false, revSent: false, tick: 0, carPaused: false };
+  componentDidMount() {
+    let l = null;
+    try { l = localStorage.getItem('mo-lang'); } catch (e) {}
+    this.applyLang(l || this.props.idiomaInicial || 'es');
+    this._lastY = window.scrollY;
+    this._onScroll = () => {
+      const y = window.scrollY;
+      const hidden = y > this._lastY + 4 && y > 140;
+      const shown = y < this._lastY - 4 || y <= 140;
+      if (hidden && !this.state.navHidden) this.setState({ navHidden: true });
+      else if (shown && this.state.navHidden) this.setState({ navHidden: false });
+      this._lastY = y;
+    };
+    this._onKey = (e) => {
+      if (e.key === 'Escape') this.setState({ lb: null, menuOpen: false, revOpen: false, revSent: false });
+      if (this.state.lb !== null && e.key === 'ArrowRight') this.setState(s => ({ lb: (s.lb + 1) % 4 }));
+      if (this.state.lb !== null && e.key === 'ArrowLeft') this.setState(s => ({ lb: (s.lb + 3) % 4 }));
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('keydown', this._onKey);
+    this._car = setInterval(() => { if (!this.state.carPaused) this.setState(s => ({ tick: s.tick + 1 })); }, 4200);
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('keydown', this._onKey); clearInterval(this._car); }
+  applyLang(l) {
+    document.body.dataset.lang = l;
+    try { localStorage.setItem('mo-lang', l); } catch (e) {}
+    this.setState({ lang: l });
+  }
+  waNum() { return String(this.props.whatsapp ?? '5492916421561').replace(/[^0-9]/g, ''); }
+  wa(msg) { return 'https://wa.me/' + this.waNum() + '?text=' + encodeURIComponent(msg); }
+  val(id) { const e = document.getElementById(id); return e && e.value ? e.value : ''; }
+  buildMsg() {
+    const es = this.state.lang !== 'en';
+    const L = [];
+    L.push(es ? 'Hola Monte Olivia Suites! Quiero consultar disponibilidad.' : "Hi Monte Olivia Suites! I'd like to check availability.");
+    const n = this.val('mo-nombre'); if (n) L.push((es ? 'Nombre: ' : 'Name: ') + n);
+    const a = this.val('mo-llegada'), b = this.val('mo-salida');
+    if (a || b) L.push((es ? 'Fechas: ' : 'Dates: ') + (a || '¿?') + ' → ' + (b || '¿?'));
+    L.push((es ? 'Huéspedes: ' : 'Guests: ') + (this.val('mo-pax') || '2'));
+    const d = this.val('mo-depto'); if (d) L.push((es ? 'Departamento: N° ' : 'Apartment: No. ') + d);
+    const m = this.val('mo-msg'); if (m) L.push(m);
+    return L.join('\n');
+  }
+  renderVals() {
+    const es = this.state.lang !== 'en';
+    const showPrices = this.props.mostrarPrecios ?? true;
+    const email = this.props.email ?? 'info@monteoliviasuites.com.ar';
+    const DATA = [
+      { n: 1, pax: 6, baja: '4 pax U$S 140 · 5/6 pax U$S 170', alta: '4 pax U$S 150 · 5/6 pax U$S 185',
+        dEs: 'Amplio, moderno y muy luminoso. Living-comedor espacioso y cocina completamente equipada.',
+        dEn: 'Spacious, modern and bright, with a large living-dining room and a fully equipped kitchen.' },
+      { n: 2, pax: 6, baja: '4 pax U$S 140 · 5/6 pax U$S 170', alta: '4 pax U$S 150 · 5/6 pax U$S 185',
+        dEs: 'Espacioso y confortable, con living luminoso y cocina completa. Ideal para familias y grupos.',
+        dEn: 'Roomy and comfortable, with a bright living room and full kitchen. Ideal for families and groups.' },
+      { n: 3, pax: 4, baja: '2 pax U$S 100 · 3/4 pax U$S 125', alta: '2 pax U$S 110 · 3/4 pax U$S 135',
+        dEs: 'Cálido y funcional, pensado para parejas — con lugar para uno o dos huéspedes más.',
+        dEn: 'Warm and functional, designed for couples — with room for one or two extra guests.' },
+      { n: 4, pax: 4, baja: 'U$S 135', alta: 'U$S 145',
+        dEs: 'Cómodo y completo para cuatro huéspedes, con todos los servicios.',
+        dEn: 'Comfortable and complete for four guests, with every essential covered.' },
+      { n: 5, pax: 2, baja: 'U$S 69', alta: 'U$S 79',
+        dEs: 'Compacto y acogedor, ideal para dos. La base perfecta para explorar Ushuaia.',
+        dEn: 'Compact and cosy, ideal for two — the perfect base to explore Ushuaia.' }
+    ];
+    const amenityList = es
+      ? ['Wi-Fi libre', 'Cocina equipada', 'TV', 'Calefacción', 'Ropa blanca y toallas', 'Estacionamiento a pedido']
+      : ['Free Wi-Fi', 'Full kitchen', 'TV', 'Heating', 'Linens & towels', 'Parking on request'];
+    const SLIDES = es ? ['Foto principal', 'Living', 'Dormitorio'] : ['Main photo', 'Living room', 'Bedroom'];
+    const tick = this.state.tick;
+    const apartments = DATA.map((a, idx) => ({
+      ...a,
+      alt: idx % 2 === 1 ? 'true' : 'false',
+      numLbl: (es ? 'Departamento ' : 'Apartment ') + a.n,
+      paxWord: es ? 'huéspedes' : 'guests',
+      paxIcons: Array.from({ length: a.pax }, (_, i) => ({ d: (i * 0.22).toFixed(2) + 's' })),
+      desc: es ? a.dEs : a.dEn,
+      lowLbl: es ? 'Temporada baja' : 'Low season',
+      highLbl: es ? 'Temporada alta' : 'High season',
+      amenityLine: amenityList.join(' · '),
+      ctaWaLbl: es ? 'Consultar por WhatsApp' : 'Enquire via WhatsApp',
+      viewLbl: es ? 'Ver departamento' : 'View apartment',
+      slides: SLIDES.map((ph, i) => ({
+        id: 'slot-apt-' + a.n + (i === 0 ? '' : '-' + (i + 1)),
+        ph: ph + (es ? ' · Departamento ' : ' · Apartment ') + a.n,
+        on: ((tick + idx) % SLIDES.length) === i ? 'true' : 'false'
+      })),
+      pageHref: 'Monte%20Olivia%20-%20Departamentos.dc.html#depto-' + a.n,
+      waHref: this.wa(es
+        ? 'Hola! Quiero consultar disponibilidad del Departamento ' + a.n + ' en Monte Olivia Suites.'
+        : "Hi! I'd like to check availability for Apartment " + a.n + ' at Monte Olivia Suites.')
+    }));
+
+    const UNIQ = [
+      ['assets/ushuaia-ciudad.avif', es ? 'Ushuaia y los Andes fueguinos' : 'Ushuaia and the Fuegian Andes'],
+      ['assets/canal-beagle-veleros.avif', es ? 'Canal Beagle' : 'Beagle Channel'],
+      ['assets/ushuaia-puerto-invierno.avif', es ? 'Puerto de Ushuaia en invierno' : 'Ushuaia port in winter'],
+      ['assets/hero-monte-olivia.avif', 'Monte Olivia']
+    ];
+    const im = i => ({ isImg: true, isSlot: false, bg: 'url(' + UNIQ[i][0] + ')', alt: UNIQ[i][1], id: '', ph: '', open: () => this.setState({ lb: i }) });
+    const slot = (id, phEs, phEn) => ({ isImg: false, isSlot: true, bg: 'none', alt: '', id: 'slot-' + id, ph: es ? 'Foto real: ' + phEs : 'Real photo: ' + phEn, open: () => {} });
+    const top = [im(0), slot('living', 'living Depto 1', 'living room Apt 1'), im(1), slot('dormitorio', 'dormitorio', 'bedroom'), im(2), slot('cocina', 'cocina equipada', 'kitchen'), im(3), slot('fachada', 'fachada del edificio', 'building façade')];
+    const bot = [slot('bano', 'baño', 'bathroom'), im(1), slot('balcon', 'vista desde el balcón', 'balcony view'), im(0), slot('comedor', 'comedor', 'dining area'), im(2), slot('entrada', 'entrada del edificio', 'building entrance'), im(3)];
+    const lb = this.state.lb;
+
+    const REV = [
+      ['Mariana — Buenos Aires', 5, 'El departamento impecable y la atención de primera. La zona es tranquila y está cerca de todo.', 'Spotless apartment and first-class hosts. The area is quiet and close to everything.'],
+      ['Sarah — London', 5, 'Muy cómodo, cálido y con todo lo necesario. Nos ayudaron a planear cada día del viaje.', 'Very comfortable and warm, with everything we needed. They helped us plan every day of the trip.'],
+      ['Julián — Córdoba', 5, 'Volveríamos sin dudarlo. Se siente como en casa, con las montañas por la ventana.', 'We would come back in a heartbeat. It feels like home, with mountains outside the window.'],
+      ['Thomas — Berlin', 5, 'Ubicación perfecta para descansar después de las excursiones. Cocina completa y calefacción excelente.', 'Perfect place to rest after the tours. Full kitchen and excellent heating.'],
+      ['Camila — Santiago', 4, 'Nos recibieron con todo listo. Limpieza impecable y vista a las montañas desde el living.', 'Everything was ready when we arrived. Spotless, with mountain views from the living room.'],
+      ['Lucas y Flor — Rosario', 5, 'Ideal para ir en familia: espacio de sobra, estacionamiento sin problemas y muy tranquilo.', 'Ideal for families: plenty of space, easy parking and very quiet.'],
+      ['Emma — Melbourne', 5, 'Cálido, impecable y silencioso. Nos coordinaron la navegación por el Beagle en minutos.', 'Warm, spotless and quiet. They arranged our Beagle Channel trip in minutes.'],
+      ['Pedro — São Paulo', 4, 'Departamento amplio, buena calefacción y Wi-Fi rápido para trabajar unos días.', 'Spacious apartment, good heating and fast Wi-Fi for a few days of work.'],
+      ['Ana — Mendoza', 5, 'Nos trataron como en casa. Las recomendaciones locales valieron oro.', 'They treated us like family. The local tips were worth gold.'],
+      ['Nicolas — Paris', 5, 'Excelente base para recorrer Ushuaia. La cocina tenía todo y los anfitriones, un encanto.', 'Excellent base for exploring Ushuaia. The kitchen had everything and the hosts were lovely.'],
+      ['Valentina — Montevideo', 5, 'Cálido y luminoso. A pocos minutos del centro, pero sin nada de ruido.', 'Warm and bright. Minutes from downtown, yet completely quiet.'],
+      ['Martín — La Plata', 5, 'Todo impecable. Volvemos en invierno para ver la nieve.', 'Everything spotless. We are coming back in winter for the snow.']
+    ];
+    const revList = REV.map(r => ({ who: r[0], stars: '★★★★★'.slice(0, r[1]) + '☆☆☆☆☆'.slice(0, 5 - r[1]), text: es ? r[2] : r[3] }));
+
+    const TOURS = [
+      { name: 'Canal Beagle', img: 'assets/canal-beagle-veleros.avif',
+        dEs: 'Navegación al Faro Les Éclaireurs e Isla de los Lobos.', dEn: 'Sail to Les Éclaireurs lighthouse and the sea lion colony.',
+        distEs: 'Puerto de Ushuaia · a 5 min', distEn: 'Ushuaia port · 5 min away', conEs: 'Operadores del puerto · reservamos por vos', conEn: 'Port operators · we book for you' },
+      { name: es ? 'Parque Nacional' : 'National Park', slot: 'parque', phEs: 'Parque Nacional', phEn: 'National Park',
+        dEs: 'Tierra del Fuego y Bahía Lapataia, medio día entre bosques y costa.', dEn: 'Tierra del Fuego & Lapataia Bay — half a day of forest and coast.',
+        distEs: '12 km · 20 min en auto', distEn: '12 km · 20 min by car', conEs: 'Traslado y guía · lo coordinamos', conEn: 'Transfer & guide · we arrange it' },
+      { name: es ? 'Tren del Fin del Mundo' : 'End of the World Train', slot: 'tren', phEs: 'Tren del Fin del Mundo', phEn: 'End of the World Train',
+        dEs: 'El histórico ferrocarril austral, dentro del Parque Nacional.', dEn: 'The historic southern railway, inside the National Park.',
+        distEs: '8 km · 15 min en auto', distEn: '8 km · 15 min by car', conEs: 'Estación del Fin del Mundo · boletería', conEn: 'End of the World Station · ticket office' },
+      { name: 'Laguna Esmeralda', slot: 'laguna', phEs: 'Laguna Esmeralda', phEn: 'Laguna Esmeralda',
+        dEs: 'Trekking de día completo hasta la laguna turquesa.', dEn: 'Full-day trek to the turquoise lagoon.',
+        distEs: '18 km · 25 min en auto', distEn: '18 km · 25 min by car', conEs: 'Guías habilitados · lo coordinamos', conEn: 'Licensed guides · we arrange it' }
+    ];
+    const tours = TOURS.map(t => ({
+      name: t.name, hasImg: !!t.img, bg: t.img ? 'url(' + t.img + ')' : 'none', noImg: !t.img, slotId: 'slot-tour-' + (t.slot || ''), ph: (es ? 'Foto: ' : 'Photo: ') + (es ? t.phEs : t.phEn),
+      desc: es ? t.dEs : t.dEn, dist: es ? t.distEs : t.distEn, contact: es ? t.conEs : t.conEn
+    }));
+
+    return {
+      apartments, showPrices, tours,
+      pauseCar: () => this.setState({ carPaused: true }),
+      resumeCar: () => this.setState({ carPaused: false }),
+      galTop: [...top, ...top], galBot: [...bot, ...bot],
+      lbOpen: lb !== null, lbBg: lb !== null ? 'url(' + UNIQ[lb][0] + ')' : 'none', lbAlt: lb !== null ? UNIQ[lb][1] : '', lbCounter: lb !== null ? (lb + 1) + ' / ' + UNIQ.length : '',
+      lbClose: () => this.setState({ lb: null }),
+      lbPrev: (e) => { e.stopPropagation(); this.setState(s => ({ lb: (s.lb + UNIQ.length - 1) % UNIQ.length })); },
+      lbNext: (e) => { e.stopPropagation(); this.setState(s => ({ lb: (s.lb + 1) % UNIQ.length })); },
+      stop: (e) => e.stopPropagation(),
+      reviews: [...revList, ...revList],
+      revOpen: this.state.revOpen, revSent: this.state.revSent, revNotSent: !this.state.revSent,
+      openReview: () => this.setState({ revOpen: true, revSent: false }),
+      closeReview: () => this.setState({ revOpen: false, revSent: false }),
+      submitReview: () => this.setState({ revSent: true }),
+      distLbl: es ? 'Distancia' : 'Distance', contactLbl: es ? 'Contacto' : 'Contact',
+      navHidden: this.state.navHidden ? 'true' : 'false',
+      menuOpen: this.state.menuOpen,
+      openMenu: () => this.setState({ menuOpen: true }),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      setEs: () => this.applyLang('es'),
+      setEn: () => this.applyLang('en'),
+      email, mailHref: 'mailto:' + email,
+      igUrl: this.props.instagramUrl ?? 'https://www.instagram.com/',
+      abUrl: this.props.airbnbUrl ?? 'https://www.airbnb.com/',
+      heroWa: this.wa(es ? 'Hola! Quiero consultar disponibilidad en Monte Olivia Suites.' : "Hi! I'd like to check availability at Monte Olivia Suites."),
+      sendWhatsApp: () => window.open(this.wa(this.buildMsg()), '_blank'),
+      sendEmail: () => { window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(es ? 'Consulta de reserva — Monte Olivia Suites' : 'Booking enquiry — Monte Olivia Suites') + '&body=' + encodeURIComponent(this.buildMsg()); },
+      ph: {
+        nombre: es ? 'Tu nombre' : 'Your name',
+        msg: es ? 'Contanos fechas flexibles, consultas, etc.' : 'Flexible dates, questions, etc.',
+        any: es ? 'Cualquiera' : 'Any',
+        revWho: es ? 'Ej.: Mariana — Buenos Aires' : 'E.g.: Sarah — London',
+        revText: es ? '¿Cómo fue tu estadía?' : 'How was your stay?'
+      }
+    };
+  }
+}
+</script>
+
+
+</body></html>

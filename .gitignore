@@ -46,3 +46,9 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# design: binarios extraídos (se regeneran con scripts/extract-design.py)
+/design/extracted/**/*.png
+/design/extracted/**/*.avif
+# originales de fotos y videos del cliente (pesados; se optimizan a public/images)
+/images/

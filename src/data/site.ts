@@ -28,6 +28,8 @@ export const site = {
   /** Video de fondo del hero (solo desktop). null = hero con imagen. Ver .docs/roadmap.md */
   heroVideo: null as null | { mp4: string; webm?: string },
   foundingYear: 2019,
+  /** Año del copyright (fijo para que las páginas sigan siendo estáticas). */
+  copyrightYear: 2026,
 } as const
 
 export const seasons = {

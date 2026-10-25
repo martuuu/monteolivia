@@ -44,7 +44,10 @@ export const tours: Tour[] = [
   {
     id: 'laguna-esmeralda',
     name: { es: 'Laguna Esmeralda', en: 'Laguna Esmeralda' },
-    desc: { es: 'Trekking de día completo hasta la laguna turquesa.', en: 'Full-day trek to the turquoise lagoon.' },
+    desc: {
+      es: 'Trekking de día completo hasta la laguna turquesa.',
+      en: 'Full-day trek to the turquoise lagoon.',
+    },
     distance: { es: '18 km · 25 min en auto', en: '18 km · 25 min by car' },
     contact: { es: 'Guías habilitados · lo coordinamos', en: 'Licensed guides · we arrange it' },
     image: 'landscape-9',

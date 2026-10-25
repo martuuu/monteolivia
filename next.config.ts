@@ -32,6 +32,9 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   partialPrefetching: true,
   poweredByHeader: false,
+  experimental: {
+    globalNotFound: true,
+  },
   turbopack: {
     rules: {
       '*.css': {

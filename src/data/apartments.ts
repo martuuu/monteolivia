@@ -2,7 +2,8 @@ import type { Locale } from '@/i18n/routing'
 import type { ImageId } from './image-manifest'
 import type { L } from './site'
 
-export type RoomKey = 'overview' | 'living' | 'dining' | 'kitchen' | 'bedroom' | 'twin' | 'bathroom' | 'balcony' | 'detail'
+export type RoomKey =
+  'overview' | 'living' | 'dining' | 'kitchen' | 'bedroom' | 'twin' | 'bathroom' | 'balcony' | 'detail'
 export type PriceTier = { minPax: number; maxPax: number; usd: number }
 export type ApartmentImage = { id: ImageId; room: RoomKey }
 
@@ -76,8 +77,14 @@ export const apartments: Apartment[] = [
     n: 1,
     pax: 6,
     bedrooms: 2,
-    beds: { es: '1 cama King · 2 camas de plaza y media · sofá cama', en: '1 king bed · 2 large single beds · sofa bed' },
-    sizeLine: { es: 'Living-comedor · 2 dormitorios · Cocina completa', en: 'Living-dining · 2 bedrooms · Full kitchen' },
+    beds: {
+      es: '1 cama King · 2 camas de plaza y media · sofá cama',
+      en: '1 king bed · 2 large single beds · sofa bed',
+    },
+    sizeLine: {
+      es: 'Living-comedor · 2 dormitorios · Cocina completa',
+      en: 'Living-dining · 2 bedrooms · Full kitchen',
+    },
     summary: {
       es: 'Amplio, moderno y muy luminoso. Living-comedor espacioso y cocina completamente equipada.',
       en: 'Spacious, modern and bright, with a large living-dining room and a fully equipped kitchen.',
@@ -121,8 +128,14 @@ export const apartments: Apartment[] = [
     n: 2,
     pax: 6,
     bedrooms: 2,
-    beds: { es: '1 cama King · 2 camas de plaza y media · sofá cama', en: '1 king bed · 2 large single beds · sofa bed' },
-    sizeLine: { es: 'Living-comedor · 2 dormitorios · Cocina completa', en: 'Living-dining · 2 bedrooms · Full kitchen' },
+    beds: {
+      es: '1 cama King · 2 camas de plaza y media · sofá cama',
+      en: '1 king bed · 2 large single beds · sofa bed',
+    },
+    sizeLine: {
+      es: 'Living-comedor · 2 dormitorios · Cocina completa',
+      en: 'Living-dining · 2 bedrooms · Full kitchen',
+    },
     summary: {
       es: 'Espacioso y confortable, con living luminoso y cocina completa. Ideal para familias y grupos.',
       en: 'Roomy and comfortable, with a bright living room and full kitchen. Ideal for families and groups.',
@@ -166,7 +179,10 @@ export const apartments: Apartment[] = [
     pax: 4,
     bedrooms: 1,
     beds: { es: '1 cama King · sofá cama Queen', en: '1 king bed · queen sofa bed' },
-    sizeLine: { es: 'Living · 1 dormitorio · Cocina completa · Balcón', en: 'Living room · 1 bedroom · Full kitchen · Balcony' },
+    sizeLine: {
+      es: 'Living · 1 dormitorio · Cocina completa · Balcón',
+      en: 'Living room · 1 bedroom · Full kitchen · Balcony',
+    },
     summary: {
       es: 'Cálido y funcional, pensado para parejas — con lugar para uno o dos huéspedes más y un gran balcón.',
       en: 'Warm and functional, designed for couples — with room for one or two extra guests and a large balcony.',
@@ -211,7 +227,10 @@ export const apartments: Apartment[] = [
     pax: 4,
     bedrooms: 2,
     beds: { es: '1 cama King · 2 camas de plaza y media', en: '1 king bed · 2 large single beds' },
-    sizeLine: { es: 'Living-comedor · 2 dormitorios · Cocina completa · Balcón', en: 'Living-dining · 2 bedrooms · Full kitchen · Balcony' },
+    sizeLine: {
+      es: 'Living-comedor · 2 dormitorios · Cocina completa · Balcón',
+      en: 'Living-dining · 2 bedrooms · Full kitchen · Balcony',
+    },
     summary: {
       es: 'Cómodo y completo para cuatro huéspedes, con dos dormitorios y un gran balcón con vista.',
       en: 'Comfortable and complete for four guests, with two bedrooms and a large balcony with views.',
@@ -251,7 +270,10 @@ export const apartments: Apartment[] = [
     pax: 2,
     bedrooms: 0,
     beds: { es: '1 cama King', en: '1 king bed' },
-    sizeLine: { es: 'Monoambiente · Cocina completa · Baño privado', en: 'Studio · Full kitchen · Private bathroom' },
+    sizeLine: {
+      es: 'Monoambiente · Cocina completa · Baño privado',
+      en: 'Studio · Full kitchen · Private bathroom',
+    },
     summary: {
       es: 'Compacto y acogedor, ideal para dos. La base perfecta para explorar Ushuaia.',
       en: 'Compact and cosy, ideal for two — the perfect base to explore Ushuaia.',
@@ -269,8 +291,12 @@ export const apartments: Apartment[] = [
       en: ['Studio', 'Full kitchen', 'King bed', 'Breakfast bar', 'Private bathroom'],
     },
     notes: {
-      es: ['Está en el 4° piso: el ascensor llega hasta el 3° y sigue un tramo corto de escalera. Te ayudamos con el equipaje.'],
-      en: ['It is on the 4th floor: the lift goes up to the 3rd and then there is a short flight of stairs. We help with your luggage.'],
+      es: [
+        'Está en el 4° piso: el ascensor llega hasta el 3° y sigue un tramo corto de escalera. Te ayudamos con el equipaje.',
+      ],
+      en: [
+        'It is on the 4th floor: the lift goes up to the 3rd and then there is a short flight of stairs. We help with your luggage.',
+      ],
     },
     prices: {
       low: [{ minPax: 2, maxPax: 2, usd: 69 }],
@@ -289,7 +315,8 @@ export const apartments: Apartment[] = [
   },
 ]
 
-export const apartmentSlug = (n: number, locale: Locale) => (locale === 'es' ? `departamento-${n}` : `apartment-${n}`)
+export const apartmentSlug = (n: number, locale: Locale) =>
+  locale === 'es' ? `departamento-${n}` : `apartment-${n}`
 
 export function apartmentFromSlug(slug: string, locale: Locale) {
   const m = slug.match(locale === 'es' ? /^departamento-(\d)$/ : /^apartment-(\d)$/)

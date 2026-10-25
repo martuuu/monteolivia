@@ -1,1 +1,215 @@
-{"Meta":{"siteName":"Monte Olivia Suites"}}
+{
+  "Meta": {
+    "siteName": "Monte Olivia Suites",
+    "homeTitle": "Departamentos en Ushuaia · Alquiler temporario | Monte Olivia Suites",
+    "homeDescription": "5 departamentos boutique en alquiler temporario en Ushuaia, en una zona tranquila cerca del centro. Wi-Fi, cocina completa y estacionamiento. Reservá por WhatsApp.",
+    "apartmentsTitle": "Alquiler de departamentos en Ushuaia, de 2 a 6 huéspedes | Monte Olivia Suites",
+    "apartmentsDescription": "Conocé los 5 departamentos de Monte Olivia Suites en Ushuaia: fotos, ambientes, comodidades y tarifas por temporada. Consultá disponibilidad por WhatsApp.",
+    "apartmentTitle": "Departamento {n} en Ushuaia · {pax} | Monte Olivia Suites",
+    "apartmentDescription": "{summary} Desde U$S {price} por noche. Monte Olivia Suites, Primer Argentino 108, Ushuaia.",
+    "notFoundTitle": "Página no encontrada · Monte Olivia Suites",
+    "maintenanceTitle": "En mantenimiento · Monte Olivia Suites",
+    "ogAlt": "Monte Olivia Suites · departamentos en Ushuaia"
+  },
+  "Nav": {
+    "home": "Inicio",
+    "apartments": "Departamentos",
+    "rates": "Tarifas",
+    "guests": "Huéspedes",
+    "book": "Reservar",
+    "bookNow": "Reservar",
+    "gallery": "Galería",
+    "tours": "Excursiones",
+    "location": "Ubicación",
+    "menu": "Menú",
+    "close": "Cerrar",
+    "skip": "Saltar al contenido",
+    "langLabel": "Idioma",
+    "switchTo": "Ver el sitio en inglés"
+  },
+  "Common": {
+    "bookWhatsapp": "Reservar por WhatsApp",
+    "askWhatsapp": "Consultar por WhatsApp",
+    "seeApartments": "Ver departamentos",
+    "seeAllApartments": "Ver todos los departamentos",
+    "viewApartment": "Ver departamento",
+    "apartment": "Departamento",
+    "guests": "huéspedes",
+    "upTo": "Hasta {n} huéspedes",
+    "exactly": "{n} huéspedes",
+    "perNight": "por noche",
+    "whatsappLabel": "Escribinos por WhatsApp",
+    "waHello": "Hola! Quiero consultar disponibilidad en Monte Olivia Suites.",
+    "waRecommend": "Hola! Quiero que me recomienden un departamento en Monte Olivia Suites.",
+    "waApartment": "Hola! Quiero consultar disponibilidad del Departamento {n} en Monte Olivia Suites."
+  },
+  "Hero": {
+    "eyebrow": "Ushuaia · Tierra del Fuego",
+    "title": "Tu lugar en el fin del mundo",
+    "lead": "Departamentos boutique, amplios y cálidos, en una zona tranquila de Ushuaia — con las montañas siempre a la vista.",
+    "imageAlt": "El Monte Olivia nevado sobre la ciudad de Ushuaia y el Canal Beagle"
+  },
+  "Facts": {
+    "heading": "Lo esencial de Monte Olivia Suites",
+    "apartmentsTitle": "5 departamentos",
+    "apartmentsText": "Amplios, modernos y luminosos",
+    "wifiTitle": "Wi-Fi",
+    "wifiText": "Gratis en todas las unidades",
+    "parkingTitle": "Estacionamiento",
+    "parkingText": "A pedido, sin cargo",
+    "lockersTitle": "Lockers de ski",
+    "lockersText": "Y lavasecarropas para tu equipo",
+    "guestsTitle": "De 2 a 6 huéspedes",
+    "guestsText": "Según el departamento"
+  },
+  "HomeApartments": {
+    "eyebrow": "Departamentos",
+    "title": "Cada detalle pensado para sentirte en casa",
+    "lead": "Cinco departamentos modernos y espaciosos en una zona residencial, comercial y muy tranquila de Ushuaia. Decoración cálida, cocina completa y Wi-Fi libre en todas las unidades.",
+    "amenityLine": "Wi-Fi libre · Cocina equipada · Smart TV · Calefacción · Lavasecarropas · Ropa blanca y toallas · Estacionamiento a pedido",
+    "photoOf": "Foto {i} de {total}",
+    "prevPhoto": "Foto anterior",
+    "nextPhoto": "Foto siguiente"
+  },
+  "Rates": {
+    "title": "Tarifas",
+    "lead": "Precios por departamento y por noche, en dólares estadounidenses (U$S). Consultá disponibilidad por WhatsApp — respondemos en el día.",
+    "residents": "Para residentes argentinos, los valores se cobran en pesos según la cotización del día del Banco Nación."
+  },
+  "Guests": {
+    "eyebrow": "Huéspedes",
+    "title": "Sentirse en casa, incluso en el fin del mundo",
+    "note": "Reseñas reales de huéspedes, en su idioma original.",
+    "leaveReview": "Dejar comentario",
+    "stayedIn": "Estadía"
+  },
+  "ReviewForm": {
+    "eyebrow": "Huéspedes",
+    "title": "Dejá tu comentario",
+    "name": "Nombre y ciudad",
+    "namePlaceholder": "Ej.: Mariana — Buenos Aires",
+    "rating": "Puntaje",
+    "ratingOption": "{n} de 5 estrellas",
+    "text": "Comentario",
+    "textPlaceholder": "¿Cómo fue tu estadía?",
+    "email": "Email (opcional, no se publica)",
+    "submit": "Enviar comentario",
+    "sending": "Enviando…",
+    "thanksTitle": "¡Gracias por tu comentario!",
+    "thanksText": "Lo recibimos correctamente y pronto aparecerá junto a los demás huéspedes.",
+    "fallbackText": "Abrimos tu programa de correo con el comentario listo para enviar. Si no se abrió, escribinos a {email}.",
+    "error": "Revisá los datos: el nombre y un comentario de al menos 10 caracteres son obligatorios.",
+    "close": "Cerrar",
+    "mailSubject": "Comentario de huésped — Monte Olivia Suites"
+  },
+  "Booking": {
+    "eyebrow": "Reservas",
+    "title": "Reservá tu estadía",
+    "lead": "Completá tus datos y enviá la solicitud por WhatsApp o por email — el mensaje se arma solo. Te respondemos en el día.",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "checkIn": "Llegada",
+    "checkOut": "Salida",
+    "guests": "Huéspedes",
+    "apartment": "Departamento",
+    "any": "Cualquiera",
+    "message": "Mensaje",
+    "messagePlaceholder": "Contanos fechas flexibles, consultas, etc.",
+    "sendWhatsapp": "Enviar por WhatsApp",
+    "sendEmail": "Enviar por email",
+    "alsoOn": "También estamos en",
+    "msgHello": "Hola Monte Olivia Suites! Quiero consultar disponibilidad.",
+    "msgHelloApartment": "Hola Monte Olivia Suites! Quiero consultar disponibilidad del Departamento {n} ({pax}).",
+    "msgName": "Nombre: {v}",
+    "msgDates": "Fechas: {in} → {out}",
+    "msgGuests": "Huéspedes: {v}",
+    "msgApartment": "Departamento: N° {v}",
+    "msgNights": "Noches: {v}",
+    "mailSubject": "Consulta de reserva — Monte Olivia Suites",
+    "mailSubjectApartment": "Consulta Departamento {n} — Monte Olivia Suites",
+    "unknownDate": "¿?",
+    "dateError": "La salida tiene que ser posterior a la llegada."
+  },
+  "Gallery": {
+    "eyebrow": "Galería",
+    "title": "Ushuaia desde acá",
+    "hint": "Tocá una foto para verla en grande.",
+    "open": "Ampliar foto: {alt}"
+  },
+  "Tours": {
+    "eyebrow": "Excursiones",
+    "title": "El fin del mundo, cerca",
+    "lead": "Coordinamos excursiones y traslados con operadores locales de confianza. Contanos qué querés conocer y armamos tu itinerario.",
+    "distance": "Distancia",
+    "contact": "Contacto",
+    "scrollHint": "Deslizá para ver más excursiones",
+    "prev": "Excursiones anteriores",
+    "next": "Más excursiones"
+  },
+  "Location": {
+    "eyebrow": "Ubicación",
+    "region": "Ushuaia, Tierra del Fuego, Argentina",
+    "b1": "Zona residencial y comercial, muy tranquila",
+    "b2": "A 200 m: supermercados, rotiserías y parada de taxis",
+    "b3": "A 20 minutos a pie del centro y del puerto",
+    "b4": "Estacionamiento sin cargo, a pedido",
+    "directions": "Cómo llegar",
+    "mapTitle": "Mapa de la ubicación de Monte Olivia Suites en Ushuaia",
+    "mapLoad": "Ver mapa interactivo",
+    "mapCredit": "© colaboradores de OpenStreetMap"
+  },
+  "Footer": {
+    "tagline": "Tu lugar en el fin del mundo.",
+    "sections": "Secciones",
+    "contact": "Contacto",
+    "rights": "© {year} Monte Olivia Suites — Ushuaia, Argentina",
+    "pricesNote": "Precios en U$S, por noche"
+  },
+  "ApartmentsPage": {
+    "eyebrow": "Monte Olivia Suites · Ushuaia",
+    "title": "Departamentos",
+    "lead": "Cinco departamentos modernos y muy espaciosos en una zona residencial, comercial y a la vez muy tranquila de Ushuaia. Cada detalle está pensado para que te sientas como en casa: decoración cálida y con estilo, cocina completa y Wi-Fi libre. Estacionamiento sin cargo, a pedido al reservar.",
+    "imageAlt": "La ciudad de Ushuaia frente a la bahía, con los Andes fueguinos nevados",
+    "jumpTo": "Ir a un departamento",
+    "closingTitle": "¿No sabés cuál elegir?",
+    "closingText": "Contanos cuántos viajan y en qué fechas, y te recomendamos el departamento ideal.",
+    "seeRates": "Ver tarifas"
+  },
+  "Apartment": {
+    "rooms": "Ambientes",
+    "amenities": "Comodidades",
+    "beds": "Camas",
+    "goodToKnow": "Bueno saber",
+    "bookEyebrow": "Consultar disponibilidad",
+    "sendVia": "Enviar por",
+    "seePhotos": "Ver las {n} fotos",
+    "openPhoto": "Ampliar foto: {caption}",
+    "photoAlt": "{caption} del Departamento {n} — Monte Olivia Suites, Ushuaia",
+    "breadcrumbHome": "Inicio",
+    "prev": "Departamento anterior",
+    "next": "Departamento siguiente",
+    "allApartments": "Todos los departamentos",
+    "fromPrice": "Desde U$S {price} por noche"
+  },
+  "Lightbox": {
+    "close": "Cerrar",
+    "prev": "Anterior",
+    "next": "Siguiente",
+    "counter": "{i} / {total}"
+  },
+  "NotFound": {
+    "eyebrow": "Error 404 · Ushuaia",
+    "title": "Te perdiste en el fin del mundo",
+    "lead": "La página que buscás no existe o cambió de lugar. Pasa hasta en las mejores excursiones: volvé al inicio y te ayudamos a encontrar el camino.",
+    "home": "Volver al inicio",
+    "apartments": "Ver departamentos",
+    "help": "¿Necesitás algo puntual? Escribinos por",
+    "waText": "Hola! Estaba buscando algo en la web de Monte Olivia Suites y no lo encontré."
+  },
+  "Maintenance": {
+    "eyebrow": "En mantenimiento",
+    "title": "Estamos poniendo la casa a punto",
+    "lead": "Estamos haciendo unas mejoras en la web y volvemos muy pronto. Mientras tanto, seguimos atendiendo consultas y reservas como siempre: escribinos y te respondemos enseguida.",
+    "whatsapp": "Escribinos por WhatsApp"
+  }
+}

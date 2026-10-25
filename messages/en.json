@@ -1,1 +1,215 @@
-{"Meta":{"siteName":"Monte Olivia Suites"}}
+{
+  "Meta": {
+    "siteName": "Monte Olivia Suites",
+    "homeTitle": "Apartments in Ushuaia · Vacation rentals | Monte Olivia Suites",
+    "homeDescription": "5 boutique vacation apartments in Ushuaia, Argentina, in a quiet area close to downtown. Free Wi-Fi, full kitchens and parking. Book via WhatsApp.",
+    "apartmentsTitle": "Apartments for rent in Ushuaia for 2 to 6 guests | Monte Olivia Suites",
+    "apartmentsDescription": "Discover the 5 apartments at Monte Olivia Suites in Ushuaia: photos, rooms, amenities and seasonal rates. Check availability via WhatsApp.",
+    "apartmentTitle": "Apartment {n} in Ushuaia · {pax} | Monte Olivia Suites",
+    "apartmentDescription": "{summary} From U$S {price} per night. Monte Olivia Suites, Primer Argentino 108, Ushuaia.",
+    "notFoundTitle": "Page not found · Monte Olivia Suites",
+    "maintenanceTitle": "Under maintenance · Monte Olivia Suites",
+    "ogAlt": "Monte Olivia Suites · apartments in Ushuaia"
+  },
+  "Nav": {
+    "home": "Home",
+    "apartments": "Apartments",
+    "rates": "Rates",
+    "guests": "Guests",
+    "book": "Book",
+    "bookNow": "Book now",
+    "gallery": "Gallery",
+    "tours": "Tours",
+    "location": "Location",
+    "menu": "Menu",
+    "close": "Close",
+    "skip": "Skip to content",
+    "langLabel": "Language",
+    "switchTo": "Ver el sitio en español"
+  },
+  "Common": {
+    "bookWhatsapp": "Book via WhatsApp",
+    "askWhatsapp": "Enquire via WhatsApp",
+    "seeApartments": "See the apartments",
+    "seeAllApartments": "See all apartments",
+    "viewApartment": "View apartment",
+    "apartment": "Apartment",
+    "guests": "guests",
+    "upTo": "Up to {n} guests",
+    "exactly": "{n} guests",
+    "perNight": "per night",
+    "whatsappLabel": "Message us on WhatsApp",
+    "waHello": "Hi! I'd like to check availability at Monte Olivia Suites.",
+    "waRecommend": "Hi! I'd like a recommendation for an apartment at Monte Olivia Suites.",
+    "waApartment": "Hi! I'd like to check availability for Apartment {n} at Monte Olivia Suites."
+  },
+  "Hero": {
+    "eyebrow": "Ushuaia · Tierra del Fuego",
+    "title": "Your place at the end of the world",
+    "lead": "Boutique apartments — spacious, warm and quiet — in a calm corner of Ushuaia, with the mountains always in sight.",
+    "imageAlt": "Snow-capped Mount Olivia above the city of Ushuaia and the Beagle Channel"
+  },
+  "Facts": {
+    "heading": "Monte Olivia Suites at a glance",
+    "apartmentsTitle": "5 apartments",
+    "apartmentsText": "Spacious, modern and bright",
+    "wifiTitle": "Wi-Fi",
+    "wifiText": "Free in every apartment",
+    "parkingTitle": "Parking",
+    "parkingText": "On request, free of charge",
+    "lockersTitle": "Ski lockers",
+    "lockersText": "Plus a washer-dryer for your gear",
+    "guestsTitle": "2 to 6 guests",
+    "guestsText": "Depending on the apartment"
+  },
+  "HomeApartments": {
+    "eyebrow": "Apartments",
+    "title": "Every detail designed to feel like home",
+    "lead": "Five modern, spacious apartments in a quiet residential and commercial area of Ushuaia. Warm interiors, full kitchens and free Wi-Fi in every unit.",
+    "amenityLine": "Free Wi-Fi · Full kitchen · Smart TV · Heating · Washer-dryer · Linens & towels · Parking on request",
+    "photoOf": "Photo {i} of {total}",
+    "prevPhoto": "Previous photo",
+    "nextPhoto": "Next photo"
+  },
+  "Rates": {
+    "title": "Rates",
+    "lead": "Rates per apartment, per night, in US dollars (U$S). Check availability via WhatsApp — we reply within the day.",
+    "residents": "Argentine residents pay in pesos at the Banco Nación exchange rate of the day."
+  },
+  "Guests": {
+    "eyebrow": "Guests",
+    "title": "Feeling at home — even at the end of the world",
+    "note": "Real guest reviews, in their original language.",
+    "leaveReview": "Leave a review",
+    "stayedIn": "Stay"
+  },
+  "ReviewForm": {
+    "eyebrow": "Guests",
+    "title": "Leave your review",
+    "name": "Name and city",
+    "namePlaceholder": "E.g.: Sarah — London",
+    "rating": "Rating",
+    "ratingOption": "{n} out of 5 stars",
+    "text": "Review",
+    "textPlaceholder": "How was your stay?",
+    "email": "Email (optional, not published)",
+    "submit": "Send review",
+    "sending": "Sending…",
+    "thanksTitle": "Thank you for your review!",
+    "thanksText": "We received it and it will soon appear alongside the other guests' reviews.",
+    "fallbackText": "We opened your email app with the review ready to send. If it didn't open, write to us at {email}.",
+    "error": "Please check the form: your name and a review of at least 10 characters are required.",
+    "close": "Close",
+    "mailSubject": "Guest review — Monte Olivia Suites"
+  },
+  "Booking": {
+    "eyebrow": "Booking",
+    "title": "Book your stay",
+    "lead": "Fill in your details and send the request via WhatsApp or email — the message is pre-filled. We reply within the day.",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "guests": "Guests",
+    "apartment": "Apartment",
+    "any": "Any",
+    "message": "Message",
+    "messagePlaceholder": "Flexible dates, questions, etc.",
+    "sendWhatsapp": "Send via WhatsApp",
+    "sendEmail": "Send by email",
+    "alsoOn": "Also find us on",
+    "msgHello": "Hi Monte Olivia Suites! I'd like to check availability.",
+    "msgHelloApartment": "Hi Monte Olivia Suites! I'd like to check availability for Apartment {n} ({pax}).",
+    "msgName": "Name: {v}",
+    "msgDates": "Dates: {in} → {out}",
+    "msgGuests": "Guests: {v}",
+    "msgApartment": "Apartment: No. {v}",
+    "msgNights": "Nights: {v}",
+    "mailSubject": "Booking enquiry — Monte Olivia Suites",
+    "mailSubjectApartment": "Enquiry Apartment {n} — Monte Olivia Suites",
+    "unknownDate": "?",
+    "dateError": "Check-out must be after check-in."
+  },
+  "Gallery": {
+    "eyebrow": "Gallery",
+    "title": "Ushuaia from here",
+    "hint": "Tap a photo to view it full size.",
+    "open": "Enlarge photo: {alt}"
+  },
+  "Tours": {
+    "eyebrow": "Tours",
+    "title": "The end of the world, up close",
+    "lead": "We arrange tours and transfers with trusted local operators. Tell us what you want to see and we'll plan your itinerary.",
+    "distance": "Distance",
+    "contact": "Contact",
+    "scrollHint": "Swipe to see more tours",
+    "prev": "Previous tours",
+    "next": "More tours"
+  },
+  "Location": {
+    "eyebrow": "Location",
+    "region": "Ushuaia, Tierra del Fuego, Argentina",
+    "b1": "Quiet residential and commercial area",
+    "b2": "200 m to supermarkets, take-away food and a taxi stand",
+    "b3": "A 20-minute walk to downtown and the port",
+    "b4": "Free parking, on request",
+    "directions": "Get directions",
+    "mapTitle": "Map showing Monte Olivia Suites in Ushuaia",
+    "mapLoad": "Open interactive map",
+    "mapCredit": "© OpenStreetMap contributors"
+  },
+  "Footer": {
+    "tagline": "Your place at the end of the world.",
+    "sections": "Sections",
+    "contact": "Contact",
+    "rights": "© {year} Monte Olivia Suites — Ushuaia, Argentina",
+    "pricesNote": "Rates in U$S, per night"
+  },
+  "ApartmentsPage": {
+    "eyebrow": "Monte Olivia Suites · Ushuaia",
+    "title": "Apartments",
+    "lead": "Five modern, very spacious apartments in a residential and commercial — yet very quiet — area of Ushuaia. Every detail is designed to make you feel at home: warm, stylish interiors, full kitchens and free Wi-Fi. Free parking on request when booking.",
+    "imageAlt": "The city of Ushuaia on the bay, with the snow-capped Fuegian Andes",
+    "jumpTo": "Go to an apartment",
+    "closingTitle": "Not sure which one to choose?",
+    "closingText": "Tell us how many are travelling and when, and we'll recommend the ideal apartment.",
+    "seeRates": "See rates"
+  },
+  "Apartment": {
+    "rooms": "Rooms",
+    "amenities": "Amenities",
+    "beds": "Beds",
+    "goodToKnow": "Good to know",
+    "bookEyebrow": "Check availability",
+    "sendVia": "Send via",
+    "seePhotos": "See all {n} photos",
+    "openPhoto": "Enlarge photo: {caption}",
+    "photoAlt": "{caption} of Apartment {n} — Monte Olivia Suites, Ushuaia",
+    "breadcrumbHome": "Home",
+    "prev": "Previous apartment",
+    "next": "Next apartment",
+    "allApartments": "All apartments",
+    "fromPrice": "From U$S {price} per night"
+  },
+  "Lightbox": {
+    "close": "Close",
+    "prev": "Previous",
+    "next": "Next",
+    "counter": "{i} / {total}"
+  },
+  "NotFound": {
+    "eyebrow": "Error 404 · Ushuaia",
+    "title": "Lost at the end of the world",
+    "lead": "The page you're looking for doesn't exist or has moved. It happens on the best tours too — head back home and we'll help you find your way.",
+    "home": "Back to home",
+    "apartments": "See apartments",
+    "help": "Need something specific? Message us on",
+    "waText": "Hi! I was looking for something on the Monte Olivia Suites site and couldn't find it."
+  },
+  "Maintenance": {
+    "eyebrow": "Under maintenance",
+    "title": "We're getting the house ready",
+    "lead": "We're making a few improvements to the site and will be back very soon. In the meantime we're still taking enquiries and bookings as usual — message us and we'll reply right away.",
+    "whatsapp": "Message us on WhatsApp"
+  }
+}

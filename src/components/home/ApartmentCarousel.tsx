@@ -8,16 +8,19 @@ import type { LightboxItem } from '@/components/ui/Lightbox'
 type Props = { slides: LightboxItem[]; offset: number; apartment: number; dotLabel: string }
 
 /**
- * Carrusel del diseño: 3 fotos en fundido (opacity .9s), cambio cada 4,2 s desfasado por departamento,
+ * Carrusel del diseño: 3 fotos en fundido (opacity .9s). Arranca en la portada; cambia cada 4,2 s (el primer cambio
+ * desfasado por departamento),
  * pausa con hover/foco/fuera de pantalla/pestaña oculta. Sin autoplay con reduced-motion. Swipe en mobile.
  */
 export function ApartmentCarousel({ slides, offset, apartment, dotLabel }: Props) {
-  const [i, setI] = useState(offset % slides.length)
+  // Siempre arranca en la portada (slide 0). El desfase entre departamentos va en el primer cambio.
+  const [i, setI] = useState(0)
   const [paused, setPaused] = useState(false)
   const [visible, setVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const touch = useRef<number | null>(null)
   const interacted = useRef(false)
+  const started = useRef(false)
 
   useEffect(() => {
     const el = ref.current
@@ -30,11 +33,24 @@ export function ApartmentCarousel({ slides, offset, apartment, dotLabel }: Props
   useEffect(() => {
     if (paused || !visible) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-    const id = setInterval(() => {
+    const next = () => {
       if (document.visibilityState === 'visible') setI((v) => (v + 1) % slides.length)
-    }, 4200)
-    return () => clearInterval(id)
-  }, [paused, visible, slides.length])
+    }
+    let id: ReturnType<typeof setInterval> | undefined
+    // primer cambio desfasado por departamento (para que no cambien todos a la vez), después cada 4,2 s
+    const first = setTimeout(
+      () => {
+        started.current = true
+        next()
+        id = setInterval(next, 4200)
+      },
+      started.current ? 4200 : 4200 + offset * 700,
+    )
+    return () => {
+      clearTimeout(first)
+      if (id) clearInterval(id)
+    }
+  }, [paused, visible, slides.length, offset])
 
   const go = (n: number, action: string) => {
     setI((n + slides.length) % slides.length)

@@ -221,7 +221,7 @@ export const apartments: Apartment[] = [
       { id: 'desayuno-4', room: 'breakfast' },
       ...buildingPhotos,
     ],
-    carousel: ['depto-2-portada', 'depto-2-05', 'depto-2-10'],
+    carousel: ['depto-2-portada', 'depto-2-05', 'depto-2-02'],
   },
   {
     n: 3,

@@ -31,6 +31,17 @@ describe('apartments data', () => {
       expect(new Set(a.images.map((i) => i.id)).size).toBe(a.images.length)
     }
   })
+  it('los carruseles de la home no repiten fotos entre departamentos', () => {
+    const md5 = (id: string) => imageManifest[id as keyof typeof imageManifest].blurDataURL
+    const seen = new Map<string, string>()
+    for (const a of apartments) {
+      for (const id of a.carousel) {
+        const key = md5(id)
+        expect(seen.get(key), `${id} repite ${seen.get(key)}`).toBeUndefined()
+        seen.set(key, id)
+      }
+    }
+  })
   it('matches the approved rates (diseño + sitio anterior)', () => {
     expect(priceLine(apartments[0].prices.low, 'es')).toBe('4 pax U$S 140 · 5/6 pax U$S 170')
     expect(priceLine(apartments[2].prices.high, 'es')).toBe('2 pax U$S 110 · 3/4 pax U$S 135')

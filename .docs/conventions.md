@@ -55,7 +55,7 @@ tests/unit · tests/e2e
 
 - Tipo bilingüe: `L<T> = { es: T; en: T }` (`src/data/site.ts`).
 - Precio nuevo / cambio de tarifa → `apartments.ts` (`prices.low/high`, tramos por pax). La home, tarifas, fichas y JSON-LD se actualizan solos.
-- Fotos: ids del manifest (`'apartment-12'`, `'landscape-9'`, `'hero-home'`). `npm run images:manifest` después de agregar archivos.
+- Fotos: ids del manifest = nombre del archivo (`'depto-2-portada'`, `'depto-2-05'`, `'edificio-fachada'`, `'landscape-9'`, `'hero-home'`). Para sumar una foto a un depto: copiarla a `images/apartments/depto-N/`, correr `npm run images:prepare && npm run images:manifest` y agregarla en `images` del depto en `src/data/apartments.ts` (las 5 primeras, horizontales, arman el mosaico). Un test verifica que cada depto use solo fotos de su carpeta y empiece por su portada.
 
 ## Routing
 

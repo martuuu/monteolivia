@@ -45,7 +45,7 @@ export default async function ApartmentsPage() {
       >
         <div className="animate-mo-zoom absolute inset-0">
           <Photo
-            id="apartment-24"
+            id="depto-3-portada"
             alt={t('imageAlt')}
             fill
             fetchPriority="high"

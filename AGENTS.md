@@ -12,7 +12,7 @@ npm run lint && npm run typecheck && npm test        # rápido (Vitest)
 npm run test:e2e         # build con GA de prueba + Playwright (rutas, 301, 404, SEO, GA, a11y, mobile)
 
 # Contenido visual
-npm run images:prepare   # images/{apartments,landscapes} + heroes del diseño → public/images (≤2048px, sin EXIF)
+npm run images:prepare   # images/{apartments/depto-N,building,landscapes} + heroes del diseño → public/images (≤2048px, sin EXIF)
 npm run images:manifest  # public/images → src/data/image-manifest.ts (ancho/alto/blur). No editar a mano
 npm run og:build         # public/og/*.jpg (1200×630) por página e idioma
 npm run brand:logo                        # logo blanco del footer + favicon/icon/apple-icon
@@ -32,7 +32,7 @@ node scripts/qa/screenshot.mjs <url> <dir> / /departamentos   # capturas 390/144
 - `src/components/` — `layout/`, `home/`, `apartments/`, `ui/`, `icons/` (SVG animados como JSX de servidor), `analytics/`, `seo/`.
 - `src/lib/` — `booking.ts` (mensaje de WhatsApp/email), `analytics.ts`, `jsonld.ts`, `seo.ts`, `locale-path.ts`, `campaign.ts` (links UTM). Tests en `tests/unit`.
 - `.docs/` — `runbook.md` (producción), `conventions.md`, `analytics.md`, `context.md`, `roadmap.md`, `pending.md`, `QA.md`, `copy-changes.md`, `design-deviations.md`.
-- `images/` — fotos y videos originales del cliente (no se versiona). `public/images` es lo optimizado.
+- `images/` — originales del cliente (no se versiona): `apartments/depto-N/` (portada `depto-N-portada.jpg` + `depto-N-02…`), `building/` (fachada, lockers, desayunos), `landscapes/`. `public/images` es lo optimizado (`npm run images:prepare && npm run images:manifest`). Mapa de nombres: `images/photo-map.csv`.
 
 ## Reglas
 

@@ -76,8 +76,8 @@ test('lightbox de galería: abrir, navegar con teclado y cerrar con Esc', async 
 
 test('mosaico de departamento abre lightbox con todas las fotos', async ({ page }) => {
   await page.goto('/departamentos/departamento-1')
-  await page.getByRole('button', { name: /Ver las 8 fotos/ }).click()
-  await expect(page.locator('dialog[open]')).toContainText('1 / 8')
+  await page.getByRole('button', { name: /Ver las 16 fotos/ }).click()
+  await expect(page.locator('dialog[open]')).toContainText('1 / 16')
   await expect(page.locator('dialog[open]')).toContainText('Departamento 1')
 })
 
@@ -213,7 +213,10 @@ test('selector de departamentos: activo según scroll', async ({ page }) => {
 test('ficha: galería propia (no el mosaico) y columna de reserva', async ({ page }) => {
   await page.goto('/departamentos/departamento-2')
   await expect(page.locator('.aspect-\\[6\\/5\\]')).toHaveCount(0)
-  await page.getByRole('button', { name: /Ampliar foto: Vista general/ }).click()
+  await page
+    .getByRole('button', { name: /^Ampliar foto/ })
+    .first()
+    .click()
   await expect(page.locator('dialog[open]')).toContainText('Departamento 2')
   await page.keyboard.press('Escape')
   await expect(page.getByText('Consultar disponibilidad')).toBeVisible()

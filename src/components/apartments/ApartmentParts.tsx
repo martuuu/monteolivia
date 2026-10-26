@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server'
 import type { Locale } from '@/i18n/routing'
-import { commonAmenities, roomCaption, tierLabel, type Apartment } from '@/data/apartments'
+import { SHARED_ROOMS, commonAmenities, roomCaption, tierLabel, type Apartment } from '@/data/apartments'
 import { seasons, site } from '@/data/site'
 import { CheckIcon, PaxIcons } from '@/components/icons'
 import { toItem } from '@/lib/images'
@@ -27,7 +27,11 @@ export async function apartmentPhotos(apt: Apartment, locale: Locale) {
   const t = await getTranslations('Apartment')
   return apt.images.map((im) => {
     const caption = roomCaption[im.room][locale]
-    return toItem(im.id, t('photoAlt', { caption, n: apt.n }), caption)
+    // fotos del edificio: no son "del Departamento N"
+    const alt = SHARED_ROOMS.includes(im.room)
+      ? `${caption} · Monte Olivia Suites, Ushuaia`
+      : t('photoAlt', { caption, n: apt.n })
+    return toItem(im.id, alt, caption)
   })
 }
 

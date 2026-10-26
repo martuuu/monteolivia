@@ -45,5 +45,5 @@ test('selector de departamentos: los 5 visibles sin scroll', async ({ page }) =>
 
 test('ficha mobile: carrusel con contador', async ({ page }) => {
   await page.goto('/departamentos/departamento-1')
-  await expect(page.getByText('1 / 8')).toBeVisible()
+  await expect(page.getByText('1 / 16')).toBeVisible()
 })

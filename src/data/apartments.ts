@@ -3,7 +3,22 @@ import type { ImageId } from './image-manifest'
 import type { L } from './site'
 
 export type RoomKey =
-  'overview' | 'living' | 'dining' | 'kitchen' | 'bedroom' | 'twin' | 'bathroom' | 'balcony' | 'detail'
+  | 'overview'
+  | 'living'
+  | 'dining'
+  | 'kitchen'
+  | 'bedroom'
+  | 'twin'
+  | 'bathroom'
+  | 'balcony'
+  | 'detail'
+  | 'hall'
+  | 'laundry'
+  // compartidas / del edificio
+  | 'breakfast'
+  | 'aperitif'
+  | 'lockers'
+  | 'building'
 export type PriceTier = { minPax: number; maxPax: number; usd: number }
 export type ApartmentImage = { id: ImageId; room: RoomKey }
 
@@ -23,7 +38,11 @@ export type Apartment = {
   /** Datos prácticos importantes (accesibilidad, piso, etc.) */
   notes?: L<string[]>
   prices: { low: PriceTier[]; high: PriceTier[] }
-  /** Las 5 primeras forman el mosaico (vista general, living, detalle, dormitorio, cocina); el resto se ve en el lightbox. */
+  /**
+   * Fotos de images/apartments/depto-N (la primera es la portada elegida por el cliente), luego los desayunos
+   * sacados en ese depto y al final las del edificio (lockers y fachada, images/building).
+   * Las 5 primeras forman el mosaico de /departamentos y la grilla de la ficha (usar horizontales); el resto se ve en el lightbox.
+   */
   images: ApartmentImage[]
   /** Tres fotos para el carrusel de la home */
   carousel: [ImageId, ImageId, ImageId]
@@ -40,6 +59,12 @@ export const roomCaption: Record<RoomKey, L> = {
   bathroom: { es: 'Baño', en: 'Bathroom' },
   balcony: { es: 'Balcón y vista', en: 'Balcony view' },
   detail: { es: 'Detalle', en: 'Detail' },
+  hall: { es: 'Pasillo', en: 'Hallway' },
+  laundry: { es: 'Lavadero', en: 'Laundry' },
+  breakfast: { es: 'Desayuno', en: 'Breakfast' },
+  aperitif: { es: 'Picada con vino', en: 'Wine and snacks' },
+  lockers: { es: 'Lockers para esquís y valijas', en: 'Lockers for skis and luggage' },
+  building: { es: 'Fachada del edificio', en: 'The building' },
 }
 
 /** Comodidades de todas las unidades (diseño + equipamiento real publicado en el sitio anterior). */
@@ -71,6 +96,14 @@ export const commonAmenities: L<string[]> = {
     'Free parking on request',
   ],
 }
+
+/** Fotos del edificio (images/building) que cierran la galería de todos los departamentos. */
+export const SHARED_ROOMS: RoomKey[] = ['lockers', 'building']
+const buildingPhotos: ApartmentImage[] = [
+  { id: 'lockers-1', room: 'lockers' },
+  { id: 'lockers-2', room: 'lockers' },
+  { id: 'edificio-fachada', room: 'building' },
+]
 
 export const apartments: Apartment[] = [
   {
@@ -112,16 +145,23 @@ export const apartments: Apartment[] = [
       ],
     },
     images: [
-      { id: 'apartment-1', room: 'overview' },
-      { id: 'apartment-3', room: 'living' },
-      { id: 'apartment-4', room: 'dining' },
-      { id: 'apartment-8', room: 'bedroom' },
-      { id: 'apartment-2', room: 'kitchen' },
-      { id: 'apartment-6', room: 'twin' },
-      { id: 'apartment-20', room: 'bathroom' },
-      { id: 'apartment-40', room: 'detail' },
+      { id: 'depto-1-portada', room: 'dining' },
+      { id: 'depto-1-02', room: 'living' },
+      { id: 'depto-1-03', room: 'kitchen' },
+      { id: 'depto-1-05', room: 'bedroom' },
+      { id: 'depto-1-08', room: 'twin' },
+      { id: 'depto-1-04', room: 'living' },
+      { id: 'depto-1-10', room: 'dining' },
+      { id: 'depto-1-09', room: 'bedroom' },
+      { id: 'depto-1-07', room: 'twin' },
+      { id: 'depto-1-06', room: 'laundry' },
+      // desayunos sacados en este depto (identificados por mobiliario)
+      { id: 'desayuno-1', room: 'aperitif' },
+      { id: 'desayuno-7', room: 'breakfast' },
+      { id: 'desayuno-6', room: 'breakfast' },
+      ...buildingPhotos,
     ],
-    carousel: ['apartment-1', 'apartment-2', 'apartment-8'],
+    carousel: ['depto-1-portada', 'depto-1-02', 'depto-1-05'],
     airbnbUrl: 'https://www.airbnb.com/rooms/40944379',
   },
   {
@@ -163,16 +203,25 @@ export const apartments: Apartment[] = [
       ],
     },
     images: [
-      { id: 'apartment-10', room: 'overview' },
-      { id: 'apartment-12', room: 'living' },
-      { id: 'apartment-15', room: 'dining' },
-      { id: 'apartment-18', room: 'bedroom' },
-      { id: 'apartment-11', room: 'kitchen' },
-      { id: 'apartment-17', room: 'twin' },
-      { id: 'apartment-21', room: 'bathroom' },
-      { id: 'apartment-16', room: 'detail' },
+      { id: 'depto-2-portada', room: 'living' },
+      { id: 'depto-2-05', room: 'dining' },
+      { id: 'depto-2-02', room: 'kitchen' },
+      { id: 'depto-2-10', room: 'bedroom' },
+      { id: 'depto-2-11', room: 'twin' },
+      { id: 'depto-2-03', room: 'living' },
+      { id: 'depto-2-04', room: 'living' },
+      { id: 'depto-2-06', room: 'kitchen' },
+      { id: 'depto-2-07', room: 'kitchen' },
+      { id: 'depto-2-09', room: 'bathroom' },
+      { id: 'depto-2-13', room: 'bathroom' },
+      { id: 'depto-2-08', room: 'hall' },
+      { id: 'depto-2-12', room: 'laundry' },
+      // desayunos sacados en este depto (identificados por mobiliario)
+      { id: 'desayuno-3', room: 'breakfast' },
+      { id: 'desayuno-4', room: 'breakfast' },
+      ...buildingPhotos,
     ],
-    carousel: ['apartment-10', 'apartment-15', 'apartment-18'],
+    carousel: ['depto-2-portada', 'depto-2-05', 'depto-2-10'],
   },
   {
     n: 3,
@@ -211,16 +260,20 @@ export const apartments: Apartment[] = [
       ],
     },
     images: [
-      { id: 'apartment-25', room: 'overview' },
-      { id: 'apartment-24', room: 'dining' },
-      { id: 'apartment-22', room: 'balcony' },
-      { id: 'apartment-31', room: 'bedroom' },
-      { id: 'apartment-26', room: 'kitchen' },
-      { id: 'apartment-23', room: 'living' },
-      { id: 'apartment-32', room: 'bathroom' },
-      { id: 'apartment-29', room: 'detail' },
+      { id: 'depto-3-portada', room: 'dining' },
+      { id: 'depto-3-03', room: 'living' },
+      { id: 'depto-3-04', room: 'balcony' },
+      { id: 'depto-3-11', room: 'bedroom' },
+      { id: 'depto-3-05', room: 'kitchen' },
+      { id: 'depto-3-02', room: 'living' },
+      { id: 'depto-3-06', room: 'kitchen' },
+      { id: 'depto-3-07', room: 'bedroom' },
+      { id: 'depto-3-09', room: 'bedroom' },
+      { id: 'depto-3-08', room: 'detail' },
+      { id: 'depto-3-10', room: 'bathroom' },
+      ...buildingPhotos,
     ],
-    carousel: ['apartment-25', 'apartment-22', 'apartment-31'],
+    carousel: ['depto-3-portada', 'depto-3-04', 'depto-3-11'],
   },
   {
     n: 4,
@@ -253,16 +306,20 @@ export const apartments: Apartment[] = [
       high: [{ minPax: 1, maxPax: 4, usd: 145 }],
     },
     images: [
-      { id: 'apartment-34', room: 'overview' },
-      { id: 'apartment-33', room: 'living' },
-      { id: 'apartment-36', room: 'balcony' },
-      { id: 'apartment-42', room: 'bedroom' },
-      { id: 'apartment-27', room: 'kitchen' },
-      { id: 'apartment-41', room: 'twin' },
-      { id: 'apartment-43', room: 'bathroom' },
-      { id: 'apartment-37', room: 'balcony' },
+      { id: 'depto-4-portada', room: 'living' },
+      { id: 'depto-4-02', room: 'dining' },
+      { id: 'depto-4-04', room: 'balcony' },
+      { id: 'depto-4-08', room: 'bedroom' },
+      { id: 'depto-4-10', room: 'twin' },
+      { id: 'depto-4-03', room: 'balcony' },
+      { id: 'depto-4-07', room: 'detail' },
+      { id: 'depto-4-05', room: 'kitchen' },
+      { id: 'depto-4-06', room: 'kitchen' },
+      { id: 'depto-4-09', room: 'bathroom' },
+      { id: 'depto-4-11', room: 'laundry' },
+      ...buildingPhotos,
     ],
-    carousel: ['apartment-34', 'apartment-36', 'apartment-42'],
+    carousel: ['depto-4-portada', 'depto-4-04', 'depto-4-08'],
     airbnbUrl: 'https://www.airbnb.com/rooms/40944392',
   },
   {
@@ -303,14 +360,16 @@ export const apartments: Apartment[] = [
       high: [{ minPax: 2, maxPax: 2, usd: 79 }],
     },
     images: [
-      { id: 'apartment-50', room: 'overview' },
-      { id: 'apartment-46', room: 'living' },
-      { id: 'apartment-47', room: 'detail' },
-      { id: 'apartment-49', room: 'bedroom' },
-      { id: 'apartment-48', room: 'kitchen' },
-      { id: 'apartment-51', room: 'bathroom' },
+      { id: 'depto-5-portada', room: 'bedroom' },
+      { id: 'depto-5-07', room: 'overview' },
+      { id: 'depto-5-03', room: 'kitchen' },
+      { id: 'depto-5-02', room: 'hall' },
+      { id: 'depto-5-04', room: 'kitchen' },
+      { id: 'depto-5-05', room: 'detail' },
+      { id: 'depto-5-06', room: 'bathroom' },
+      ...buildingPhotos,
     ],
-    carousel: ['apartment-50', 'apartment-46', 'apartment-49'],
+    carousel: ['depto-5-portada', 'depto-5-07', 'depto-5-03'],
     airbnbUrl: 'https://www.airbnb.com/rooms/40943900',
   },
 ]

@@ -26,25 +26,25 @@ const pages = [
   },
   {
     file: 'apartments-es',
-    img: 'apartments/apartment-24',
+    img: 'apartments/depto-3/depto-3-portada',
     eyebrow: 'MONTE OLIVIA SUITES',
     title: '5 departamentos en Ushuaia',
     sub: 'De 2 a 6 huéspedes · cocina completa · Wi-Fi',
   },
   {
     file: 'apartments-en',
-    img: 'apartments/apartment-24',
+    img: 'apartments/depto-3/depto-3-portada',
     eyebrow: 'MONTE OLIVIA SUITES',
     title: '5 apartments in Ushuaia',
     sub: '2 to 6 guests · full kitchen · Wi-Fi',
   },
 ]
 const apts = [
-  [1, 'apartment-1', 6],
-  [2, 'apartment-10', 6],
-  [3, 'apartment-25', 4],
-  [4, 'apartment-34', 4],
-  [5, 'apartment-50', 2],
+  [1, 'depto-1/depto-1-portada', 6],
+  [2, 'depto-2/depto-2-portada', 6],
+  [3, 'depto-3/depto-3-portada', 4],
+  [4, 'depto-4/depto-4-portada', 4],
+  [5, 'depto-5/depto-5-portada', 2],
 ]
 for (const [n, img, pax] of apts) {
   pages.push({

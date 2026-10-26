@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Optimiza las fotos originales para la web (idempotente).
- *   images/apartments/apartment-N.jpg  → public/images/apartments/  (lado mayor ≤2048px)
+ *   images/apartments/depto-N/*.jpg    → public/images/apartments/depto-N/  (lado mayor ≤2048px)
+ *   images/building/*.jpg              → public/images/building/  (fachada, lockers, desayunos)
  *   images/landscapes/landscape-N.jpg  → public/images/landscapes/  (excluye fotos sin derechos confirmados)
  *   design/extracted/* (AVIF/PNG)      → public/images/hero/ y public/images/brand/
  * Requiere haber corrido antes: python3 -I scripts/extract-design.py
@@ -15,14 +16,36 @@ const OUT = path.resolve('public/images')
 export const EXCLUDED_LANDSCAPES = [7, 12, 13, 18, ...Array.from({ length: 15 }, (_, i) => 22 + i)]
 
 const jobs = []
-for (const folder of ['apartments', 'landscapes']) {
-  const dir = path.resolve('images', folder)
-  if (!fs.existsSync(dir)) continue
-  for (const f of fs.readdirSync(dir)) {
-    const m = f.match(/^(apartment|landscape)-(\d+)\.jpg$/)
-    if (!m) continue
-    if (m[1] === 'landscape' && EXCLUDED_LANDSCAPES.includes(Number(m[2]))) continue
-    jobs.push({ src: path.join(dir, f), out: path.join(OUT, folder, f), max: 2048, q: 80 })
+const jpg = (f) => /\.(jpe?g)$/i.test(f)
+
+// Departamentos: una carpeta por depto (images/apartments/depto-N/depto-N-portada.jpg, depto-N-02.jpg, …)
+const aptRoot = path.resolve('images/apartments')
+if (fs.existsSync(aptRoot)) {
+  for (const d of fs.readdirSync(aptRoot).filter((x) => /^depto-\d$/.test(x))) {
+    for (const f of fs.readdirSync(path.join(aptRoot, d)).filter(jpg)) {
+      jobs.push({
+        src: path.join(aptRoot, d, f),
+        out: path.join(OUT, 'apartments', d, f.replace(/\.jpe?g$/i, '.jpg')),
+        max: 2048,
+        q: 80,
+      })
+    }
+  }
+}
+// Áreas comunes del edificio (fachada, lockers, desayunos)
+const buildingDir = path.resolve('images/building')
+if (fs.existsSync(buildingDir)) {
+  for (const f of fs.readdirSync(buildingDir).filter(jpg)) {
+    jobs.push({ src: path.join(buildingDir, f), out: path.join(OUT, 'building', f), max: 2048, q: 80 })
+  }
+}
+// Paisajes
+const landDir = path.resolve('images/landscapes')
+if (fs.existsSync(landDir)) {
+  for (const f of fs.readdirSync(landDir)) {
+    const m = f.match(/^landscape-(\d+)\.jpg$/)
+    if (!m || EXCLUDED_LANDSCAPES.includes(Number(m[1]))) continue
+    jobs.push({ src: path.join(landDir, f), out: path.join(OUT, 'landscapes', f), max: 2048, q: 80 })
   }
 }
 const design = path.resolve('design/extracted')
@@ -42,6 +65,17 @@ const logoLight = path.join(design, 'sitio-v2', '498fb63e-cd4a-403f-94e1-c610ff7
 const logoTile = path.join(design, 'sitio-v2', '785d5c2f-f410-4ced-9a75-b094594b2f29.png')
 
 fs.mkdirSync(path.join(OUT, 'brand'), { recursive: true })
+// Borra de public/images/{apartments,building} los archivos que ya no corresponden a ningún original
+const expected = new Set(jobs.map((j) => j.out))
+for (const folder of ['apartments', 'building']) {
+  const walk = (dir) =>
+    fs.existsSync(dir)
+      ? fs
+          .readdirSync(dir, { withFileTypes: true })
+          .flatMap((e) => (e.isDirectory() ? walk(path.join(dir, e.name)) : [path.join(dir, e.name)]))
+      : []
+  for (const f of walk(path.join(OUT, folder))) if (!expected.has(f)) fs.rmSync(f)
+}
 let done = 0
 for (const j of jobs) {
   fs.mkdirSync(path.dirname(j.out), { recursive: true })

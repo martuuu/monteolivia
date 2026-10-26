@@ -52,8 +52,8 @@ export function businessJsonLd(locale: Locale): WithContext<LodgingBusiness> {
     email: site.email,
     image: [
       abs(imageManifest['hero-home'].src),
-      abs(imageManifest['apartment-52'].src),
-      abs(imageManifest['apartment-1'].src),
+      abs(imageManifest['edificio-fachada'].src),
+      abs(imageManifest['depto-1-portada'].src),
     ],
     logo: abs('/images/brand/logo.png'),
     address: {

@@ -41,3 +41,5 @@
 - Vercel Global Config para el modo mantenimiento sin redeploy.
 - Pasar a Vercel Pro cuando haya uso comercial (términos de Hobby).
 - TypeScript 7 cuando typescript-eslint lo soporte.
+- ESLint 10 cuando los plugins de `eslint-config-next` (`import`, `jsx-a11y`, `react`) lo declaren compatible (hoy piden ESLint ≤9 y npm tira conflictos de peer dependencies). El aviso "eslint@9 deprecated" del build es solo informativo.
+- `allowScripts` en `package.json`: los scripts de instalación de `@parcel/watcher`, `@swc/core`, `unrs-resolver` y `fsevents` están denegados a propósito (no los necesita ni el build ni los tests). Si un paquete nuevo pide scripts: `npm install-scripts ls` y aprobar/denegar.

@@ -1,6 +1,6 @@
 # QA manual
 
-Lo automatizado ya pasa (`npm run test:e2e`: 43 tests de rutas, 301, 404, SEO, GA, formularios, lightbox, axe, mobile). Esto es lo que necesita ojos y dedos reales. Marcar ✅ / ❌ con nota.
+Lo automatizado ya pasa (`npm run test:e2e`: 53 tests de rutas, 301, 404, SEO, GA, formularios, lightbox, axe, mobile). Esto es lo que necesita ojos y dedos reales. Marcar ✅ / ❌ con nota.
 
 **Dispositivos:** iPhone (Safari), Android (Chrome), notebook (Chrome y Safari). Ideal: una persona mayor probando el celular.
 
@@ -11,17 +11,19 @@ Abrir `design/Monte Olivia - Sitio v2.dc.html` y `Departamentos.dc.html` en el n
 - [ ] Hero: zoom lento de la foto, botón de scroll animado, botones.
 - [ ] Datos rápidos: los 5 íconos animados (ventanas que titilan, wifi, auto, ski, tercer huésped que aparece).
 - [ ] Departamentos (home): carrusel cambia cada ~4 s, alternado izquierda/derecha, íconos de personas en ola.
-- [ ] Huéspedes y galería: marquees continuos, se frenan con el mouse.
+- [ ] Huéspedes y galería: marquees continuos, se frenan con el mouse; en mobile se deslizan con el dedo.
 - [ ] Departamentos: mosaico se queda fijo al scrollear (desktop), zoom al pasar el mouse, lightbox crece desde la foto clickeada.
 - [ ] 404 y mantenimiento (`/mantenimiento`): humo animado en la casita.
 - [ ] Header se esconde al bajar y aparece al subir.
 
 ## 1.1 Cambios de la iteración 1.1
 
-- [ ] Hero: "el fin del mundo" se tipea con cursor naranja; el resto entra suave. El botón redondo de abajo baja a "Datos rápidos".
+- [ ] Hero: "el fin del mundo" aparece suave palabra por palabra (sin cursor); el resto entra suave. El botón redondo de abajo baja a "Datos rápidos".
 - [ ] Datos rápidos en una sola fila en notebook; ícono de lockers nuevo (esquís que se balancean).
 - [ ] Departamentos (home): foto y texto entran cada uno desde su lado al hacer scroll.
-- [ ] Reseñas: estrellas visibles; el carrusel se frena con el mouse encima y sigue al salir.
+- [ ] Reseñas: estrellas visibles; el carrusel se frena con el mouse encima y sigue al salir; las flechas avanzan/retroceden una reseña.
+- [ ] Galería: las dos filas hacen zoom al pasar el mouse y abren la foto en grande.
+- [ ] Pasar de Inicio a Departamentos (y a una ficha): fundido sutil; el header no parpadea. En navegadores sin soporte simplemente no anima.
 - [ ] Galería: solo paisajes.
 - [ ] Footer: logo blanco con sol y "SUITES" naranjas.
 - [ ] /departamentos: selector de 1 a 5 siempre visible, se queda fijo al bajar y marca el departamento que estás mirando.

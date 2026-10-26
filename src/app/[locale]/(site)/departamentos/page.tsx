@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PageTransition } from '@/components/layout/PageTransition'
 import { getTranslations } from 'next-intl/server'
 import { pageLocale } from '@/i18n/locale'
 import { Link } from '@/i18n/navigation'
@@ -30,7 +31,7 @@ export default async function ApartmentsPage() {
   const c = await getTranslations('Common')
   const a = await getTranslations('Apartment')
   return (
-    <>
+    <PageTransition>
       <JsonLd
         data={breadcrumbJsonLd([
           { name: a('breadcrumbHome'), url: localizedUrl('/', locale) },
@@ -91,6 +92,7 @@ export default async function ApartmentsPage() {
             <p className="mt-6 mb-0 text-right">
               <Link
                 href={{ pathname: '/departamentos/[slug]', params: { slug: apartmentSlug(apt.n, locale) } }}
+                prefetch
                 className="text-teal inline-flex min-h-11 items-center text-base font-semibold underline-offset-4 hover:underline"
                 data-track="cta_click"
                 data-track-cta_id={`ficha_depto_${apt.n}`}
@@ -104,6 +106,6 @@ export default async function ApartmentsPage() {
         </section>
       ))}
       <ClosingCta />
-    </>
+    </PageTransition>
   )
 }

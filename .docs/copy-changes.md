@@ -24,15 +24,15 @@ El copy del diseño se mantuvo. Se agregaron **datos verificados del sitio anter
 
 ## Textos de interfaz nuevos (no estaban en el diseño)
 
-| Texto                                                                                            | Dónde                  |
-| ------------------------------------------------------------------------------------------------ | ---------------------- |
-| "Reseñas reales de huéspedes, en su idioma original." (reemplaza la nota "Reseñas de muestra…")  | Huéspedes              |
-| Campo "Email (opcional, no se publica)" en el modal de reseña                                    | Modal                  |
-| "Tocá una foto para verla en grande." (se quitó "Los recuadros punteados esperan fotos reales…") | Galería                |
-| "Ir a un departamento" + atajos "Departamento N · Hasta X huéspedes"                             | Departamentos          |
-| "Ver las N fotos", "Camas", "Bueno saber", breadcrumb, "Departamento anterior/siguiente"         | Departamentos y fichas |
-| "La salida tiene que ser posterior a la llegada."                                                | Formularios            |
-| Línea "Noches: N" en el mensaje de WhatsApp/email                                                | Mensaje armado         |
+| Texto                                                                                    | Dónde                  |
+| ---------------------------------------------------------------------------------------- | ---------------------- |
+| Se quitó la nota "Reseñas de muestra…" del diseño (sin reemplazo)                        | Huéspedes              |
+| Campo "Email (opcional, no se publica)" en el modal de reseña                            | Modal                  |
+| Se quitó la nota de la galería ("Los recuadros punteados esperan fotos reales…")         | Galería                |
+| "Ir a un departamento" + atajos "Departamento N · Hasta X huéspedes"                     | Departamentos          |
+| "Ver las N fotos", "Camas", "Bueno saber", breadcrumb, "Departamento anterior/siguiente" | Departamentos y fichas |
+| "La salida tiene que ser posterior a la llegada."                                        | Formularios            |
+| Línea "Noches: N" en el mensaje de WhatsApp/email                                        | Mensaje armado         |
 
 ## Metadata SEO (títulos y descripciones)
 

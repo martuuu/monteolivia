@@ -122,6 +122,7 @@ export async function HomeApartments({ locale }: { locale: Locale }) {
                         pathname: '/departamentos/[slug]',
                         params: { slug: apartmentSlug(a.n, locale) },
                       }}
+                      prefetch
                       className={btnTeal}
                       data-track="cta_click"
                       data-track-cta_id={`ver_depto_${a.n}`}

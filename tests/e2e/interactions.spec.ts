@@ -131,19 +131,56 @@ for (const path of ['/', '/departamentos', '/departamentos/departamento-1', '/en
   })
 }
 
-test('marquee de reseñas se pausa con hover y sigue al salir', async ({ page }) => {
+test('marquee de reseñas: se mueve, se pausa con hover y las flechas avanzan', async ({ page }) => {
   await page.goto('/#huespedes')
-  const track = page.locator('#huespedes .mo-marquee-track')
-  const state = () => track.evaluate((el) => getComputedStyle(el).animationPlayState)
-  await page.locator('#huespedes .mo-marquee').scrollIntoViewIfNeeded()
+  const section = page.locator('#huespedes')
+  const x = () =>
+    section.locator('.mo-marquee-track').evaluate((el) => new DOMMatrix(getComputedStyle(el).transform).m41)
+  await section.locator('.mo-marquee').scrollIntoViewIfNeeded()
   await page.mouse.move(5, 5)
-  await expect.poll(state, { timeout: 10_000 }).toBe('running')
-  const box = (await page.locator('#huespedes .mo-marquee').boundingBox())!
+  const a = await x()
+  await page.waitForTimeout(600)
+  expect(await x()).toBeLessThan(a) // avanza solo hacia la izquierda
+  const box = (await section.locator('.mo-marquee').boundingBox())!
   await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2)
-  await expect.poll(state, { timeout: 10_000 }).toBe('paused')
+  await page.waitForTimeout(150)
+  const b = await x()
+  await page.waitForTimeout(600)
+  expect(Math.abs((await x()) - b)).toBeLessThan(1) // pausado con hover
   await page.mouse.move(5, 5)
-  await expect.poll(state, { timeout: 10_000 }).toBe('running')
-  await expect(page.locator('#huespedes figure').first()).toContainText('★★★★★')
+  const c = await x()
+  await section.getByRole('button', { name: 'Reseña siguiente' }).click()
+  await page.waitForTimeout(900)
+  expect(c - (await x())).toBeGreaterThan(300) // avanzó ~una tarjeta
+  await expect(section.locator('figure').first()).toContainText('★★★★★')
+  expect(
+    (await gaEvents(page)).some((e) => e.name === 'carousel_interact' && e.params.carousel === 'reviews'),
+  ).toBeTruthy()
+})
+
+test('galería: la fila de abajo también abre el lightbox', async ({ page }) => {
+  await page.goto('/#galeria')
+  const rows = page.locator('#galeria .mo-marquee')
+  await rows.nth(1).scrollIntoViewIfNeeded()
+  await page.waitForTimeout(400) // termina el scroll suave
+  const box = (await rows.nth(1).boundingBox())!
+  // click en el centro de la fila de abajo apenas carga (antes mostraba la copia inert)
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2)
+  await expect(page.locator('dialog[open]')).toBeVisible()
+  await expect(page.locator('dialog[open]')).toContainText('/ 16')
+})
+
+test('navegar entre páginas usa View Transition', async ({ page }) => {
+  await page.goto('/')
+  await page.evaluate(() => {
+    const d = document as unknown as { startViewTransition?: (...a: unknown[]) => unknown; __vt: number }
+    d.__vt = 0
+    const orig = d.startViewTransition?.bind(d)
+    if (orig) d.startViewTransition = (...a: unknown[]) => ((d.__vt += 1), orig(...a))
+  })
+  await page.locator('header nav').getByRole('link', { name: 'Departamentos' }).click()
+  await expect(page).toHaveURL(/\/departamentos$/)
+  expect(await page.evaluate(() => (document as unknown as { __vt: number }).__vt)).toBeGreaterThan(0)
 })
 
 test('galería de la home: solo paisajes', async ({ page }) => {

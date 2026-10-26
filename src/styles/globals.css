@@ -43,8 +43,6 @@
   --animate-mo-fade: mo-fade 0.25s ease;
   --animate-mo-lb-fade: mo-fade 0.3s ease-out;
   --animate-mo-lb-in: mo-lb-in 0.5s cubic-bezier(0.2, 0.7, 0.2, 1);
-  --animate-mo-marquee-l: mo-marq-l 80s linear infinite;
-  --animate-mo-marquee-r: mo-marq-r 85s linear infinite;
 }
 
 @keyframes mo-zoom {
@@ -177,22 +175,6 @@
     transform: scale(1);
   }
 }
-@keyframes mo-marq-l {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-@keyframes mo-marq-r {
-  from {
-    transform: translateX(-50%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
 
 @layer base {
   html {
@@ -279,16 +261,11 @@
     background-size: 100% 2px;
   }
 
-  /* Marquees: un solo layer animado por fila */
+  /* Marquees: un solo layer movido por JS (components/ui/Marquee.tsx) */
   .mo-marquee-track {
     display: flex;
     width: max-content;
     will-change: transform;
-  }
-  .mo-marquee:hover .mo-marquee-track,
-  .mo-marquee:focus-within .mo-marquee-track,
-  .mo-marquee[data-paused='true'] .mo-marquee-track {
-    animation-play-state: paused;
   }
 
   /* Carrusel de slides (opacity .9s) y dots (width .4s) */
@@ -321,12 +298,8 @@
   html {
     scroll-behavior: auto;
   }
-  [class*='animate-mo'],
-  .mo-marquee-track {
+  [class*='animate-mo'] {
     animation: none !important;
-  }
-  .mo-marquee {
-    overflow-x: auto !important;
   }
   *,
   *::before,
@@ -359,7 +332,7 @@
 }
 
 /* ---------------------------------------------------------------
- * Hero · entrada y tipeo de "el fin del mundo" (CSS puro, sin JS)
+ * Hero · entrada suave de "el fin del mundo" (CSS puro, sin JS)
  * Los elementos nunca tienen opacity:0 de base: si la animación no corre (reduced-motion) se ven completos.
  * --------------------------------------------------------------- */
 @keyframes mo-rise {
@@ -381,28 +354,16 @@
     transform: none;
   }
 }
-@keyframes mo-type-in {
+@keyframes mo-soft-in {
   from {
     opacity: 0;
+    filter: blur(10px);
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
-  }
-}
-@keyframes mo-caret {
-  from,
-  to {
-    opacity: 1;
-  }
-}
-@keyframes mo-caret-blink {
-  0%,
-  49% {
-    opacity: 1;
-  }
-  50%,
-  100% {
-    opacity: 0;
+    filter: blur(0);
+    transform: none;
   }
 }
 @keyframes mo-cue-bob {
@@ -434,30 +395,10 @@
     animation: mo-slide-in 0.8s var(--ease-mo-out) both;
     animation-delay: var(--d, 0s);
   }
-  /* cada letra aparece de golpe (steps) en su turno */
-  .mo-type-ch {
-    position: relative;
-    animation: mo-type-in 0.01s steps(1) both;
-    animation-delay: var(--d);
-  }
-  /* cursor naranja: visible solo mientras se "escribe" esa letra */
-  .mo-type-ch::after {
-    content: '';
-    position: absolute;
-    right: -0.06em;
-    top: 0.12em;
-    bottom: 0.08em;
-    width: 0.06em;
-    min-width: 3px;
-    border-radius: 2px;
-    background: var(--color-orange);
-    opacity: 0;
-    animation: mo-caret var(--step) linear;
-    animation-delay: var(--d);
-  }
-  .mo-type-ch[data-last]::after {
-    animation: mo-caret-blink 0.9s linear 3;
-    animation-delay: var(--d);
+  /* "el fin del mundo": fundido suave por palabra */
+  .mo-soft-in {
+    animation: mo-soft-in 1.3s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+    animation-delay: var(--d, 0s);
   }
   .mo-cue-icon {
     animation: mo-cue-bob 2s ease-in-out infinite;
@@ -469,8 +410,7 @@
 @media (prefers-reduced-motion: reduce) {
   .mo-rise,
   .mo-slide-in,
-  .mo-type-ch,
-  .mo-type-ch::after,
+  .mo-soft-in,
   .mo-cue-icon,
   .mo-cue-ring {
     animation: none !important;
@@ -518,4 +458,49 @@
 }
 :root:has(.mo-nav[data-hidden='true']) {
   --hdr: 0px;
+}
+
+/* ---------------------------------------------------------------
+ * Transición entre páginas (components/layout/PageTransition.tsx)
+ * --------------------------------------------------------------- */
+@keyframes mo-vt-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes mo-vt-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+::view-transition-old(.page-exit) {
+  animation: mo-vt-out 160ms ease-out both;
+}
+::view-transition-new(.page-enter) {
+  animation: mo-vt-in 380ms cubic-bezier(0.2, 0.7, 0.2, 1) 80ms both;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+/* Header y botón de WhatsApp quedan fijos y nítidos durante la transición (se capturan aparte, sin animación) */
+.mo-nav {
+  view-transition-name: site-header;
+}
+.mo-fab {
+  view-transition-name: wa-fab;
+}
+::view-transition-group(site-header),
+::view-transition-group(wa-fab),
+::view-transition-new(site-header),
+::view-transition-new(wa-fab) {
+  animation: none;
+}
+::view-transition-old(site-header),
+::view-transition-old(wa-fab) {
+  display: none;
 }

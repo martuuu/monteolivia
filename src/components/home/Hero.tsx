@@ -6,7 +6,7 @@ import { WhatsAppIcon } from '@/components/icons'
 import { Photo } from '@/components/ui/Photo'
 import { btnGhostDark, btnOrange } from '@/components/ui/styles'
 import { HeroVideo } from './HeroVideo'
-import { TypedTitle } from './TypedTitle'
+import { HeroTitle } from './HeroTitle'
 
 export async function Hero() {
   const t = await getTranslations('Hero')
@@ -56,9 +56,9 @@ export async function Hero() {
           </svg>
           {t('eyebrow')}
         </p>
-        <TypedTitle
+        <HeroTitle
           lead={t('titleLead')}
-          typed={t('titleTyped')}
+          soft={t('titleSoft')}
           className="font-display m-0 text-[clamp(3rem,8vw,5.8rem)] leading-[1.04] font-normal text-balance text-white [text-shadow:0_2px_24px_rgba(7,27,38,.6),0_1px_2px_rgba(7,27,38,.5)]"
         />
         <p

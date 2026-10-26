@@ -28,9 +28,7 @@ export async function Gallery({ locale }: { locale: Locale }) {
         openLabel={t.raw('open')}
         labels={{ close: lb('close'), prev: lb('prev'), next: lb('next'), counter: lb.raw('counter') }}
       />
-      <div className={`${container} pt-4 pb-[clamp(56px,9vw,104px)]`}>
-        <p className="text-muted m-0 text-[15px]">{t('hint')}</p>
-      </div>
+      <div className="pb-[clamp(56px,9vw,104px)]" />
     </section>
   )
 }

@@ -53,6 +53,7 @@ export async function Guests({ locale }: { locale: Locale }) {
       </div>
       <Marquee
         label={t('eyebrow')}
+        controls={{ prev: t('prev'), next: t('next'), tone: 'dark', analytics: 'reviews' }}
         seconds={list.length * 7}
         duplicate={cards}
         className="mt-[clamp(28px,4vw,44px)] items-stretch"
@@ -60,9 +61,8 @@ export async function Guests({ locale }: { locale: Locale }) {
         {cards}
       </Marquee>
       <div
-        className={`${container} flex flex-wrap items-center justify-between gap-4 pt-6 pb-[clamp(56px,9vw,104px)]`}
+        className={`${container} flex flex-wrap items-center justify-end gap-4 pt-6 pb-[clamp(56px,9vw,104px)]`}
       >
-        <p className="m-0 text-[15px] text-white/65">{t('note')}</p>
         <ReviewModal
           locale={locale}
           email={site.email}

@@ -57,7 +57,7 @@ export async function Rates({ locale }: { locale: Locale }) {
             </div>
           ))}
         </div>
-        <p className="text-slate mt-5 mb-0 max-w-[70ch] text-base leading-[1.6]">* {t('residents')}</p>
+        <p className="text-slate mt-5 mb-0 text-base leading-[1.6]">* {t('residents')}</p>
       </div>
     </section>
   )

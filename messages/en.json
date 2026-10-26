@@ -47,7 +47,7 @@
     "eyebrow": "Ushuaia · Tierra del Fuego",
     "title": "Your place at the end of the world",
     "titleLead": "Your place at",
-    "titleTyped": "the end of the world",
+    "titleSoft": "the end of the world",
     "lead": "Boutique apartments — spacious, warm and quiet — in a calm corner of Ushuaia, with the mountains always in sight.",
     "imageAlt": "Snow-capped Mount Olivia above the city of Ushuaia and the Beagle Channel",
     "scrollCue": "Ver más"
@@ -82,9 +82,10 @@
   "Guests": {
     "eyebrow": "Guests",
     "title": "Feeling at home — even at the end of the world",
-    "note": "Real guest reviews, in their original language.",
     "leaveReview": "Leave a review",
-    "stayedIn": "Stay"
+    "stayedIn": "Stay",
+    "prev": "Previous review",
+    "next": "Next review"
   },
   "ReviewForm": {
     "eyebrow": "Guests",
@@ -136,7 +137,6 @@
   "Gallery": {
     "eyebrow": "Gallery",
     "title": "Ushuaia from here",
-    "hint": "Tap a photo to view it full size.",
     "open": "Enlarge photo: {alt}"
   },
   "Tours": {

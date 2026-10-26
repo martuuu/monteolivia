@@ -33,7 +33,7 @@ tests/unit · tests/e2e
 
 ## Componentes
 
-- **Server por defecto.** `'use client'` solo con estado o eventos: `SiteHeader`, `LangSwitch`, `ApartmentCarousel`, `ApartmentMosaic`, `Lightbox`, `Marquee`, `GalleryRows`, `BookingForm`, `ApartmentBooking`, `ReviewModal`, `ToursScroller`, `HeroVideo`, `Analytics`.
+- **Server por defecto.** `'use client'` solo con estado o eventos: `SiteHeader`, `LangSwitch`, `ApartmentCarousel`, `ApartmentMosaic`, `ApartmentGallery`, `ApartmentPicker`, `Lightbox`, `Marquee`, `RevealObserver`, `GalleryRows`, `BookingForm`, `ApartmentBooking`, `ReviewModal`, `ToursScroller`, `HeroVideo`, `Analytics`.
 - A los componentes cliente se les pasan **textos ya traducidos** por props (no hay mensajes de next-intl en el cliente; el provider solo da el locale a `<Link>`).
 - Plantillas con variables para el cliente: usar `t.raw('clave')` y reemplazar `{i}`, `{total}`, etc. en el componente.
 - Modales/menú/lightbox: `<dialog>` nativo con `showModal()`.
@@ -47,6 +47,8 @@ tests/unit · tests/e2e
 - Animaciones decorativas con `animate-mo-*` → se apagan solas con `prefers-reduced-motion`.
 - Aparición al hacer scroll: atributo `data-reveal="up|left|right"` (+ `style={{ '--reveal-delay': '.1s' }}`) en cualquier elemento de servidor; lo activa `RevealObserver` (layout). Solo oculta con JS y movimiento permitido. La sección debe tener `overflow-x-clip` si usa left/right.
 - Nunca animar desde `opacity: 0` el elemento LCP (h1 del hero): usar solo movimiento (`mo-slide-in`).
+- Transición entre páginas: envolver el contenido de cada `page.tsx` en `<PageTransition>` (no en el layout). Elementos fijos que no deben animar: `view-transition-name` propio en `globals.css` (como `.mo-nav` y `.mo-fab`).
+- Marquees: `components/ui/Marquee.tsx` (rAF). La copia del loop va `aria-hidden` y con `tabIndex={-1}`, **nunca `inert`** (bloquearía los clicks).
 - `--hdr`: alto del header fijo (79 px, 0 cuando se oculta). Usar en elementos `sticky` (`top-[var(--hdr)]`).
 
 ## Contenido

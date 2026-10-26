@@ -47,7 +47,7 @@
     "eyebrow": "Ushuaia · Tierra del Fuego",
     "title": "Tu lugar en el fin del mundo",
     "titleLead": "Tu lugar en",
-    "titleTyped": "el fin del mundo",
+    "titleSoft": "el fin del mundo",
     "lead": "Departamentos boutique, amplios y cálidos, en una zona tranquila de Ushuaia — con las montañas siempre a la vista.",
     "imageAlt": "El Monte Olivia nevado sobre la ciudad de Ushuaia y el Canal Beagle",
     "scrollCue": "Ver más"
@@ -82,9 +82,10 @@
   "Guests": {
     "eyebrow": "Huéspedes",
     "title": "Sentirse en casa, incluso en el fin del mundo",
-    "note": "Reseñas reales de huéspedes, en su idioma original.",
     "leaveReview": "Dejar comentario",
-    "stayedIn": "Estadía"
+    "stayedIn": "Estadía",
+    "prev": "Reseña anterior",
+    "next": "Reseña siguiente"
   },
   "ReviewForm": {
     "eyebrow": "Huéspedes",
@@ -136,7 +137,6 @@
   "Gallery": {
     "eyebrow": "Galería",
     "title": "Ushuaia desde acá",
-    "hint": "Tocá una foto para verla en grande.",
     "open": "Ampliar foto: {alt}"
   },
   "Tours": {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PageTransition } from '@/components/layout/PageTransition'
 import { notFound } from 'next/navigation'
 import { getTranslations } from 'next-intl/server'
 import { pageLocale } from '@/i18n/locale'
@@ -19,6 +20,13 @@ import {
 } from '@/components/apartments/ApartmentParts'
 import { ClosingCta } from '@/components/apartments/ClosingCta'
 import { ChevronIcon } from '@/components/icons'
+
+/**
+ * Las 10 fichas están prerenderizadas (generateStaticParams). La navegación hacia ellas espera ese HTML estático
+ * en lugar de mostrar un esqueleto de carga; los links a fichas usan prefetch para que igual abran al instante.
+ * (Sin esto, el modo dev de Next 16 avisa "params accessed outside of <Suspense>".)
+ */
+export const instant = false
 
 export function generateStaticParams() {
   return routing.locales.flatMap((locale) =>
@@ -69,7 +77,7 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
     'inline-flex min-h-12 items-center gap-2 rounded-full border border-ink/16 bg-white px-5 py-2.5 text-base font-semibold text-teal hover:border-teal'
 
   return (
-    <>
+    <PageTransition>
       <JsonLd
         data={[
           apartmentJsonLd(apt, locale),
@@ -125,6 +133,7 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
           >
             <Link
               href={href(prev.n)}
+              prefetch
               className={pager}
               data-track="nav_click"
               data-track-target={`depto_${prev.n}`}
@@ -144,6 +153,7 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
             </Link>
             <Link
               href={href(next.n)}
+              prefetch
               className={pager}
               data-track="nav_click"
               data-track-target={`depto_${next.n}`}
@@ -156,6 +166,6 @@ export default async function ApartmentPage({ params }: PageProps<'/[locale]/dep
         </div>
       </section>
       <ClosingCta />
-    </>
+    </PageTransition>
   )
 }

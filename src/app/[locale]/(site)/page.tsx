@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { PageTransition } from '@/components/layout/PageTransition'
 import { getTranslations } from 'next-intl/server'
 import { pageLocale } from '@/i18n/locale'
 import { buildMetadata } from '@/lib/seo'
@@ -30,7 +31,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function Home() {
   const locale = await pageLocale()
   return (
-    <>
+    <PageTransition>
       <JsonLd data={[businessJsonLd(locale), websiteJsonLd(locale)]} />
       <Hero />
       <QuickFacts />
@@ -41,6 +42,6 @@ export default async function Home() {
       <Gallery locale={locale} />
       <Tours locale={locale} />
       <Location />
-    </>
+    </PageTransition>
   )
 }
